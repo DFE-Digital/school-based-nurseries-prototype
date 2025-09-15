@@ -1,6 +1,6 @@
-# Expression of interest prototype
+# School based nuseries prototype
 
-All designs, content and prototypes for the Expression of interest (EOI) project.
+All designs, content and prototypes for the School based nuseries.
 
 ## GOV.UK Prototype Kit
 
