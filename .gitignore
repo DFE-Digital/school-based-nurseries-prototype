@@ -58,6 +58,11 @@ build/
 out/
 
 # ======================
+# Temporary build/runtime files
+# ======================
+.tmp/
+
+# ======================
 # Coverage & testing
 # ======================
 coverage/
