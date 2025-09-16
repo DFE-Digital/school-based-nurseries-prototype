@@ -1,0 +1,86 @@
+{% extends "layouts/dfe-header.html" %}
+
+{% block pageTitle %}
+  {{serviceName}} prototype – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+    <a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+    <h1 class="govuk-heading-xl">Design history</h1>
+
+    <table class="govuk-table design-history">
+      <caption class="govuk-table__caption govuk-table__caption--m">All previous designs</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Dates</th>
+          <th scope="col" class="govuk-table__header">What we did</th>
+          <th scope="col" class="govuk-table__header">Why we did it</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Status</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="v3/pages" class="govuk-link">v3</a></th>
+          <td class="govuk-table__cell">22 May 2025</td>
+          <td class="govuk-table__cell">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Iterations to the 'apply' journey to reasonably shorten it, improve it and wire in key logic steps.</li>
+              <li>Added all currently known entry points to the service.</li>
+              <li>Expanded the functionality of the prototype such as adding a config page, design history, versioning plus a 'view all user journeys in this version' page for each version.</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>To meet user needs, <a href="https://educationgovuk.sharepoint.com/:p:/r/sites/lvewp00332/WorkplaceDocuments/Funding%20Expression%20of%20Interest/User%20Research/1.%20UR%20Deliverables%20and%20Artefacts/EOI%20-%20%20Strategic%20Solution/3.%20Research%20Output/EOI%20Round%201%20March%20-%20April%202025/Expression%20of%20Interest%20-%20Research%20Report%20March%202025.pptx?d=w5a4e2f94617d41e3aa40ed3cbde63a4b&csf=1&web=1&e=xSYnkE" target="_blank">key findings and design recommendations (PowerPoint) that came from the 1st round of user research (opens in a new tab)</a>.</li>
+              <li>As part of the revisted strategic solution strand of work for the service.</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--purple">Design in progress</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="v2/pages" class="govuk-link">v2</a></th>
+          <td class="govuk-table__cell">14 March 2025 to 21 May 2025</td>
+          <td class="govuk-table__cell">
+            This takes you to our coded flow to use in user research.
+            <br>
+            <br>
+            Each question is step-by-step.
+          </td>
+          <td class="govuk-table__cell">To create a design that is GDS compliant that can be usability tested with end users.</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--green">Complete</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="v1/pages" class="govuk-link">v1</a></th>
+          <td class="govuk-table__cell">5 March 2025 to 13 March 2025</td>
+          <td class="govuk-table__cell">
+            This takes you to our coded flow to use in user research.
+            <br>
+            <br>
+            This flow has 2 pages that have multiple questions on them which are not GDS-compliant.
+          </td>
+          <td class="govuk-table__cell">We needed to design the 'apply' user journey at pace so we could put it in front of users.</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--green">Complete</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="https://lucid.app/lucidspark/ac88e2b6-9f9b-4204-b184-f809d3fa68e7/edit?view_items=kDgYIRnZcACB&invitationId=inv_a7269586-47b7-46d4-a684-4d1910ce6e34" class="govuk-link" target="_blank">Ideation and design concepts in Lucid (opens in a new tab)</a></th>
+          <td class="govuk-table__cell">5 March 2025</td>
+          <td class="govuk-table__cell">
+            This takes you to the design work on Lucid for our first prototype.
+            <br>
+            <br>
+            Opens in a new link and is password-protected.
+          </td>
+          <td class="govuk-table__cell">To help the UCD team to understand the problem space, ideate and create design concepts that could meet the business requirements.</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">Living document</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+{% endblock %}

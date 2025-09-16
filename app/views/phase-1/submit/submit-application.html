@@ -1,0 +1,53 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Submit your application - Declaration - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="/phase-1//submit/application-submitted" method="post">
+
+    <span class="govuk-caption-xl">Submit your application</span>
+    <h1 class="govuk-heading-xl">Declaration</h1>
+
+    <p class="govuk-body">Before submitting this application I agree that:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the information I have entered is correct</li>
+        <li>I understand that any inaccurate or misleading information would make the funding void and could breach any future funding agreements</li>
+        <li>the school has given due regard to its duties under the <a href="design-history">Public Sector Equality Duty (opens in a new tab)</a> including the expected impact on individuals with protected characteristics</li>
+        <li>governing bodies have confirmed the project aligns with the school's strategic objectives, is financially feasible, and supports early years education now and in the future</li>
+        <li>I understand that the funding covers only the actual eligible costs of the specified works, and any underspend must be returned to the Department for Education</li>
+        <li>if the funded activities are not completed by 31st March 2027, the DfE reserves the right to exercise clawback proceedings</li>
+      </ul>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        You cannot change your application once you have submitted it
+      </strong>
+    </div>
+
+      
+    {{ govukButton({
+    text: "Agree and submit application",
+          href: ""
+    }) }}
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

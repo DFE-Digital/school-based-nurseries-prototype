@@ -1,0 +1,57 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Project information - Project proposal and funding - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-1/about-your-project/upload-site-plan" method="post">
+
+  <span class="govuk-caption-xl">Project information</span>
+  <h1 class="govuk-heading-l">Project proposal and funding</h1>
+
+  <p class="govuk-body">Describe the scope of the work and why capital funding is needed.</p>
+
+  <p class="govuk-body">Your answer should include:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>details of construction work, equipment, and how the funding will support nursery places</li>
+      <li>justification that the work scope matches the funding requested and number of places being created</li>
+      <li>any conflicts of interest your technical adviser may have with others involved in your application</li>
+    </ul>
+
+  <p class="govuk-body">More information on this can be found in <a class="govuk-link" href="" >our guidance (opens in a new tab).</a></p>
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+  <textarea class="govuk-textarea govuk-js-character-count" id="projectProposal" name="projectProposal" rows="10" aria-describedby="projectProposal"></textarea>
+  <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message">
+    You have 750 words remaining
+  </div>
+</div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

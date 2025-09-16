@@ -1,0 +1,61 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Eligibility - Has your Local Authority Early Years lead been consulted before starting this application? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="local-authority-pupil-lead-been-consulted" method="post">
+
+  <span class="govuk-caption-xl">Eligibility</span>
+
+   <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Has your Local Authority Early Years lead been consulted before starting this application?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="leadConsulted" name="leadConsulted" type="radio" value="Yes">
+        <label class="govuk-label govuk-radios__label" for="leadConsulted">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="leadConsulted-2" name="leadConsulted" type="radio" value="No">
+        <label class="govuk-label govuk-radios__label" for="leadConsulted-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+      
+    {{ govukButton({
+    text: "Continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

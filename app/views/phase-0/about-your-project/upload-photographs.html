@@ -1,0 +1,56 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Project information - Upload photographs of affected spaces - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-1/about-your-project/your-uploaded-photographs" method="post">
+
+  <span class="govuk-caption-xl">Project information</span>
+  <h1 class="govuk-heading-l">Upload photographs of affected spaces</h1>
+
+  <p class="govuk-body">You must provide photographs of any affected spaces within the school.</p>
+
+  <p class="govuk-body">This can help us justify any higher costs, especially if the space is in poor condition.</p>
+
+  <div class="govuk-inset-text">
+     <p class="govuk-body">Your photographs must be in PNG, JPG, or JPEG format, or you can upload the photographs collectively in a ZIP file.</p> <p class="govuk-body">Your file must be smaller than 20MB.</p> <p class="govuk-body">If you cannot reduce the size, email the photos and your unique reference number (URN) to <a class="govuk-link" href="" >images.schoolnurseries@education.gov.uk</a></p>
+  </div>
+
+ 
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="file-upload-2">
+    Upload a file
+  </label>
+  <input class="govuk-file-upload" id="file-upload-2" name="fileUpload2" type="file">
+  </div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Upload file",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

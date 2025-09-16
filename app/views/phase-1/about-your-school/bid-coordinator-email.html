@@ -1,0 +1,49 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Bid coordinator details - Are you the bid coordinator for this application? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="can-the-project-be-delivered" method="post">
+
+  <span class="govuk-caption-xl">Bid coordinator details</span>
+
+  <div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="event-name">
+       What is your bid coordinator's email?
+      </label>
+    </h1>
+    <div id="event-name-hint" class="govuk-hint">
+      Do not use a personal email or a shared mailbox address
+    </div>
+    <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+  </div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: "/phase-1/about-your-school/provide-your-current-bid-coordinator-application"
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

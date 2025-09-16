@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">User research</h1>
+        <p>Research sessions and outputs</p>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-l">Version 4 (flow of questions)</h2>
+
+        <p>This research aimed to:
+
+          To identify the varying needs and challenges users encounter when considering applying and applying to DfE condition funding pots (such as SRP, CIF and SBN)
+          
+          To assess the comprehensibility of the proposed EOI service prototype questions.
+          
+        </p>
+
+   
+        {{ govukButton({
+          text: "View version 4",
+          href: "../v4/start.html"
+        }) }}
+  
+        {{ govukButton({
+          text: "Page by Page listings",
+          href: "/v4/v4-listings",
+          classes: "govuk-button--secondary govuk-!-margin-left-1"
+          }) }}
+  
+        <p><a href="https://lucid.app/lucidspark/1f999525-3ba7-48dd-a08e-cb8e78ae0292/edit?view_items=~ixsXpNOimH1" class="govuk-link" rel="noreferrer noopener" target="_blank">V4 User flows (opens in new tab)</a></span></p>
+
+        <p><a href="https://educationgovuk.sharepoint.com.mcas.ms/:p:/r/sites/lvewp00332/_layouts/15/doc2.aspx?file=EOI%2B-Alpha%2B-%2BRound%2B2%2B-%2BResearch%2BReport.pptx&action=edit&sourcedoc=%7BAEF6C04B-8188-4169-A228-8ED640E185C6%7D&mobileredirect=true" class="govuk-link" rel="noreferrer noopener" target="_blank">Research report (opens in new tab)</a></span></p>
+
+    </div>
+
+
+{% endblock %}

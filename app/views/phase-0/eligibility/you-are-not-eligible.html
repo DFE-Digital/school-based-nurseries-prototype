@@ -1,0 +1,50 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Eligibility - You are not eligible for the School Based Nursery Capital Grant - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="check-your-answers" method="post">
+
+  <span class="govuk-caption-xl">Eligibility</span>
+
+   <h1 class="govuk-heading-xl">You are not eligible for the School Based Nursery Capital Grant</h1>
+
+     <p class="govuk-body">Based on your answers, you need to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>ensure the nursery is located on the school premises</li>
+        <li>consult your Local Authority Early Years lead before starting an application</li>
+      </ul>
+      <p class="govuk-body">If you are able to meet these requirements before the closing date, you can apply again.</p>
+      <p class="govuk-body">You can <a class="govuk-link" href="#">find more information in our guidance</a>.</p>
+
+      <h2 class="govuk-heading-l">Register your interest for next year</h2>
+      <p class="govuk-body">You can <a class="govuk-link" href="#">register your interest to apply for a future round of the capital grant</a>.</p>
+      <p class="govuk-body">We will notify you when the application process opens.</p>
+
+      <h2 class="govuk-heading-l">Give feedback about this service</h2>
+      <p class="govuk-body"><a class="govuk-link" href="#">What did you think of this service?</a>(takes 30 seconds)</p>
+      
+    {{ govukButton({
+    text: "Continue",
+          href: ""
+    }) }}
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

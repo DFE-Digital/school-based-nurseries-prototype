@@ -1,0 +1,12 @@
+.govuk-template{
+  background-color:#555;
+}
+
+.govuk-template__body{
+  width: 740px;
+  margin: auto;
+}
+
+header.dfe-header, div.govuk-phase-banner, div.govuk-width-container{
+  padding: 10px 20px;
+}

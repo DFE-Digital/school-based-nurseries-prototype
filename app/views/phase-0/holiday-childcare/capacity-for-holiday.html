@@ -1,0 +1,46 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Holiday childcare - What is your current total capacity for holiday childcare? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-1/holiday-childcare/capacity-after-project" method="post">
+
+  <span class="govuk-caption-xl">Holiday childcare</span>
+
+  <div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="holidayCapacity">
+       What is your current total capacity for holiday childcare?
+      </label>
+    </h1>
+    <input class="govuk-input govuk-input--width-5" id="holidayCapacity" name="holidayCapacity" type="text" spellcheck="false" aria-describedby="holidayCapacity-hint" inputmode="numeric">
+  </div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

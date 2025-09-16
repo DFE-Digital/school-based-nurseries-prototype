@@ -1,0 +1,44 @@
+{% extends "layouts/dfe-header.html" %}
+
+{% block pageTitle %}
+  {{serviceName}} prototype – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">GOV.UK Prototype Kit</span>
+    <h1 class="govuk-heading-xl">{{serviceName}} prototype</h1>
+
+
+
+      <h2 class="govuk-heading-l">Phase 1</h2>
+    
+        {{ govukButton({
+          text: "Phase 1",
+          href: "phase-1/eligibility/will-the-nursery-be-located-on-the-school-premises"
+        }) }}
+
+        {{ govukButton({
+          text: "Page by Page listings",
+          href: "/phase-1/listings",
+          classes: "govuk-button--secondary govuk-!-margin-left-1"
+          }) }}
+
+          <p><a href="https://lucid.app/lucidspark/2082eb65-82f5-456e-b3e6-795a57b4176b/edit?invitationId=inv_55b2d1e5-97ed-44a1-8be4-4f93248e7995&page=0_0#" class="govuk-link" rel="noreferrer noopener" target="_blank">Phase 1 User flows (opens in new tab)</a></span></p>
+
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      </a>
+
+      <h2 class="govuk-heading-l">User Research </h2>
+      <p><a href="user-research">What we tested with users and the sessions outputs</a></p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l">Design history</h2>
+      <p><a href="">View design history</a> </p>
+    </div>
+
+  </div>
+  {% endblock %}

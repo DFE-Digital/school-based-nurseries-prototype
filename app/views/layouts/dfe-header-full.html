@@ -1,0 +1,46 @@
+{#
+  For guidance on how to use layouts see:
+  https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% from "node_modules/dfe-frontend/packages/components/header/macro.njk" import header %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "moj/components/organisation-switcher/macro.njk" import mojOrganisationSwitcher %}
+
+{% block header %}
+<header class="govuk-header" data-module="govuk-header">
+  <div class="top-bar">
+  <div class="top-bar__inner">
+    <a href="#">Sign out</a>
+  </div>
+</div>
+  <div class="govuk-header__container govuk-width-container">
+
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <img src="/public/images/department-for-education_white.png" alt="Department for Education" class="govuk-header__logotype">
+      </a>
+    </div>
+
+  </div>
+
+</header>
+
+{{ govukServiceNavigation({
+  serviceName: "Apply for a School-Based Nurseries Capital Grant",
+  serviceUrl: "",
+  navigation: [
+    {
+      href: "/phase-1/home",
+      text: "Home"
+    },
+    {
+      href: "/phase-1/applications",
+      text: "Applications"
+    }
+  ]
+}) }}
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Eligibility - Nursery capacity for academic year 2025 to 2026 - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-1/about-your-school/nursery-capacity-26-27" method="post">
+
+  <span class="govuk-caption-xl">Nursery provision and capacity</span>
+  <h1 class="govuk-heading-xl">Nursery capacity for academic year 2025 to 2026</h1>
+ 
+  <div class="govuk-inset-text">
+  Enter the number of children in each age group. This is their age as of the start of the academic year (excluding reception year)
+  </div>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="under-2">
+      Under the age of 2
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="under-2" name="under-2" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="2-years">
+      2 years of age
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="2-years" name="2-years" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="3-years">
+      3 years of age
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="3-years" name="3-years" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="4-years">
+      4 years of age
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="4-years" name="4-years" type="text">
+  </div>
+
+  <h3 class="govuk-heading-s">Total number of children</h3>
+  <p class="govuk-body">0</p>
+
+ 
+
+  </div>
+  </div>
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
