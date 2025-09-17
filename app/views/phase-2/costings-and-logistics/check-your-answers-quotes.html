@@ -1,0 +1,116 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Quotes - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/phase-2/tasklist?quotes=Complete" method="post">
+
+      <span class="govuk-caption-xl">Quotes</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">
+             Quote 1
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="/phase-2/costings-and-logistics/what-quotes-have-you-received">Change<span class="govuk-visually-hidden"> Quote 1 breakdown</span></a>
+              </li>
+               <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> Delete quote 1</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Company name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['companyName'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  What is the cost per item?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['cost'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Date quote was received
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['quote-was-received-day'] }}/{{ data['quote-was-received-month'] }}/{{ data['quote-was-received-year'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Additional information about this quote
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['additional-info'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  File
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <a class="govuk-link" href="#">{{ data['filequote1'] }}</a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Save and continue",
+          href: ""
+         }) }}
+
+        {{ govukButton({
+          text: "Add another quote",
+          href: "/phase-2/costings-and-logistics/what-quotes-have-you-received",
+          classes: "govuk-button--secondary"
+        }) }}
+      </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+      
+  
+
+
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

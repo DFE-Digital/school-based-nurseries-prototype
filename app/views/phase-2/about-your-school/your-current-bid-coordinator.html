@@ -1,0 +1,99 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Eligibility - You are eligible for the School Based Nursery Capital Grant - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="/phase-2/tasklist" method="post">
+
+    <span class="govuk-caption-xl">Bid coordinator details</span>
+    <h1 class="govuk-heading-xl">Your current bid coordinator</h1>
+
+    <p class="govuk-body">Your current bid coordinator details are shown below.</p>
+
+    <p class="govuk-body">On this page you can:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>update your current bid coordinator details</li>
+      <li>change the bid coordinator</li>
+    </ul>
+
+     <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">
+            Current details
+          </h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="/phase-2/about-your-school/provide-your-current-bid-coordinator">Update details<span class="govuk-visually-hidden"></span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                First name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                John
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Last name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Doe
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Email
+              </dt>
+              <dd class="govuk-summary-list__value">
+                john.doe@eduation.gov.uk
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Phone number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                0163296001
+              </dd>
+            </div>
+             <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Job title
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Headteacher
+              </dd>
+            </div>
+          </dl>
+        </div>
+    </div>
+
+      {{ govukButton({
+      text: "Change your bid coordinator",
+            href: "/phase-2/about-your-school/are-you-the-bid-coordinator"
+      }) }}
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Bid coordinator details - Provide bid coordinator details for the application - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="/phase-2/tasklist?coordinator=Complete" method="post">
+
+    <span class="govuk-caption-xl">Bid coordinator details</span>
+    <h1 class="govuk-heading-xl">Provide bid coordinator details for the application</h1>
+
+    <p class="govuk-body">We have identified that this contact has previously signed into this website using their DfE Sign-in account. If their name or email address is incorrect they will need to update their information via their DfE Sign-in account, which will reflect here next time they sign in to this website.</p>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          joe.doe@education.gov.uk
+        </dd>
+      </div>
+    </dl>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        The contact's phone number and job title will apply to all applications they coordinate, regardless of the organisation
+      </strong>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="firstName">
+        First name
+      </label>
+      <input class="govuk-input" id="firstName" name="firstName" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="lastName">
+        Last name
+      </label>
+      <input class="govuk-input" id="lastName" name="lastName" type="text">
+    </div>
+
+     <div class="govuk-form-group">
+      <label class="govuk-label" for="phoneNumber">
+        Phone number
+      </label>
+      <input class="govuk-input" id="phoneNumber" name="phoneNumber" type="text">
+    </div>
+
+      <div class="govuk-form-group">
+      <label class="govuk-label" for="jobTitle">
+        Job title
+      </label>
+      <input class="govuk-input" id="jobTitle" name="jobTitle" type="text">
+    </div>
+
+      {{ govukButton({
+      text: "Save and continue",
+            href: ""
+      }) }}
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Planning permission - Provide more information - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-2/costings-and-logistics/check-your-answers-planning" method="post">
+
+  <span class="govuk-caption-xl">Planning permission</span>
+  <h1 class="govuk-heading-l">Provide more information</h1>
+
+  <p class="govuk-body">Provide information on:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>when you are planning on submitting an application</li>
+      <li>what steps you have taken already</li>
+      <li>any relevant discussions with the local planning authority</li>
+    </ul>
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+  <textarea class="govuk-textarea govuk-js-character-count" id="planningInfo" name="planningInfo" rows="10" aria-describedby="planningInfo"></textarea>
+  <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message">
+    You have 1000 words remaining
+  </div>
+</div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

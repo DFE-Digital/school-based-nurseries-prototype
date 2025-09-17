@@ -1,0 +1,58 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Local need, educational approach and sustainability of provision - Evidence of local childcare needs - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-2/about-your-project/approach-to-early-years-learning" method="post">
+
+  <span class="govuk-caption-xl">Local need, educational approach and sustainability of provision</span>
+  <h1 class="govuk-heading-l">Evidence of local childcare needs</h1>
+
+  <p class="govuk-body">Provide evidence that your proposal has considered the local need for childcare places.</p>
+
+  <p class="govuk-body">Your answer can include:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>evidence of demand for local childcare, for example parental surveys, discussions or consultations</li>
+      <li>information on local childcare availability within the school's catchment area</li>
+      <li>relevant information from any local consultations you have conducted</li>
+      <li>evidence of the existing demand in your local childcare market</li>
+      <li>how your proposed nursery meets local childcare needs, for example, age groups not currently catered for</li>
+      <li>evidence of current school or nursery waiting lists in the local area</li>
+    </ul>
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+  <textarea class="govuk-textarea govuk-js-character-count" id="evidenceNeeds" name="evidenceNeeds" rows="10" aria-describedby="evidenceNeeds"></textarea>
+  <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message">
+    You have 1000 words remaining
+  </div>
+</div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

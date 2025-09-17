@@ -1,0 +1,61 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Holiday childcare - Will the DfE funding provide holiday childcare where it does not currently exist? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="" method="post">
+
+  <span class="govuk-caption-xl">Holiday childcare</span>
+
+   <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Will the DfE funding provide holiday childcare where it does not currently exist?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="dfeFunding" name="dfeFunding" type="radio" value="Yes~/phase-2/holiday-childcare/capacity-after-project">
+        <label class="govuk-label govuk-radios__label" for="holidayChildcare">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="dfeFunding-2" name="dfeFunding" type="radio" value="No~/phase-2/holiday-childcare/check-your-answers">
+        <label class="govuk-label govuk-radios__label" for="dfeFunding-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

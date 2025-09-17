@@ -1,0 +1,49 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Local consultation - Provide more information - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-2/about-your-project/check-your-answers-consultation" method="post">
+
+  <span class="govuk-caption-xl">Local consultation</span>
+  <h1 class="govuk-heading-l">Provide more information</h1>
+
+  <p class="govuk-body">Provide information on the reason why local consultation is not required for your project (maximum 200 words).</p>
+
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+  <textarea class="govuk-textarea govuk-js-character-count" id="consultInfo" name="consultInfo" rows="10" aria-describedby="consultInfo"></textarea>
+  <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message">
+    You have 200 words remaining
+  </div>
+</div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
