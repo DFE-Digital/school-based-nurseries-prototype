@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
- Project information - Upload photographs of affected spaces - {{serviceName}} - GOV.UK Prototype Kit
+Project Overview - Upload photographs of current site and design photos - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,17 +13,17 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-       <form action="/phase-2/about-your-project/your-uploaded-photographs" method="post">
+       <form action="/phase-2/costings-and-logistics/project-overview/your-uploaded-photographs" method="post">
 
-  <span class="govuk-caption-xl">Project information</span>
-  <h1 class="govuk-heading-l">Upload photographs of affected spaces</h1>
+  <span class="govuk-caption-xl">Project Overview</span>
+  <h1 class="govuk-heading-l">Upload photographs of current site and design photos</h1>
 
   <p class="govuk-body">You must provide photographs of any affected spaces within the school.</p>
 
   <p class="govuk-body">This can help us justify any higher costs, especially if the space is in poor condition.</p>
 
   <div class="govuk-inset-text">
-     <p class="govuk-body">Your photographs must be in PNG, JPG, or JPEG format, or you can upload the photographs collectively in a ZIP file.</p> <p class="govuk-body">Your file must be smaller than 20MB.</p> <p class="govuk-body">If you cannot reduce the size, email the photos and your unique reference number (URN) to <a class="govuk-link" href="" >images.schoolnurseries@education.gov.uk</a></p>
+     <p class="govuk-body">Your photographs must be in PNG, JPG, or JPEG format, or you can upload the photographs collectively in a ZIP file.</p> <p class="govuk-body">Your file must be smaller than 20MB.</p> 
   </div>
 
  
@@ -38,11 +38,17 @@
 
 
 
-      
+    <div class="govuk-button-group">
     {{ govukButton({
     text: "Upload file",
           href: ""
     }) }}
+
+    {{ govukButton({
+    text: "Continue without uploading another file",
+    classes: "govuk-button--secondary"
+  }) }}
+    </div>
 
 </form>
   </fieldset>

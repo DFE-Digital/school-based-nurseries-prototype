@@ -1,0 +1,68 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Project Overview - Upload floor and site plans - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-2/costings-and-logistics/project-overview/your-uploaded-site-plan" method="post">
+
+  <span class="govuk-caption-xl">Project Overview</span>
+  <h1 class="govuk-heading-l">Upload floor and site plans</h1>
+
+  <p class="govuk-body">You must upload:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>an existing floor plan with any marked changes</li>
+      <li>a proposed floor plan</li>
+      <li>a site plan showing the full school grounds</li>
+    </ul>
+
+  <p class="govuk-body">You should detail the areas where work will be carried out and the school is legally responsible for managing.</p>
+  <p class="govuk-body">These plans will help assess if the planned works match the number of new places being provided.</p>
+
+  <div class="govuk-inset-text">
+     <p class="govuk-body">Your file must be in PDF format and smaller than 20MB.</p> 
+  </div>
+
+ 
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="file-upload-1">
+    Upload a file
+  </label>
+  <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+  </div>
+ 
+
+
+
+    <div class="govuk-button-group">
+    {{ govukButton({
+    text: "Upload file",
+          href: ""
+    }) }}
+
+    {{ govukButton({
+    text: "Continue without uploading another file",
+    classes: "govuk-button--secondary"
+  }) }}
+    </div>
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
