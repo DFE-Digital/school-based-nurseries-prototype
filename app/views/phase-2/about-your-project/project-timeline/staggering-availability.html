@@ -1,0 +1,52 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project timeline - Will you be staggering the availability of places across the 2026 to 2027 academic year? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-2/about-your-project/project-timeline/check-your-answers-timeline" method="post">
+
+  <span class="govuk-caption-xl">Project timeline</span>
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="stagAvailability">
+       Will you be staggering the availability of places across the 2026 to 2027 academic year?
+      </label>
+    </h1>
+    <div id="stagAvailability-hint" class="govuk-hint">
+      If yes, please provide details on the nursery capacity at each stage of the rollout, along with the expected dates.
+    </div>
+    <textarea class="govuk-textarea govuk-js-character-count" id="stagAvailability" name="stagAvailability" rows="7" aria-describedby="word-count-info"></textarea>
+  <div id="word-count-info" class="govuk-hint govuk-character-count__message">
+    You can enter up to 150 words
+  </div>
+  </div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

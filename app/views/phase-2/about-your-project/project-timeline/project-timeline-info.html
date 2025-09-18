@@ -1,0 +1,138 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project timeline - Project timeline information - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="/phase-2/about-your-project/project-timeline/staggering-availability" method="post">
+
+    <span class="govuk-caption-xl">Project timeline</span>
+    <h1 class="govuk-heading-xl">Project timeline information</h1>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="project-start-received-hint">
+      <legend class="govuk-fieldset__legend">
+       Project start date
+      </legend>
+      <div class="govuk-date-input" id="project-start-received">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="project-start-received-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="project-start-received-day" name="project-start-received-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="project-start-received-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="project-start-received-month" name="project-start-received-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="project-start-received-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="project-start-received-year" name="project-start-received-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="project-end-received-hint">
+      <legend class="govuk-fieldset__legend">
+        Project end date
+      </legend>
+      <div class="govuk-date-input" id="project-end-received">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="project-end-received-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="project-end-received-day" name="project-end-received-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="project-end-received-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="project-end-received-month" name="project-end-received-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="project-end-received-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="project-end-received-year" name="project-end-received-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="nursery-open-received-hint">
+      <legend class="govuk-fieldset__legend">
+        Date nursery provision will open
+      </legend>
+      <div class="govuk-date-input" id="nursery-open-received">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="nursery-open-received-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="nursery-open-received-day" name="nursery-open-received-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="nursery-open-received-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="nursery-open-received-month" name="nursery-open-received-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="nursery-open-received-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="nursery-open-received-year" name="nursery-open-received-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+      
+    {{ govukButton({
+    text: "Continue",
+          href: ""
+    }) }}
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
