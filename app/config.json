@@ -1,5 +1,5 @@
 {
-  "serviceName": "School Based Nursery",
+  "serviceName": "School based nursery",
   "plugins": {
     "govuk-frontend": {
 	  "rebrand": true

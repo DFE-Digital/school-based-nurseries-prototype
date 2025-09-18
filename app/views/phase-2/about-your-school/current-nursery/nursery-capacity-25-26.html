@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
- Eligibility - Nursery capacity for academic year 2025 to 2026 - {{serviceName}} - GOV.UK Prototype Kit
+ Current nursery provision and capacity - Nursery capacity for academic year 2025 to 2026 - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,14 +13,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-       <form action="/phase-2/about-your-school/nursery-capacity-26-27" method="post">
+       <form action="/phase-2/about-your-school/current-nursery/check-your-answers" method="post">
 
-  <span class="govuk-caption-xl">Nursery provision and capacity</span>
-  <h1 class="govuk-heading-xl">Nursery capacity for academic year 2025 to 2026</h1>
+  <span class="govuk-caption-xl">Current nursery provision and capacity</span>
+  <h1 class="govuk-heading-l">Nursery capacity for academic year 2025 to 2026</h1>
  
-  <div class="govuk-inset-text">
-  Enter the number of children in each age group. This is their age as of the start of the academic year (excluding reception year)
-  </div>
+  <p class="govuk-body">Tell us your current 2025 to 2026 academic year nursery capacity.</p>
+  <p class="govuk-body">This should reflect the maximum number of children you have at any given time in the nursery space, not necessarily the total capacity of the space, for example if your staff structure doesn't allow. Do not double count places used in both morning and afternoon sessions. Only include the highest number of children expected to be present at once.</p>
 
 
   <div class="govuk-form-group">
@@ -37,16 +36,11 @@
   </div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="3-years">
-      3 years of age
+      3 to 4 years of age
     </label>
     <input class="govuk-input govuk-input--width-4" id="3-years" name="3-years" type="text">
   </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="4-years">
-      4 years of age
-    </label>
-    <input class="govuk-input govuk-input--width-4" id="4-years" name="4-years" type="text">
-  </div>
+ 
 
   <h3 class="govuk-heading-s">Total number of children</h3>
   <p class="govuk-body">0</p>

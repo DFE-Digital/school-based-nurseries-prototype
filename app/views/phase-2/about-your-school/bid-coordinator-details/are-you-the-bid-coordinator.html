@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
- Eligibility - Will you be reducing capacity for school-aged pupils to accommodate the nursery provision? - {{serviceName}} - GOV.UK Prototype Kit
+ Bid coordinator details - Are you the bid coordinator for this application? - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,27 +13,27 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-       <form action="can-the-project-be-delivered" method="post">
+       <form action="" method="post">
 
-  <span class="govuk-caption-xl">Nursery provision and capacity</span>
+  <span class="govuk-caption-xl">Bid coordinator details</span>
 
    <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Will you be reducing capacity for school-aged pupils to accommodate the nursery provision?
+        Are you the bid coordinator for this application?
       </h1>
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="reduceCapacity" name="reduceCapacity" type="radio" value="Yes~/phase-2/about-your-school/how-many-places">
-        <label class="govuk-label govuk-radios__label" for="reduceCapacity">
+        <input class="govuk-radios__input" id="bidCoordinator" name="bidCoordinator" type="radio" value="Yes~/phase-2/about-your-school/bid-coordinator-details/provide-your-current-bid-coordinator">
+        <label class="govuk-label govuk-radios__label" for="localAuthority">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="reduceCapacity-2" name="reduceCapacity" type="radio" value="No~/phase-2/about-your-school/does-the-school-provide-nursery">
-        <label class="govuk-label govuk-radios__label" for="reduceCapacity-2">
+        <input class="govuk-radios__input" id="bidCoordinator-2" name="bidCoordinator" type="radio" value="No~/phase-2/about-your-school/bid-coordinator-details/bid-coordinator-email">
+        <label class="govuk-label govuk-radios__label" for="bidCoordinator-2">
           No
         </label>
       </div>

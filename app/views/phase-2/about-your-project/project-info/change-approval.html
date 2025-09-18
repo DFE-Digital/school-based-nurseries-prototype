@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
- Bid coordinator details - Are you the bid coordinator for this application? - {{serviceName}} - GOV.UK Prototype Kit
+Project information - Does your project require a Significant Change Approval? - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,27 +13,30 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-       <form action="can-the-project-be-delivered" method="post">
+       <form action="" method="post">
 
-  <span class="govuk-caption-xl">Bid coordinator details</span>
+  <span class="govuk-caption-xl">Project information</span>
 
    <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Are you the bid coordinator for this application?
+        Does your project require a Significant Change Approval?
       </h1>
     </legend>
+     <div id="signIn-hint" class="govuk-hint">
+      Select one option
+    </div>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="bidCoordinator" name="bidCoordinator" type="radio" value="Yes~/phase-2/about-your-school/provide-your-current-bid-coordinator">
+        <input class="govuk-radios__input" id="changeApproval" name="changeApproval" type="radio" value="Yes~/phase-2/about-your-project/project-info/upload-summary-consultation">
         <label class="govuk-label govuk-radios__label" for="localAuthority">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="bidCoordinator-2" name="bidCoordinator" type="radio" value="No~/phase-2/about-your-school/bid-coordinator-email">
-        <label class="govuk-label govuk-radios__label" for="bidCoordinator-2">
+        <input class="govuk-radios__input" id="changeApproval-2" name="changeApproval" type="radio" value="No~/phase-2/about-your-project/project-info/check-your-answers">
+        <label class="govuk-label govuk-radios__label" for="changeApproval-2">
           No
         </label>
       </div>
@@ -45,7 +48,7 @@
 
       
     {{ govukButton({
-    text: "Continue",
+    text: "Save and continue",
           href: ""
     }) }}
 

@@ -83,10 +83,18 @@
         </div>
     </div>
 
+    <div class="govuk-button-group">
       {{ govukButton({
-      text: "Change your bid coordinator",
-            href: "/phase-2/about-your-school/are-you-the-bid-coordinator"
+      text: "Save and continue"
       }) }}
+
+       {{ govukButton({
+        text: "Change your bid coordinator",
+        classes: "govuk-button--secondary",
+        href: "/phase-2/about-your-school/bid-coordinator-email"
+      }) }}
+
+      </div>
 
 </form>
 </div>

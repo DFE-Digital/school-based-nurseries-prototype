@@ -1,0 +1,145 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project timeline - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form action="/phase-2/tasklist?costs=Complete" method="post">
+
+      <span class="govuk-caption-xl">Local consultation</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What type of project is it?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['projectType'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What type of project is it?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             How does the project support wider estate aims?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['projectAim'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> How does the project support wider estate aims?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             How will the nursery provision be delivered?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['nProvision'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> How will the nursery provision be delivered?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Are there any potential conflicts of interest, including those related to the use of technical advisors, contractors, or other sources of grant funding?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['conflictInterest'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Are there any potential conflicts of interest, including those related to the use of technical advisors, contractors, or other sources of grant funding?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Will your nursery require any of the following?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['earlyReg'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Will your nursery require any of the following?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Which of the following statements apply to your project?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['projectGoals'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Which of the following statements apply to your project?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Does your project require a significant change approval?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['changeApproval'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Does your project require a significant change approval?</span></a>
+            </dd>
+          </div>
+          {% if data['changeApproval'] == "Yes" %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Consultation details
+            </dt>
+            <dd class="govuk-summary-list__value">
+            <a class="govuk-link" href="#">{{ data['fileUpload3'] }}</a>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Consultation details</span></a>
+            </dd>
+          </div>
+          {% else%}
+          {% endif %}
+        </dl>
+
+
+
+        {{ govukButton({
+          text: "Save and continue",
+          href: ""
+         }) }}
+
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+      
+  
+
+
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

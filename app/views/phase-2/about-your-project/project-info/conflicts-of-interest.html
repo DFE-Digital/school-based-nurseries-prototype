@@ -1,0 +1,49 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project information - Conflicts of interest - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-2/about-your-project/project-info/early-years-registration" method="post">
+
+  <span class="govuk-caption-xl">Project information</span>
+  <h1 class="govuk-heading-l">Conflicts of interest</h1>
+
+  <p class="govuk-body">Are there any potential conflicts of interest, including those related to the use of technical advisors, contractors, or other sources of grant funding? If so, please provide details.</p>
+
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+  <textarea class="govuk-textarea govuk-js-character-count" id="conflictInterest" name="conflictInterest" rows="10" aria-describedby="conflictInterest"></textarea>
+  <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message">
+    You have 400 words remaining
+  </div>
+</div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
