@@ -13,7 +13,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-       <form action="/phase-2/costings-and-logistics/check-your-answers-quotes" method="post">
+       <form action="/phase-2/costings-and-logistics/quotes/check-your-answers-quotes" method="post">
 
   <span class="govuk-caption-xl">Quotes</span>
   <h1 class="govuk-heading-l">What quotes have you received for the work?</h1>
@@ -21,6 +21,7 @@
   <p class="govuk-body">Enter information about any quotes received from a competitive tender.</p>
   <p class="govuk-body">You must provide:</p>
     <ul class="govuk-list govuk-list--bullet">
+      <li>a maximum of 3 quotes</li>
       <li>a minimum of one quantified cost breakdown from a professional cost consultant or assessed competitive quantified quotation</li>
       <li>details of quotes received from a competitive tender exercise, if undertaken</li>
     </ul>
@@ -94,7 +95,6 @@
 
   <div class="govuk-inset-text">
     <p class="govuk-body">Your quote must be in PDF format and smaller than 20MB.</p>
-    <p class="govuk-body">If you cannot reduce the size, email the documents and your unique reference number (URN) to<a class="govuk-link" href="#"> images.schoolnurseries@education.gov.uk</a></p>
   </div>
 
   <div class="govuk-form-group">
@@ -107,17 +107,13 @@
   </div>
   </div>
 
-  <div class="govuk-button-group">
+
     {{ govukButton({
     text: "Save and continue",
           href: ""
     }) }}
 
-    {{ govukButton({
-    text: "Continue without adding another quote",
-    classes: "govuk-button--secondary"
-    }) }}
-  </div>
+ 
 
 </form>
   </fieldset>
