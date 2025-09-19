@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
- Project information - Your uploaded consultation details files - {{serviceName}} - GOV.UK Prototype Kit
+Local need, educational approach and management of provision - Your uploaded Local Authority Approval Form files - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,12 +13,12 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-       <form action="/phase-2/about-your-project/check-your-answers-consultation" method="post">
+       <form action="/phase-2/costings-and-logistics/local-need/nursery-approach" method="post">
 
-  <span class="govuk-caption-xl">Project information</span>
-  <h1 class="govuk-heading-l">Your uploaded consultation details files</h1>
+  <span class="govuk-caption-xl">Local need, educational approach and management of provision</span>
+  <h1 class="govuk-heading-l">Your uploaded Local Authority Approval Form files</h1>
 
-  <p class="govuk-body">Click the file name to download a copy of the file.</p>
+  <p class="govuk-body">Select the file name to download a copy of the file.</p>
 
   <table class="govuk-table">
   <thead class="govuk-table__head">
@@ -31,7 +31,7 @@
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a class="govuk-link" href="">{{ data['fileUpload3'] }}</a></td>
+      <td class="govuk-table__cell"><a class="govuk-link" href="">{{ data['approvalForm'] }}</a></td>
       <td class="govuk-table__cell">53 KB</td>
       <td class="govuk-table__cell">8/29/2025 9:58:47 AM</td>
       <td class="govuk-table__cell"><a class="govuk-link" href="">Delete</a></td>

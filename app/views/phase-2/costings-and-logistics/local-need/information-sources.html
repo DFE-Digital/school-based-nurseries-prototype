@@ -1,0 +1,97 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Local need, educational approach and management of provision - Which sources of information have you used to assess the local need for early years childcare? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="/phase-2/costings-and-logistics/local-need/local-need-information" method="post">
+
+    <span class="govuk-caption-xl">Local need, educational approach and management of provision</span>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Which sources of information have you used to assess the local need for early years childcare?
+          </h1>
+        </legend>
+        <div id="waste-hint" class="govuk-hint">
+          Select all that apply
+        </div>
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="infoUsed" name="infoUsed" type="checkbox" value="Local Authority sufficiency analysis">
+            <label class="govuk-label govuk-checkboxes__label" for="infoUsed">         
+              Local Authority sufficiency analysis
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="infoUsed-2" name="infoUsed" type="checkbox" value="Conversations with the Local Authority">
+            <label class="govuk-label govuk-checkboxes__label" for="infoUsed-2">
+              Conversations with the Local Authority
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="infoUsed-3" name="infoUsed" type="checkbox" value="Parent surveys or feedback">
+            <label class="govuk-label govuk-checkboxes__label" for="infoUsed-3">
+              Parent surveys or feedback
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="infoUsed-3" name="infoUsed" type="checkbox" value="Waiting lists or registration data">
+            <label class="govuk-label govuk-checkboxes__label" for="infoUsed-3">
+              Waiting lists or registration data
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="infoUsed-4" name="infoUsed" type="checkbox" value="Engagement with local childcare providers">
+            <label class="govuk-label govuk-checkboxes__label" for="infoUsed-4">
+              Engagement with local childcare providers
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="infoUsed-5" name="infoUsed" type="checkbox" value="Community group feedback">
+            <label class="govuk-label govuk-checkboxes__label" for="infoUsed-5">
+              Community group feedback
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="infoUsed-6" name="infoUsed" type="checkbox" value="Ofsted data">
+            <label class="govuk-label govuk-checkboxes__label" for="infoUsed-6">
+              Ofsted data
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="infoUsed-7" name="infoUsed" type="checkbox" value="Other (Please specify)">
+            <label class="govuk-label govuk-checkboxes__label" for="infoUsed-7">
+              Other (Please specify)
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

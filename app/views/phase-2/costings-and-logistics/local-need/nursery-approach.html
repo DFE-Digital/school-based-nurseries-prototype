@@ -1,0 +1,50 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Local need, educational approach and management of provision - Describe your nursery’s approach to delivering high quality early years provision - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-2/costings-and-logistics/local-need/setting-provide-support" method="post">
+
+  <span class="govuk-caption-xl">Local need, educational approach and management of provision</span>
+  <h1 class="govuk-heading-l">Describe your nursery’s approach to delivering high quality early years provision</h1>
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="nurseryApproach">
+      </label>
+    </h1>
+    <textarea class="govuk-textarea govuk-js-character-count" id="nurseryApproach" name="nurseryApproach" rows="7" aria-describedby="nurseryApproach-info"></textarea>
+    <div id="nurseryApproach-info" class="govuk-hint govuk-character-count__message">
+      You can enter up to 150 words
+    </div>
+  </div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

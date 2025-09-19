@@ -13,17 +13,21 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-       <form action="/phase-2/costings-and-logistics/breakdown-of-costs" method="post">
+       <form action="/phase-2/costings-and-logistics/project-costs/breakdown-of-costs" method="post">
 
   <span class="govuk-caption-xl">Project and additional funding costs</span>
   <h1 class="govuk-heading-l">Additional funding information</h1>
 
   <p class="govuk-body">Give us information on who is providing the additional funding.</p>
 
-  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
-  <textarea class="govuk-textarea govuk-js-character-count" id="fundingInfo" name="fundingInfo" rows="10" aria-describedby="fundingInfo"></textarea>
-  <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message">
-    You have 750 words remaining
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="50">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="additionalInfo">
+    </label>
+  </h1>
+  <textarea class="govuk-textarea govuk-js-character-count" id="additionalInfo" name="additionalInfo" rows="7" aria-describedby="additionalInfo-info"></textarea>
+  <div id="additionalInfo-info" class="govuk-hint govuk-character-count__message">
+    You can enter up to 150 words
   </div>
 </div>
  

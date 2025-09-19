@@ -1,0 +1,59 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Local need, educational approach and management of provision - Local need information - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-2/costings-and-logistics/local-need/upload-local-authority" method="post">
+
+  <span class="govuk-caption-xl">Local need, educational approach and management of provision</span>
+  <h1 class="govuk-heading-l">Local need information</h1>
+
+  <p class="govuk-body">Please describe:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>what gaps or shortfalls in early years childcare you have identified in your area, based on these sources and your existing knowledge</li>
+      <li>how your proposed project responds to these needs</li>
+      <li>at least one risk related to your assessment of local childcare needs, the likelihood and any planned mitigations</li>
+    </ul>
+
+  <p class="govuk-body">Examples of risk may include limited or outdated data, assumptions about demand, impact on existing local provision, or long term sustainability.</p>
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="1000">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="riskExample">
+      </label>
+    </h1>
+    <textarea class="govuk-textarea govuk-js-character-count" id="riskExample" name="riskExample" rows="7" aria-describedby="riskExample-info"></textarea>
+    <div id="riskExample-info" class="govuk-hint govuk-character-count__message">
+      You can enter up to 150 words
+    </div>
+  </div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

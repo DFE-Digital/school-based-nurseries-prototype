@@ -1,0 +1,57 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Local need, educational approach and management of provision - Upload your Local Authority Approval Form - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-2/costings-and-logistics/local-need/your-uploaded-local-authority" method="post">
+
+  <span class="govuk-caption-xl">Local need, educational approach and management of provision</span>
+  <h1 class="govuk-heading-l">Upload your Local Authority Approval Form</h1>
+
+  <p class="govuk-body">You will need to provide your Local Authority Approval form.</p>
+
+  <div class="govuk-inset-text">
+    <p class="govuk-body">Your file must be in PDF format and smaller than 20MB.</p>
+  </div>
+
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="approvalForm">
+    Upload a file
+  </label>
+  <input class="govuk-file-upload" id="approvalForm" name="approvalForm" type="file">
+  </div>
+ 
+
+  <div class="govuk-button-group">
+  {{ govukButton({
+  text: "Upload file",
+        href: ""
+  }) }}
+
+  {{ govukButton({
+  text: "Continue without uploading another file",
+  classes: "govuk-button--secondary"
+  }) }}
+  </div>
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

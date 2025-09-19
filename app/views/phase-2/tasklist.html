@@ -168,7 +168,7 @@
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-2/about-your-project/evidence-of-local-childcare-needs?childcare=inProgress" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="/phase-2/costings-and-logistics/local-need/information-sources?childcare=inProgress" aria-describedby="company-details-1-status">
             Local need, educational approach and sustainability of provision
           </a>
         </div>
@@ -178,6 +178,50 @@
           In progress
         </strong>
         {% elif data['childcare'] == "Complete" %}
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong>
+        {% else %}
+         <strong class="govuk-tag govuk-tag--grey">
+          Not started
+        </strong>
+        {% endif %}
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="/phase-2/costings-and-logistics/project-costs/project-costs?costs=inProgress" aria-describedby="company-details-1-status">
+            Project and additional funding costs
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="company-details-1-status">
+        {% if data['costs'] == "inProgress" %}
+        <strong class="govuk-tag govuk-tag--blue">
+          In progress
+        </strong>
+        {% elif data['costs'] == "Complete" %}
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong>
+        {% else %}
+         <strong class="govuk-tag govuk-tag--grey">
+          Not started
+        </strong>
+        {% endif %}
+        </div>
+      </li>
+       <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="/phase-2/costings-and-logistics/new-nursery/new-nursery-capacity?new=inProgress" aria-describedby="company-details-1-status">
+            New nursery provision and capacity
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="company-details-1-status">
+        {% if data['new'] == "inProgress" %}
+        <strong class="govuk-tag govuk-tag--blue">
+          In progress
+        </strong>
+        {% elif data['new'] == "Complete" %}
         <strong class="govuk-tag govuk-tag--green">
           Completed
         </strong>
@@ -232,28 +276,7 @@
         {% endif %}
         </div>
       </li>
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-2/costings-and-logistics/what-risks?risks=inProgress" aria-describedby="company-details-1-status">
-            Project risks
-          </a>
-        </div>
-        <div class="govuk-task-list__status" id="company-details-1-status">
-        {% if data['risks'] == "inProgress" %}
-        <strong class="govuk-tag govuk-tag--blue">
-          In progress
-        </strong>
-        {% elif data['risks'] == "Complete" %}
-        <strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong>
-        {% else %}
-         <strong class="govuk-tag govuk-tag--grey">
-          Not started
-        </strong>
-        {% endif %}
-        </div>
-      </li>
+    
     </ul>
 
      <h2 class="govuk-heading-m">4. Submit</h2>

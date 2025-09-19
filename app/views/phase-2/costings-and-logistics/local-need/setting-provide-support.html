@@ -1,0 +1,55 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Local need, educational approach and management of provision - Local need information - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="/phase-2/costings-and-logistics/local-need/management-provision" method="post">
+
+      <span class="govuk-caption-xl">Local need, educational approach and management of provision</span>
+      <h1 class="govuk-heading-l">How will your setting provide targeted support for children from disadvantaged backgrounds and any other specific groups of children?</h1>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Children from disadvantaged backgrounds may include children such as children eligible for free school meals or early years pupil premium</li>
+          <li>Any other specific groups of children are such as those with SEND or English as an Additional Language (EAL)</li>
+        </ul>
+
+      <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="provideSetting">
+          </label>
+        </h1>
+        <textarea class="govuk-textarea govuk-js-character-count" id="provideSetting" name="provideSetting" rows="7" aria-describedby="provideSetting-info"></textarea>
+        <div id="provideSetting-info" class="govuk-hint govuk-character-count__message">
+          You can enter up to 150 words
+        </div>
+      </div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

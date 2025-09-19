@@ -1,0 +1,115 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Local need, educational approach and sustainability of provision - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/phase-2/tasklist?childcare=Complete" method="post">
+
+      <span class="govuk-caption-xl">Local need, educational approach and sustainability of provision</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which sources of information have you used to assess the local need for early years childcare?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['infoUsed'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Which sources of information have you used to assess the local need for early years childcare?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Local need information
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['riskExample'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Local need information</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Local Authority Approval Form
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a class="govuk-link" href="">{{ data['approvalForm'] }}</a>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Local Authority Approval Form</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Describe your nursery's approach to delivering high quality early years provision
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['nurseryApproach'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Describe your nursery's approach to delivering high quality early years provision</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How will your setting provide targeted support for children from disadvantaged backgrounds and any other specific groups of children?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['provideSetting'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> How will your setting provide targeted support for children from disadvantaged backgrounds and any other specific groups of children?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Management of provision
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['manageProvision'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Management of provision</span></a>
+            </dd>
+          </div>
+        </dl>
+      
+         {{ govukButton({
+          text: "Save and continue",
+          href: ""
+         }) }}
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+      
+  
+
+
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
