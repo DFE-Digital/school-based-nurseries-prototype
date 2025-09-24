@@ -118,6 +118,30 @@
         {% endif %}
         </div>
       </li>
+      {% if data['nProvision'] == "Private, voluntary or independent (PVI) provider run" %}
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="/phase-2/about-your-project/pvi/pvi-provider-name?pvi=inProgress" aria-describedby="company-details-1-status">
+            PVI or childminder partner
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="company-details-1-status">
+        {% if data['pvi'] == "inProgress" %}
+        <strong class="govuk-tag govuk-tag--blue">
+          In progress
+        </strong>
+        {% elif data['pvi'] == "Complete" %}
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong>
+        {% else %}
+         <strong class="govuk-tag govuk-tag--grey">
+          Not started
+        </strong>
+        {% endif %}
+        </div>
+      </li>
+      {% endif %}
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
           <a class="govuk-link govuk-task-list__link" href="/phase-2/about-your-project/planning-permission/planning-permission-required?planning=inProgress" aria-describedby="company-details-1-status">

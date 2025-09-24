@@ -1,0 +1,46 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+PVI or childminder partner - What is their contact phone number? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-2/about-your-project/pvi/piv-contact-email" method="post">
+
+  <span class="govuk-caption-xl">PVI or childminder partner</span>
+
+  <div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="pivcontactNumb">
+       What is their contact phone number?
+      </label>
+    </h1>
+    <input class="govuk-input" id="pivcontactNumb" name="pivcontactNumb" type="text" aria-describedby="event-name-hint">
+  </div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
