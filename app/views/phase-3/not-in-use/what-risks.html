@@ -1,0 +1,152 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project risks - What risks do you have for the project? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/costings-and-logistics/check-your-answers-risks" method="post">
+
+  <span class="govuk-caption-xl">Project risks</span>
+  <h1 class="govuk-heading-l">What risks do you have for the project?</h1>
+
+  <p class="govuk-body">Summarise the key risks to opening the provision on time, considering their likelihood and impact.</p>
+  <p class="govuk-body">More information on this can be found in <a class="govuk-link" href="#"> our guidance (opens in a new tab).</span></a></p>
+  <p class="govuk-body">Add the details for one risk at a time using the form below. If you need to add multiple risks, you will have the opportunity to do so on the next page.</p>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="what-risk">
+      What is the risk?
+    </label>
+      <div id="what-risk-hint" class="govuk-hint">
+      You must consider the risks specific to your setting, including how to manage and reduce them. Potential risks might involve fraud, project delays or cost overruns, changing local demand, or workforce continuity, though this list is not exhaustive
+      </div>
+    <textarea class="govuk-textarea" id="what-risk" name="what-risk" rows="7"></textarea>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend">
+        What is the chance that the risk will happen?
+      </legend>
+        <div id="riskChance-hint" class="govuk-hint">
+          Select one option
+        </div>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="riskChance" name="riskChance" type="radio" value="Very high">
+          <label class="govuk-label govuk-radios__label" for="riskChance">
+            Very high
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="riskChance-2" name="riskChance" type="radio" value="High">
+          <label class="govuk-label govuk-radios__label" for="riskChance-2">
+            High
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="riskChance-3" name="riskChance" type="radio" value="Medium">
+          <label class="govuk-label govuk-radios__label" for="riskChance-3">
+            Medium
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="riskChance-4" name="riskChance" type="radio" value="Low">
+          <label class="govuk-label govuk-radios__label" for="riskChance-4">
+            Low
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="riskChance-5" name="riskChance" type="radio" value="Very low">
+          <label class="govuk-label govuk-radios__label" for="riskChance-5">
+            Very low
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend">
+        What is the impact of the risk?
+      </legend>
+        <div id="impactRisk-hint" class="govuk-hint">
+          Select one option
+        </div>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="impactRisk" name="impactRisk" type="radio" value="Very high">
+          <label class="govuk-label govuk-radios__label" for="impactRisk">
+            Very high
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="impactRisk-2" name="impactRisk" type="radio" value="High">
+          <label class="govuk-label govuk-radios__label" for="impactRisk-2">
+            High
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="impactRisk-3" name="impactRisk" type="radio" value="Medium">
+          <label class="govuk-label govuk-radios__label" for="impactRisk-3">
+            Medium
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="impactRisk-4" name="impactRisk" type="radio" value="Low">
+          <label class="govuk-label govuk-radios__label" for="impactRisk-4">
+            Low
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="impactRisk-5" name="impactRisk" type="radio" value="Very low">
+          <label class="govuk-label govuk-radios__label" for="impactRisk-5">
+            Very low
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+    <label class="govuk-label" for="mitigateRisk">
+      How will you mitigate this risk?
+    </label>
+      <div id="what-risk-hint" class="govuk-hint">
+      You must provide mitigations to manage the risk, which will reduce both likelihood and potential impact
+      </div>
+    <textarea class="govuk-textarea govuk-js-character-count" id="mitigateRisk" name="mitigateRisk" rows="7" aria-describedby="label-as-page-heading-info"></textarea>
+    <div id="mitigateRisk-info" class="govuk-hint govuk-character-count__message">
+      You have 150 words remaining
+    </div>
+  </div>
+  
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

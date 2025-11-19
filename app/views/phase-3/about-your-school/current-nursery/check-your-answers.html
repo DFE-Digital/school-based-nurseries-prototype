@@ -1,0 +1,112 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Eligibility - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/phase-3/tasklist?capacity=Complete" method="post">
+
+      <span class="govuk-caption-xl">Current nursery provision and capacity</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Does your school have an existing nursery already operating on site?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['existingNursery'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Does your school have an existing nursery already operating on site?</span></a>
+            </dd>
+          </div>
+        </dl> 
+        {% if data['existingNursery'] == "No" %}
+        {% else %}
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">
+              Nursery capacity for academic year 2025 to 2026
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Nursery capacity for academic year 2025 to 2026</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Under the age of 2
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['under-2'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  2 years of age	
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['2-years'] }}
+                </dd>
+              </div>
+                <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  3-4 years of age
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['3-years'] }}
+                </dd>
+              </div>
+                <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total	
+                </dt>
+                <dd class="govuk-summary-list__value">
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        {% endif %}
+
+
+      
+         {{ govukButton({
+          text: "Save and continue",
+          href: ""
+         }) }}
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+      
+  
+
+
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

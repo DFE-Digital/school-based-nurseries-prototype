@@ -1,0 +1,52 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Project and additional funding costs - Additional funding information - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/costings-and-logistics/project-costs/breakdown-of-costs" method="post">
+
+  <span class="govuk-caption-xl">Project and additional funding costs</span>
+  <h1 class="govuk-heading-l">Additional funding information</h1>
+
+  <p class="govuk-body">Give us information on who is providing the additional funding.</p>
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="50">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="additionalInfo">
+    </label>
+  </h1>
+  <textarea class="govuk-textarea govuk-js-character-count" id="additionalInfo" name="additionalInfo" rows="7" aria-describedby="additionalInfo-info"></textarea>
+  <div id="additionalInfo-info" class="govuk-hint govuk-character-count__message">
+    You can enter up to 150 words
+  </div>
+</div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

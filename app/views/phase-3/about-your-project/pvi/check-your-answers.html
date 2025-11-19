@@ -1,0 +1,109 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+PVI or childminder partner - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form action="/phase-3/tasklist?pvi=Complete" method="post">
+
+      <span class="govuk-caption-xl">PVI or childminder partner</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is the name of the PVI provider or childminder?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['pviProvider'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What is the name of the PVI provider or childminder?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Provide a contact name
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['providerName'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Provide a contact name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             What is the address of the PVI provider or childminder?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['pviAddress1'] }}, {{ data['pviAddress2'] }} {{ data['pviAddressTown'] }} {{ data['pviAddressPostcode'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What is the address of the PVI provider or childminder?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             What is their contact phone number?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['pivcontactNumb'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What is their contact phone number?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             What is their contact email address?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['pivcontactEmail'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What is their contact email address?</span></a>
+            </dd>
+          </div>
+        </dl>
+
+
+
+        {{ govukButton({
+          text: "Save and continue",
+          href: ""
+         }) }}
+
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+      
+  
+
+
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

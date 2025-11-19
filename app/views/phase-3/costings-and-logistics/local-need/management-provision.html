@@ -1,0 +1,58 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Local need, educational approach and management of provision - Management of provision - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/costings-and-logistics/local-need/check-your-answers" method="post">
+
+  <span class="govuk-caption-xl">Local need, educational approach and management of provision</span>
+  <h1 class="govuk-heading-l">Management of provision</h1>
+
+  <p class="govuk-body">Please describe:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>who will govern and manage the nursery provision and how this fits into your school's existing governance and accountability structures</li>
+      <li>how you will make sure the nursery is appropriately staffed by the time it opens</li>
+      <li>how you will make sure the nursery is financially sustainable in the long term</li>
+      <li>at least one risk related to the deliverability of your provision, the likelihood and any planned mitigations</li>
+    </ul>
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="1000">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="manageProvision">
+      </label>
+    </h1>
+    <textarea class="govuk-textarea govuk-js-character-count" id="manageProvision" name="manageProvision" rows="7" aria-describedby="manageProvision-info"></textarea>
+    <div id="manageProvision-info" class="govuk-hint govuk-character-count__message">
+      You can enter up to 150 words
+    </div>
+  </div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

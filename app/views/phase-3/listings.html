@@ -1,0 +1,174 @@
+{% extends "layouts/dfe-header.html" %}
+
+{% block pageTitle %}
+  Page by page listings – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        (Phase 2) Page by page listings
+      </h1>
+
+      <p class="govuk-body-s">Last updated 24 September 2025</p>
+      <p><a href="/admin/data">Data been stored as part of current session</a></p>
+      <p><a href="/manage-prototype/clear-data">Clear data</a></p>
+
+
+          <h2>Home/applications</h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/home" >Apply for a School-Based Nurseries Capital Grant</a></li>
+              <li><a class="govuk-link" href="/phase-3/applications" >Applications</a></li>
+            </ul>
+
+            <h2>Start/Eligibility</h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/home" >Apply for a School-Based Nurseries Capital Grant</a></li>
+              <li><a class="govuk-link" href="/phase-3/eligibility/declaration" >Declaration</a></li>
+              <li><a class="govuk-link" href="/phase-3/eligibility/before-you-apply" >Before you apply</a></li>
+            </ul>
+
+            <h2>Tasklist</h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/tasklist" >Tasklist</a></li>
+            </ul>
+
+
+            <h2>About your school or trust</h2>
+            <h3>Bid coordinator detials</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/about-your-school/bid-coordinator-details/are-you-the-bid-coordinator" >Are you the bid coordinator for this application?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-school/bid-coordinator-details/provide-your-current-bid-coordinator" >Provide bid coordinator details for the application</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-school/bid-coordinator-details/bid-coordinator-email" >What is your bid coordinator's email?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-school/bid-coordinator-details/provide-your-current-bid-coordinator-application" >Provide bid coordinator details for the application</a></li>
+            </ul>
+
+            
+            <h3>Current nursery provision and capacity</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/about-your-school/current-nursery/school-have-existing-nursery" >Does your school have an existing nursery already operating on site?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-school/current-nursery/nursery-capacity-25-26" >Nursery capacity for academic year 2025 to 2026</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-school/current-nursery/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h2>About the project</h2>
+            <h3>Project information</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-info/what-type-of-project" >What type of project is it?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-info/project-support-aim" >How does the project support wider estate aims?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-info/nursery-provision" >How will the nursery provision be delivered?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-info/conflicts-of-interest" >Conflicts of interest</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-info/early-years-registration" >Early Years registration</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-info/project-goals" >Project goals</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-info/change-approval" >Project goals</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-info/upload-summary-consultation" >Upload local consultation details</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-info/your-uploaded-consultation-details" >Your uploaded consultation details files</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-info/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>Project timeline</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-timeline/project-timeline-info" >Project timeline information</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-timeline/staggering-availability" >Will you be staggering the availability of places across the 2026 to 2027 academic year?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/project-timeline/check-your-answers-timeline" >Check your answers</a></li>
+            </ul>
+
+            <h3>PVI or childminder partner</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/about-your-project/pvi/pvi-provider-name" >What is the name of the PVI provider or childminder?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/pvi/piv-contact-name" >Provide a contact name</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/pvi/piv-address" >Enter the address of the PVI provider or childminder</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/pvi/piv-contact-number" >What is their contact phone number?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/pvi/piv-contact-email" >What is their contact email address?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/pvi/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>Planning permission</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/about-your-project/planning-permission/planning-permission-required" >Is planning permission required for this project?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/planning-permission/what-stage" >At what stage is your planning permission at?</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/planning-permission/planning-more-information" >Provide more information</a></li>
+              <li><a class="govuk-link" href="/phase-3/about-your-project/planning-permission/check-your-answers-planning" >Check your answers</a></li>
+            </ul>
+
+            <h2>Costings and logistics</h2>
+            <h3>Project overview</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-overview/project-proposal" >Project proposal and funding</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-overview/upload-site-plan" >Upload floor and site plans</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-overview/your-uploaded-site-plan" >Your uploaded site and layout plan files</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-overview/upload-photographs" >Upload photographs of current site and design photos</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-overview/your-uploaded-photographs" >Your uploaded photographs</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-overview/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>Local need, educational approach and sustainability of provision</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/local-need/information-sources" >Which sources of information have you used to assess the local need for early years childcare?</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/local-need/local-need-information" >Local need information</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/local-need/upload-local-authority" >Upload your Local Authority Approval Form</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/local-need/your-uploaded-local-authority" >Your uploaded Local Authority Approval Form files</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/local-need/nursery-approach" >Describe your nursery’s approach to delivering high quality early years provision</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/local-need/setting-provide-support" >How will your setting provide targeted support for children from disadvantaged backgrounds and any other specific groups of children?</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/local-need/management-provision" >Management of provision</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/local-need/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>Project and additional funding costs</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-costs/project-costs" >Project costs</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-costs/how-much-grant" >How much DfE Capital Grant funding are you applying for?</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-costs/receiving-additional-funding" >Will you be receiving additional funding from other sources?</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-costs/additional-funding-information" >Additional funding information</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-costs/breakdown-of-costs" >Breakdown of project costs</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/project-costs/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>New nursery provision and capacity</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/new-nursery/new-nursery-capacity" >Your new nursery capacity</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/new-nursery/operating-hours" >What will be the operating hours of the nursery provision?</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/new-nursery/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>Holiday childcare</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/holiday-childcare/do-you-currently-provide-holiday" >Will your nursery provide holiday childcare?</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/holiday-childcare/operating-hours" >What will be the holiday opening hours of the nursery provision?</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/holiday-childcare/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>Quotes</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics//quotes/what-quotes-have-you-received" >What quotes have you received for the work?</a></li>
+              <li><a class="govuk-link" href="/phase-3/costings-and-logistics/quotes/check-your-answers-quotes" >Check your answers</a></li>
+            </ul>
+
+
+
+            <h2>Submit</h2>
+            <h3>Submit your application</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/submit/submit-application" >Submit your appliation</a></li>
+              <li><a class="govuk-link" href="/phase-3/submit/application-submitted" >Confirmation page</a></li>
+            </ul>
+
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

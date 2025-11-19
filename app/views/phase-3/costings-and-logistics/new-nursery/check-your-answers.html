@@ -1,0 +1,156 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+New nursery provision and capacity - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/phase-3/tasklist?new=Complete" method="post">
+
+      <span class="govuk-caption-xl">New nursery provision and capacity</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">
+             Your new nursery capacity
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> Quote 1 breakdown</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Under the age of 2
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['new-under-2'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  2 years of age	
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['new-2-years'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  3-4 years of age
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['new-3-years'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data[''] }}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">
+             What will be the opening hours of the nursery provision?
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> Quote 1 breakdown</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Monday
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['m-start'] }} - {{ data['m-end'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Tuesday
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['t-start'] }} - {{ data['t-end'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Wednesday
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['w-start'] }} - {{ data['w-end'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Thursday
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['th-start'] }} - {{ data['th-end'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Friday
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['f-start'] }} - {{ data['f-end'] }}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+
+        {{ govukButton({
+          text: "Save and continue",
+          href: ""
+         }) }}
+
+   
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+      
+  
+
+
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

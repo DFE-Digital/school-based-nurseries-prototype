@@ -1,0 +1,99 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Eligibility - Declaration - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="/phase-3/eligibility/before-you-apply" method="post">
+
+  <span class="govuk-caption-xl">Eligibility</span>
+
+   <h1 class="govuk-heading-xl">Declaration</h1>
+
+     <p class="govuk-body">Before completing an application, you must first complete an eligibility check to confirm that your project meets all the eligibility criteria listed in the supporting guidance. These criteria have been designed to ensure the department upholds its responsibility to manage public money correctly.</p>
+     <p class="govuk-body">Failure against any one of the eligibility criteria will result in automatic disqualification, and you will not be able to proceed to the full application stage.</p>
+
+     <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              My organisation did not receive funding through the SBN Capital Grant 2024 to 2025.
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+              My project will result in a net increase in the number of childcare places, taking into account any existing provision on site or nearby, including that delivered by external providers.
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              My project can be delivered with up to £150,000 of DfE capital funding, either alone or combined with other funding sources.
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              My SBN will be operational and offering new childcare places before September 2027.
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              My project is either an SBN located on a primary-phase school site that already offers Early Years education (for example, a reception class), or part of a maintained nursery school site.
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              I have written permission from the relevant freehold landowner (for example, local authority, foundation or trust, or religious body) to use the land for nursery provision and carry out the proposed works.
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              I have discussed my project with the Local Authority's Planning, Place and Provision (PPP) team and the Early Years (EY) lead and received formal approval for key aspects such as capacity and age range. I will upload a copy of the Local Authority Approval Form completed and signed by my local authority alongside my application.
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              I confirm I meet all eligibility criteria.
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+      
+    <div class="govuk-inset-text">
+    If your project does not meet the eligibility criteria but you are interested in opening a nursery, you can <a class="govuk-link" href="#">register your interest</a>. For more information, <a class="govuk-link" href="#">see the supporting guidance (opens in a new tab)</a>.
+    </div>
+
+
+      {{ govukButton({
+      text: "Continue",
+            href: ""
+      }) }}
+
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

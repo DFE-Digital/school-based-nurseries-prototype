@@ -1,0 +1,108 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project risks - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/phase-3/tasklist?risks=Complete" method="post">
+
+      <span class="govuk-caption-xl">Project risks</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">
+             Risk 1
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="/phase-3/costings-and-logistics/what-risks">Change<span class="govuk-visually-hidden"> Quote 1 breakdown</span></a>
+              </li>
+               <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> Delete Risk 1</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  What is the risk?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['what-risk'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  What is the chance that the risk will happen?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['riskChance'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  What is the impact of the risk?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['impactRisk'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  How will you mitigate this risk?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['mitigateRisk'] }}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Add another risk",
+          href: "/phase-3/what-risks"
+         }) }}
+
+        {{ govukButton({
+          text: "Save progress and return to tasklist",
+          href: "",
+          classes: "govuk-button--secondary"
+        }) }}
+      </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+      
+  
+
+
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

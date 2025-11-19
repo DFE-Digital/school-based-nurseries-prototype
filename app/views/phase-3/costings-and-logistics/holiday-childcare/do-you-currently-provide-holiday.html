@@ -1,0 +1,61 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Holiday childcare - Will your nursery provide holiday childcare? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="" method="post">
+
+  <span class="govuk-caption-xl">Holiday childcare</span>
+
+   <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Will your nursery provide holiday childcare?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="holidayChildcare" name="holidayChildcare" type="radio" value="Yes~/phase-3/costings-and-logistics/holiday-childcare/operating-hours">
+        <label class="govuk-label govuk-radios__label" for="holidayChildcare">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="holidayChildcare-2" name="holidayChildcare" type="radio" value="No~/phase-3/costings-and-logistics/holiday-childcare/check-your-answers">
+        <label class="govuk-label govuk-radios__label" for="holidayChildcare-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
