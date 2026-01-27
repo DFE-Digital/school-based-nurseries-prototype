@@ -1,0 +1,118 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Opening times and holiday childcare - What will be the holiday opening hours of the nursery provision? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/opening-times-childcare/check-your-answers" method="post">
+
+  <span class="govuk-caption-xl">Holiday childcare</span>
+  <h1 class="govuk-heading-l">What will be the holiday opening hours of the nursery provision?</h1>
+ 
+  <p class="govuk-body">Enter the start and end times for your term time opening hours.</p>
+  <p class="govuk-body">Times must be entered in 24 hour decimal format. For example, 09.00 or 14.30. Enter 12.00 for midday.</p>
+
+  <h2 class="govuk-heading-m">Monday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="m-start-hol">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="m-start-hol" name="m-start-hol" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="m-end-hol">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="m-end-hol" name="m-end-hol" type="text">
+  </div>
+
+  <h2 class="govuk-heading-m">Tuesday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="t-start-hol">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="t-start-hol" name="t-start-hol" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="t-end-hol">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="t-end-hol" name="t-end-hol" type="text">
+  </div>
+
+  <h2 class="govuk-heading-m">Wednesday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="w-start-hol">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="w-start-hol" name="w-start-hol" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="w-end-hol">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="w-end-hol" name="w-end-hol" type="text">
+  </div>
+
+  <h2 class="govuk-heading-m">Thursday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="th-start-hol">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="th-start-hol" name="th-start-hol" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="th-end-hol">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="th-end-hol" name="th-end-hol" type="text">
+  </div>
+
+   <h2 class="govuk-heading-m">Friday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="f-start-hol">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="f-start-hol" name="f-start-hol" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="f-end-hol">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="f-end-hol" name="f-end-hol" type="text">
+  </div>
+
+
+  </div>
+  </div>
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
