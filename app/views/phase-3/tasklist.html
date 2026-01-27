@@ -16,50 +16,30 @@
        <form action="check-your-answers" method="post">
 
     <span class="govuk-caption-xl">APP-20250827-D9Y4</span>
-    <h1 class="govuk-heading-xl">Apply for a School-Based Nurseries Capital Grant</h1>
+    <h1 class="govuk-heading-xl">Bowland high</h1>
 
-    <p class="govuk-body">The application process is arranged into stages. Each stage contains one or more sections with questions relating to your application.</p>
-    <p class="govuk-body">Once you have completed all the sections, you can submit your answers to us to assess.</p>
+
+    <p class="govuk-body">Castle Road, Pucklechurch, Bristol, South Gloucestershire, BS16 9RF<br>
+                  URN: 135300, DfE number: 801/6907 UKPRN: 10021092</p>
+  
 
     <h3 class="govuk-heading-s">You have completed 0 of 12 sections</h3>
   
 
-    <h2 class="govuk-heading-m">1. About your school or trust</h2>
+    <h2 class="govuk-heading-m">1. About your school or Best Start Family Hub  </h2>
     <ul class="govuk-task-list">
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/about-your-school/bid-coordinator-details/are-you-the-bid-coordinator?coordinator=inProgress" aria-describedby="company-details-1-status">
-            Bid coordinator details
-          </a>
-        </div>
-        <div class="govuk-task-list__status" id="company-details-1-status">
-        {% if data['coordinator'] == "inProgress" %}
-        <strong class="govuk-tag govuk-tag--blue">
-          In progress
-        </strong>
-        {% elif data['coordinator'] == "Complete" %}
-        <strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong>
-        {% else %}
-         <strong class="govuk-tag govuk-tag--grey">
-          Not started
-        </strong>
-        {% endif %}
-        </div>
-      </li>
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/about-your-school/current-nursery/school-have-existing-nursery?capacity=inProgress" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="?proCapacity=inProgress" aria-describedby="company-details-1-status">
             Current nursery provision and capacity
           </a>
         </div>
         <div class="govuk-task-list__status" id="company-details-1-status">
-        {% if data['capacity'] == "inProgress" %}
+        {% if data['proCapacity'] == "inProgress" %}
         <strong class="govuk-tag govuk-tag--blue">
           In progress
         </strong>
-        {% elif data['capacity'] == "Complete" %}
+        {% elif data['proCapacity'] == "Complete" %}
         <strong class="govuk-tag govuk-tag--green">
           Completed
         </strong>
@@ -70,22 +50,40 @@
         {% endif %}
         </div>
       </li>
-    </ul>
-
-    <h2 class="govuk-heading-m">2. About the project</h2>
-    <ul class="govuk-task-list">
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/about-your-project/project-info/what-type-of-project?proinfo=inProgress" aria-describedby="company-details-1-status">
-            Project information
+          <a class="govuk-link govuk-task-list__link" href="?newProvision=inProgress" aria-describedby="company-details-1-status">
+            Delivery of new nursery provision 
           </a>
         </div>
-         <div class="govuk-task-list__status" id="company-details-1-status">
-        {% if data['proinfo'] == "inProgress" %}
+        <div class="govuk-task-list__status" id="company-details-1-status">
+        {% if data['newProvision'] == "inProgress" %}
         <strong class="govuk-tag govuk-tag--blue">
           In progress
         </strong>
-        {% elif data['proinfo'] == "Complete" %}
+        {% elif data['newProvision'] == "Complete" %}
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong>
+        {% else %}
+         <strong class="govuk-tag govuk-tag--grey">
+          Not started
+        </strong>
+        {% endif %}
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="?newNursery=inProgress" aria-describedby="company-details-1-status">
+            New nursery provsion and capacity
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="company-details-1-status">
+        {% if data['newNursery'] == "inProgress" %}
+        <strong class="govuk-tag govuk-tag--blue">
+          In progress
+        </strong>
+        {% elif data['newNursery'] == "Complete" %}
         <strong class="govuk-tag govuk-tag--green">
           Completed
         </strong>
@@ -98,7 +96,33 @@
       </li>
         <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/about-your-project/project-timeline/project-timeline-info?timeline=inProgress" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="?timesHoliday=inProgress" aria-describedby="company-details-1-status">
+            Opening times and holiday childcare  
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="company-details-1-status">
+        {% if data['timesHoliday'] == "inProgress" %}
+        <strong class="govuk-tag govuk-tag--blue">
+          In progress
+        </strong>
+        {% elif data['timesHoliday'] == "Complete" %}
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong>
+        {% else %}
+         <strong class="govuk-tag govuk-tag--grey">
+          Not started
+        </strong>
+        {% endif %} 
+        </div>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m">2. About the project</h2>
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="?timeline=inProgress" aria-describedby="company-details-1-status">
             Project timeline
           </a>
         </div>
@@ -118,19 +142,18 @@
         {% endif %}
         </div>
       </li>
-      {% if data['nProvision'] == "Private, voluntary or independent (PVI) provider run" %}
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/about-your-project/pvi/pvi-provider-name?pvi=inProgress" aria-describedby="company-details-1-status">
-            PVI or childminder partner
+          <a class="govuk-link govuk-task-list__link" href="?proCosts=inProgress" aria-describedby="company-details-1-status">
+            Project and additional funding costs
           </a>
         </div>
-        <div class="govuk-task-list__status" id="company-details-1-status">
-        {% if data['pvi'] == "inProgress" %}
+         <div class="govuk-task-list__status" id="company-details-1-status">
+        {% if data['proCosts'] == "inProgress" %}
         <strong class="govuk-tag govuk-tag--blue">
           In progress
         </strong>
-        {% elif data['pvi'] == "Complete" %}
+        {% elif data['proCosts'] == "Complete" %}
         <strong class="govuk-tag govuk-tag--green">
           Completed
         </strong>
@@ -141,11 +164,10 @@
         {% endif %}
         </div>
       </li>
-      {% endif %}
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/about-your-project/planning-permission/planning-permission-required?planning=inProgress" aria-describedby="company-details-1-status">
-            Planning permission
+          <a class="govuk-link govuk-task-list__link" href="?planning=inProgress" aria-describedby="company-details-1-status">
+            Planning permission, significant change and childcare registration 
           </a>
         </div>
         <div class="govuk-task-list__status" id="company-details-1-status">
@@ -164,14 +186,36 @@
         {% endif %}
         </div>
       </li>
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="?proOverview=inProgress" aria-describedby="company-details-1-status">
+            Project overview 
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="company-details-1-status">
+        {% if data['proOverview'] == "inProgress" %}
+        <strong class="govuk-tag govuk-tag--blue">
+          In progress
+        </strong>
+        {% elif data['proOverview'] == "Complete" %}
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong>
+        {% else %}
+         <strong class="govuk-tag govuk-tag--grey">
+          Not started
+        </strong>
+        {% endif %}
+        </div>
+      </li>
     </ul>
 
-    <h2 class="govuk-heading-m">3. Costings and logistics</h2>
+    <h2 class="govuk-heading-m">3. Declaration</h2>
     <ul class="govuk-task-list">
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/costings-and-logistics/project-overview/project-proposal?overview=inProgress" aria-describedby="company-details-1-status">
-            Project overview
+          <a class="govuk-link govuk-task-list__link" href="?overview=inProgress" aria-describedby="company-details-1-status">
+          Quality declaration
           </a>
         </div>
         <div class="govuk-task-list__status" id="company-details-1-status">
@@ -190,134 +234,8 @@
         {% endif %}
         </div>
       </li>
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/costings-and-logistics/local-need/information-sources?childcare=inProgress" aria-describedby="company-details-1-status">
-            Local need, educational approach and sustainability of provision
-          </a>
-        </div>
-        <div class="govuk-task-list__status" id="company-details-1-status">
-         {% if data['childcare'] == "inProgress" %}
-        <strong class="govuk-tag govuk-tag--blue">
-          In progress
-        </strong>
-        {% elif data['childcare'] == "Complete" %}
-        <strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong>
-        {% else %}
-         <strong class="govuk-tag govuk-tag--grey">
-          Not started
-        </strong>
-        {% endif %}
-        </div>
-      </li>
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/costings-and-logistics/project-costs/project-costs?costs=inProgress" aria-describedby="company-details-1-status">
-            Project and additional funding costs
-          </a>
-        </div>
-        <div class="govuk-task-list__status" id="company-details-1-status">
-        {% if data['costs'] == "inProgress" %}
-        <strong class="govuk-tag govuk-tag--blue">
-          In progress
-        </strong>
-        {% elif data['costs'] == "Complete" %}
-        <strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong>
-        {% else %}
-         <strong class="govuk-tag govuk-tag--grey">
-          Not started
-        </strong>
-        {% endif %}
-        </div>
-      </li>
-       <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/costings-and-logistics/new-nursery/new-nursery-capacity?new=inProgress" aria-describedby="company-details-1-status">
-            New nursery provision and capacity
-          </a>
-        </div>
-        <div class="govuk-task-list__status" id="company-details-1-status">
-        {% if data['new'] == "inProgress" %}
-        <strong class="govuk-tag govuk-tag--blue">
-          In progress
-        </strong>
-        {% elif data['new'] == "Complete" %}
-        <strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong>
-        {% else %}
-         <strong class="govuk-tag govuk-tag--grey">
-          Not started
-        </strong>
-        {% endif %}
-        </div>
-      </li>
-       <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/costings-and-logistics/holiday-childcare/do-you-currently-provide-holiday?holiday=inProgress" aria-describedby="company-details-1-status">
-            Holiday childcare
-          </a>
-        </div>
-        <div class="govuk-task-list__status" id="company-details-1-status">
-          {% if data['holiday'] == "inProgress" %}
-        <strong class="govuk-tag govuk-tag--blue">
-          In progress
-        </strong>
-        {% elif data['holiday'] == "Complete" %}
-        <strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong>
-        {% else %}
-         <strong class="govuk-tag govuk-tag--grey">
-          Not started
-        </strong>
-        {% endif %}
-        </div>
-      </li>
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/costings-and-logistics//quotes/what-quotes-have-you-received?quotes=inProgress" aria-describedby="company-details-1-status">
-            Quotes
-          </a>
-        </div>
-        <div class="govuk-task-list__status" id="company-details-1-status">
-        {% if data['quotes'] == "inProgress" %}
-        <strong class="govuk-tag govuk-tag--blue">
-          In progress
-        </strong>
-        {% elif data['quotes'] == "Complete" %}
-        <strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong>
-        {% else %}
-         <strong class="govuk-tag govuk-tag--grey">
-          Not started
-        </strong>
-        {% endif %}
-        </div>
-      </li>
-    
     </ul>
 
-     <h2 class="govuk-heading-m">4. Submit</h2>
-    <ul class="govuk-task-list">
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/submit/submit-application" aria-describedby="company-details-1-status">
-            Submit your application
-          </a>
-        </div>
-        <div class="govuk-task-list__status" id="company-details-1-status">
-        <strong class="govuk-tag govuk-tag--grey">
-          Not started
-        </strong>
-        </div>
-      </li>
-    </ul>
 
 </form>
 </div>

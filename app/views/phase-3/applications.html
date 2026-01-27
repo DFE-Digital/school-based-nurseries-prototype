@@ -13,7 +13,7 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-       <form action="/phase-3//submit/application-submitted" method="post">
+       <form action="/phase-3/project-location/project-location" method="post">
 
 
     <h1 class="govuk-heading-xl">Applications</h1>
@@ -41,25 +41,66 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
 
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-    <h2 class="govuk-heading-l">Your applications</h2>
+    <h2 class="govuk-heading-l">Your contacts</h2>
 
     <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Application reference</th>
-          <th scope="col" class="govuk-table__header">Organisation</th>
-          <th scope="col" class="govuk-table__header">Round</th>
-          <th scope="col" class="govuk-table__header">Created on</th>
-          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">Job title</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">Contact</th>
+          <th scope="col" class="govuk-table__header"></th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="design-history">APP-20250827-D9Y4</a></th>
-          <td class="govuk-table__cell">SBN Test: Min Age 2</td>
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">Job title</td>
+          <td class="govuk-table__cell">email@email.com</td>
+          <td class="govuk-table__cell">Primary</td>
+          <td class="govuk-table__cell"><a href="/phase-3/la-contact-information/primary-contact">Change</a></td>
+        </tr>
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">Job title</td>
+          <td class="govuk-table__cell">email@email.com</td>
+          <td class="govuk-table__cell">Secondary</td>
+          <td class="govuk-table__cell"><a href="/phase-3/la-contact-information/secondary-contact">Change</a></td>
+        </tr>
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">Job title</td>
+          <td class="govuk-table__cell">email@email.com</td>
+          <td class="govuk-table__cell">Tertiary</td>
+          <td class="govuk-table__cell"><a href="/phase-3/la-contact-information/teriary-contact">Change</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="govuk-heading-l">Your applications</h2>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Application reference</th>
+          <th scope="col" class="govuk-table__header">Project</th>
+          <th scope="col" class="govuk-table__header">Created by</th>
+          <th scope="col" class="govuk-table__header">Created on</th>
+          <th scope="col" class="govuk-table__header">Last updated</th>
+          <th scope="col" class="govuk-table__header">Round</th>
+          <th scope="col" class="govuk-table__header"></th>
+          
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/phase-3/tasklist">APP-20250827-D9Y4</a></th>
+          <td class="govuk-table__cell">School name</td>
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">27/08/2026 12:19 PM</td>
+          <td class="govuk-table__cell">N/A</td>
           <td class="govuk-table__cell">Phase 1</td>
-          <td class="govuk-table__cell">27/08/2025 12:19 PM</td>
           <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Submitted</strong></td>
         </tr>
       </tbody>
