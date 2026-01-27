@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-What is the Primary Schools, Best Start Family Hubs, Maintained Nursery Schools where the projects will be undertaken? - {{serviceName}} - GOV.UK Prototype Kit
+What is the name of the Best Start Family Hub? - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,17 +13,17 @@ What is the Primary Schools, Best Start Family Hubs, Maintained Nursery Schools 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-       <form action="/phase-3/project-location/project-names" method="post">
+       <form action="/phase-3/tasklist" method="post">
 
 
   <div class="govuk-form-group">
     <h1 class="govuk-label-wrapper">
       <label class="govuk-label govuk-label--l" for="projectLocation">
-       What is the Primary Schools, Best Start Family Hubs, Maintained Nursery Schools where the projects will be undertaken?
+       What is the UPRN of the Best Start Family Hub?
       </label>
     </h1>
       <div id="event-name-hint" class="govuk-hint">
-      Enter name, URN, LAESTAB or UKPRN
+      Enter UKPRN (optional)
       </div>
     <input class="govuk-input" id="projectLocation" name="projectLocation" type="text" aria-describedby="event-name-hint">
   </div>

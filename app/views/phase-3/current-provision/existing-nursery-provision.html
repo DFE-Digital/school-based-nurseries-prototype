@@ -1,0 +1,86 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Current nursery provision and capacity - Does the project have existing nursery provision? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/current-provision/nursery-capacity-25-26" method="post">
+
+  <span class="govuk-caption-xl">Current nursery provision and capacity</span>
+
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Does the project have existing nursery provision?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="existProvision" name="existProvision" type="radio" value="Yes, School run">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Yes, School run
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="existProvision-2" name="existProvision" type="radio" value="Yes, Governor run">
+        <label class="govuk-label govuk-radios__label" for="existProvision-2">
+          Yes, Governor run
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="existProvision-3" name="existProvision" type="radio" value="Yes, MAT run">
+        <label class="govuk-label govuk-radios__label" for="existProvision-3">
+          Yes, MAT run
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="existProvision-4" name="existProvision" type="radio" value="Yes, PVI or childminder run">
+        <label class="govuk-label govuk-radios__label" for="existProvision-4">
+          Yes, PVI or childminder run
+        </label>
+      </div>
+        <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="existProvision-4" name="existProvision" type="radio" value="Yes, Local authority run">
+        <label class="govuk-label govuk-radios__label" for="existProvision-4">
+          Yes, Local authority run (Only if BSFH project)
+        </label>
+      </div>
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="existProvision-6" name="existProvision" type="radio" value="No~/phase-3/current-provision/check-your-answers">
+        <label class="govuk-label govuk-radios__label" for="existProvision-6">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
