@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Planning permission - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+ Project information - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,59 +13,52 @@ Planning permission - Check your answers - {{serviceName}} - GOV.UK Prototype Ki
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/phase-3/tasklist?planning=Complete" method="post">
+      <form action="/phase-3/tasklist?overview=Complete" method="post">
 
-      <span class="govuk-caption-xl">Planning permission</span>
+
+      <span class="govuk-caption-xl">Project information</span>
       <h1 class="govuk-heading-l">Check your answers</h1>
-
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Planning permission required
+              Project proposal and funding
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['planningPermission'] }}
+              {{ data['wordCount'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Planning permission required</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Project proposal and funding</span></a>
             </dd>
           </div>
-          {% if data['planningPermission'] == "Yes" %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Planning stage
+              Site and layout plans
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['planningPermissionstage'] }}
+              <a class="govuk-link" href="#">{{ data['fileUpload1'] }}</a>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Planning stage</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Site and layout plans</span></a>
             </dd>
           </div>
-          {% endif %}
-          {% if ((data['planningPermissionstage'] == "I already have planning permission") or (data['planningPermission'] == "No")) %}
-          {% else %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Extra information
+              Photographs of affected spaces
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['planningInfo'] }}
+              <a class="govuk-link" href="#">{{ data['fileUpload2'] }}</a>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Extra information</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Photographs of affected spaces</span></a>
             </dd>
           </div>
-          {% endif %}
         </dl>
-
-
-        {{ govukButton({
+      
+         {{ govukButton({
           text: "Save and continue",
           href: ""
          }) }}
-
 
         </form>
       </div>
