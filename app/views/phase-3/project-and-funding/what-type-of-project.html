@@ -1,0 +1,96 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project and additional funding costs - What type of project is it? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/project-and-funding/project-costs" method="post">
+
+  <span class="govuk-caption-xl">Project and additional funding costs</span>
+
+   <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            What type of project is it?
+          </h1>
+        </legend>
+        <!-- <div id="projectType-hint" class="govuk-hint">
+        For guidance refer to Annex B in the guidance document.
+        </div> -->
+         <div id="projectType-hint" class="govuk-hint">
+        Select one option
+        </div>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType" name="projectType" type="radio" value="Small surplus">
+            <label class="govuk-label govuk-radios__label" for="projectType">
+              Small surplus
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType-2" name="projectType" type="radio" value="Medium surplus">
+            <label class="govuk-label govuk-radios__label" for="uprojectType-2">
+              Medium surplus
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType-3" name="projectType" type="radio" value="Large surplus">
+            <label class="govuk-label govuk-radios__label" for="projectType-3">
+              Large surplus
+            </label>
+          </div>
+            <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType-4" name="projectType" type="radio" value="Small extension">
+            <label class="govuk-label govuk-radios__label" for="projectType-4">
+              Small extension
+            </label>
+          </div>
+            <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType-5" name="projectType" type="radio" value="Medium extension">
+            <label class="govuk-label govuk-radios__label" for="projectType-5">
+              Medium extension
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType-6" name="projectType" type="radio" value="Large extension">
+            <label class="govuk-label govuk-radios__label" for="projectType-6">
+              Large extension
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType-6" name="projectType" type="radio" value="New build">
+            <label class="govuk-label govuk-radios__label" for="projectType-6">
+              New build
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

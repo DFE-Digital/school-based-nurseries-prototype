@@ -1,0 +1,54 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project and additional funding costs - What is the total internal floor area (m2) that will be created or refurbished as part of this project? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/project-and-funding/outdoor-area" method="post">
+
+  <span class="govuk-caption-xl">Project and additional funding costs</span>
+  
+   <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="intareaSiz">
+          What is the total internal floor area (m2) that will be created or refurbished as part of this project?
+        </label>
+      </h1>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="intareaSize">
+        Total indoor area size
+      </label>
+      <div class="govuk-input__wrapper">
+        <input class="govuk-input govuk-input--width-5" id="intareaSize" name="intareaSize" type="text" spellcheck="false">
+        <div class="govuk-input__suffix" aria-hidden="true">m²</div>
+      </div>
+    </div>
+    </div>
+  
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
