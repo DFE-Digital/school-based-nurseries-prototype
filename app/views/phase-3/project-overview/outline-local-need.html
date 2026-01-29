@@ -1,0 +1,63 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project overview - Please outline your assessment of the local need for this nursery provision in your Local Authority and how this projects support your LAs sufficiency need? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/project-overview/bsfh-school" method="post">
+
+  <span class="govuk-caption-xl">Project overview</span>
+ 
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="150">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="localNeed">
+        Please outline your assessment of the local need for this nursery provision in your Local Authority and how this projects support your LAs sufficiency need?
+      </label>
+    </h1>
+     <p class="govuk-body">Make reference to data sources such as::</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Local Authority sufficiency assessments</li>
+        <li>Parent surveys or feedback</li>
+        <li>Waiting lists or registration data </li>
+        <li>Engagement with local childcare providers</li>
+        <li>Community group feedback</li>
+        <li>Ofsted data</li>
+        <li>Other relevant local intelligence, for example new local housing developments</li>
+      </ul>
+    <textarea class="govuk-textarea govuk-js-character-count" id="localNeed" name="localNeed" rows="7" aria-describedby="localNeed-info"></textarea>
+    <div id="localNeed-info" class="govuk-hint govuk-character-count__message">
+      You can enter up to 750 words
+    </div>
+  </div>
+
+
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project overview - Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/project-overview/check-your-answers" method="post">
+
+  <span class="govuk-caption-xl">Project overview</span>
+ 
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="150">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="bsfhInfo">
+        Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?
+      </label>
+    </h1>
+     <p class="govuk-body">Include information on:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Name of schools</li>
+        <li>Type of links e.g. to support transition into school, identifying and supporting families with specific needs such as SEND, co-ordinating parental engagement activities, information sharing and referral pathways</li>
+      </ul>
+    <textarea class="govuk-textarea govuk-js-character-count" id="bsfhInfo" name="bsfhInfo" rows="7" aria-describedby="bsfhInfo-info"></textarea>
+    <div id="bsfhInfo-info" class="govuk-hint govuk-character-count__message">
+      You can enter up to 750 words
+    </div>
+  </div>
+
+
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

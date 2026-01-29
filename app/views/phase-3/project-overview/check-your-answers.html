@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
- Project information - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+Project overview - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,46 +13,60 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/phase-3/tasklist?overview=Complete" method="post">
+      <form action="/phase-3/tasklist?proOverview=Complete" method="post">
 
 
-      <span class="govuk-caption-xl">Project information</span>
+      <span class="govuk-caption-xl">Project overview</span>
       <h1 class="govuk-heading-l">Check your answers</h1>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Project proposal and funding
+               Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['wordCount'] }}
+              {{ data['proPropsal'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Project proposal and funding</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Site and layout plans
+              Please outline your assessment of the local need for this nursery provision in your Local Authority and how this projects support your LAs sufficiency need?
             </dt>
             <dd class="govuk-summary-list__value">
-              <a class="govuk-link" href="#">{{ data['fileUpload1'] }}</a>
+              {{ data['localNeed'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Site and layout plans</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Please outline your assessment of the local need for this nursery provision in your Local Authority and how this projects support your LAs sufficiency need?</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Photographs of affected spaces
+              Is your Best Start Family Hub co-located with a school?
             </dt>
             <dd class="govuk-summary-list__value">
-              <a class="govuk-link" href="#">{{ data['fileUpload2'] }}</a>
+              {{ data['bsfhSchool'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Photographs of affected spaces</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">Is your Best Start Family Hub co-located with a school?</span></a>
             </dd>
           </div>
+          {% if data['bsfhSchool'] == "Yes" %}
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+               Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['bsfhInfo'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?</span></a>
+            </dd>
+          </div>
+          {% endif %}
+          
         </dl>
       
          {{ govukButton({
