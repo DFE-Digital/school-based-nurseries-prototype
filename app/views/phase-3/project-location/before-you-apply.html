@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
- Eligibility - Before you apply - {{serviceName}} - GOV.UK Prototype Kit
+Information you will need to provide - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,22 +13,32 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-       <form action="/phase-3/project-location/project-location" method="post">
+       <form action="/phase-3/la-contact-information/primary-contact" method="post">
 
-  <span class="govuk-caption-xl">Eligibility</span>
-
-   <h1 class="govuk-heading-xl">Before you apply</h1>
+   <h1 class="govuk-heading-xl">Information you will need to provide</h1>
 
      <p class="govuk-body">During the application process, you will need to provide:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>details of any childerminders or Private, Voluntary, and Independent (PVI) partners, if relevant</li>
-        <li>information about the current or planned capacity for the term-time and holiday childminding</li>
-        <li>feasibility and sustainability details of the proposed nursery provision, including financial suitability</li>
-        <li>full project cost breakdowns</li>
-        <li>information on any additional funding needed</li>
-        <li>any risk associated with the project and key milestones</li>
-        <li>evidence showing how local childcare needs have been considered and your approach to Early Years education</li>
-        <li>mandatory documents: a marked-up floor plan, photos of the space for the capital works, and at least one cost breakdown from a qualified cost manager</li>
+        <li>evidence of how local childcare needs have been considered</li>
+        <li>evidence of your approach to early years education</li>
+        <li>feasibility and sustainability details</li>
+        <li>financial suitability details</li>
+        <li>full project cost breakdown</li>
+        <li>funding needed from addtional sources (if relevant)</li>
+        <li>risks associated with the project and key milestones</li>
+      </ul>
+
+      <p class="govuk-body">During the application process, you will need to provide:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>details of any childerminders or Private, Voluntary, and Independent (PVI) partners, if relevant</li>
+        <li>evidence of how local childcare needs have been considered</li>
+        <li>evidence of your approach to early years education</li>
+        <li>feasibility and sustainability details</li>
+        <li>financial suitability details</li>
+        <li>full project cost breakdown</li>
+        <li>funding needed from addtional sources (if relevant)</li>
+        <li>risks associated with the project and key milestones</li>
       </ul>
 
       <p class="govuk-body">You can <a class="govuk-link" href="#">find more information in our guidance</a>.</p>
@@ -40,7 +50,7 @@
 
 
       {{ govukButton({
-      text: "Start your application",
+      text: "Continue",
             href: ""
       }) }}
 

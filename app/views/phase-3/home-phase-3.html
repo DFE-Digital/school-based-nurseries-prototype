@@ -1,0 +1,59 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Apply for a School-Based Nurseries Capital Grant - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="" method="post">
+
+
+    <h1 class="govuk-heading-xl">Phase 3 grant applications are open</h1>
+    <p class="govuk-body">Local authorities understand where the nursery provision is most needed in their area. This is why all local authorities in England are invited to apply for phase 3 of the <a href="">School-based nurseries capital grant 2027 to 2030 (link opens in new tab)</a>.</p>
+
+     <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+          Applications close at 5pm on Wednesday 30 September 2026
+      </strong>
+    </div>
+
+    <p class="govuk-body">Each school-based nurseries capital grant:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>be a local authority in England</li>
+        <li>have a <a href="">DfE Sign-in account (link opens in new tab)</a></li>
+        <li>have read the guidance <a href="">School-based nurseries capital grant 2027 to 2030 (link opens in new tab)</a></li>
+      </ul>
+
+      <p class="govuk-body">Individual settings can not apply for the phase 3 grant. Settings must ask their local authority Planning, Place and Provision (PPP) team or Early Years (EY) team lead to apply on their behalf. Before contacting the local authority, <a href="">read the guidance on establishing school-based nursery provision (link opens in new tab)</a>.</p>
+
+    <h2 class="govuk-heading-l">Eligibility criteria</h2>
+    <p class="govuk-body">Your application must meet the eligibility criteria. For information about these eligibility criteria, <a href="">read the guidance on [get correct link name] (link opens in new tab)</a></p>
+
+
+  
+        {{ govukButton({
+          text: "Start application",
+          href: "/phase-3/project-location/declaration"
+        }) }}
+
+
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
