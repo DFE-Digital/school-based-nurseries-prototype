@@ -13,7 +13,11 @@ Information you will need to provide - {{serviceName}} - GOV.UK Prototype Kit
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-       <form action="/phase-3/la-contact-information/primary-contact" method="post">
+      {% if data['application'] == "New" %}
+      <form action="/phase-3/project-location/project-location" method="post">
+      {% else %}
+      <form action="/phase-3/la-contact-information/primary-contact" method="post">
+      {% endif %}
 
    <h1 class="govuk-heading-xl">Information you will need to provide</h1>
 
