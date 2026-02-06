@@ -16,7 +16,7 @@
        <form action="check-your-answers" method="post">
 
     <span class="govuk-caption-xl">APP-20250827-D9Y4</span>
-    <h1 class="govuk-heading-xl">Bowland high</h1>
+    <h1 class="govuk-heading-xl">{{ data['schools'] }}</h1>
 
     <p class="govuk-body">Castle Road, Pucklechurch, Bristol, South Gloucestershire, BS16 9RF<br>URN: 135300, DfE number: 801/6907 UKPRN: 10021092</p>
    
@@ -208,7 +208,8 @@
       </li>
     </ul>
 
-    <h2 class="govuk-heading-m">3. Declaration</h2>
+    <h2 class="govuk-heading-m">3. Submit application</h2>
+    <p class="govuk-body">Once you have completed all sections of the application, you can submit your application. You will not be able to make changes to your application after submission, so make sure you have completed all sections and reviewed your answers before submitting.</p>
     <ul class="govuk-task-list">
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
@@ -216,6 +217,7 @@
           <a class="govuk-link govuk-task-list__link" href="/phase-3/submit/submit-application?overview=inProgress" aria-describedby="company-details-1-status">
           Quality declaration
           </a>
+ 
           {% else %}
            <a class="govuk-link govuk-task-list__link" href="?overview=inProgress" aria-describedby="company-details-1-status">
           
@@ -223,6 +225,7 @@
           <div id="company-details-3-hint" class="govuk-task-list__hint">
           Quality declaration
           </div>
+         
           {% endif %}
         </div>
         <div class="govuk-task-list__status" id="company-details-1-status">
