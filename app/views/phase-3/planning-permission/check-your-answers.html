@@ -60,7 +60,7 @@ Planning permission, significant change and childcare registration - Check your 
           {% endif %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Which of the following statements apply to your project?
+              Will the project will result in a reduction in capacity of physical teaching space i.e. classroom space by over 30 (i.e. 31 or more) places
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['projectGoals'] }}
@@ -69,17 +69,20 @@ Planning permission, significant change and childcare registration - Check your 
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Which of the following statements apply to your project?</span></a>
             </dd>
           </div>
+         {% if data['projectGoals'] == "Yes" %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Does your project require a Significant Change Approval?
+             Consultation details
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['changeApproval'] }}
+            <a class="govuk-link" href="#">{{ data['fileUpload3'] }}</a>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Does your project require a Significant Change Approval?</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Consultation details</span></a>
             </dd>
           </div>
+          {% else%}
+          {% endif %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Ofsted registration - will your nursery require any of the following?

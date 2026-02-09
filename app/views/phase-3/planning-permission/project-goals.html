@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Planning permission, significant change and childcare registration - Which of the following statements apply to your project? - {{serviceName}} - GOV.UK Prototype Kit
+Planning permission, significant change and childcare registration - Will the project will result in a reduction in capacity of physical teaching space - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,61 +13,33 @@ Planning permission, significant change and childcare registration - Which of th
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-       <form action="/phase-3/planning-permission/change-approval" method="post">
+       <form action="/phase-3/planning-permission/ofsted-registration" method="post">
 
         <span class="govuk-caption-xl">Planning permission, significant change and childcare registration</span>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Which of the following statements apply to your project?
-              </h1>
-            </legend>
-            <div id="projectGoals-hint" class="govuk-hint">
-              Select all that apply
-            </div>
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="projectGoals" name="projectGoals" type="checkbox" value="I am proposing to open a new nursery that will be run by the school, either directly or through a wholly owned subsidiary company">
-                <label class="govuk-label govuk-checkboxes__label" for="projectGoals">
-                  I am proposing to open a new nursery that will be run by the school, either directly or through a wholly owned subsidiary company
-                </label>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Will the project will result in a reduction in capacity of physical teaching space i.e. classroom space by over 30 (i.e. 31 or more) places
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="projectGoals" name="projectGoals" type="radio" value="Yes~/phase-3/planning-permission/upload-summary-consultation">
+                  <label class="govuk-label govuk-radios__label" for="projectGoals">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="projectGoals-2" name="projectGoals" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="projectGoals-2">
+                    No
+                  </label>
+                </div>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="projectGoals-2" name="projectGoals" type="checkbox" value="The school (either directly or through a wholly owned subsidiary company) will be taking over a nursery previously delivered by a private provider on the school site">
-                <label class="govuk-label govuk-checkboxes__label" for="projectGoals-2">
-                  The school (either directly or through a wholly owned subsidiary company) will be taking over a nursery previously delivered by a private provider on the school site
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="projectGoals-3" name="projectGoals" type="checkbox" value="This project will result in a change to the school’s official age range as recorded on Get Information About Schools">
-                <label class="govuk-label govuk-checkboxes__label" for="projectGoals-3">
-                  This project will result in a change to the school’s official age range as recorded on Get Information About Schools
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="projectGoals-4" name="projectGoals" type="checkbox" value="The project will result in a reduction in capacity of physical teaching space (for example, classroom space) by 30 or more places">
-                <label class="govuk-label govuk-checkboxes__label" for="projectGoals-4">
-                  The project will result in a reduction in capacity of physical teaching space (for example, classroom space) by 30 or more places
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="projectGoals-5" name="projectGoals" type="checkbox" value="The project will result in over 30 (for example, 31 or more) new nursery places">
-                <label class="govuk-label govuk-checkboxes__label" for="projectGoals-5">
-                  The project will result in over 30 (for example, 31 or more) new nursery places
-                </label>
-              </div>
-              <div class="govuk-checkboxes__divider">or</div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="projectGoals-6" name="projectGoals" type="checkbox" value="None of the above statements apply">
-                <label class="govuk-label govuk-checkboxes__label" for="projectGoals-6">
-                  None of the above statements apply
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
+            </fieldset>
+          </div>
 
 
       {{ govukButton({
