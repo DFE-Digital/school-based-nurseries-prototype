@@ -36,7 +36,7 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-visually-hidden">Warning</span>
-          The deadline to apply is midday on Thursday, 19 December 2024
+          Applications close at 5pm on Wednesday 30 September 2026
         </strong>
       </div>
 
@@ -57,7 +57,7 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
           <th scope="col" class="govuk-table__header">Round</th>
           <th scope="col" class="govuk-table__header"></th>
           
-        </tr>
+        </tr> 
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
@@ -66,8 +66,26 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
           <td class="govuk-table__cell">Jonathon Markers</td>
           <td class="govuk-table__cell">27/08/2026 12:19 PM</td>
           <td class="govuk-table__cell">N/A</td>
-          <td class="govuk-table__cell">Phase 1</td>
+          <td class="govuk-table__cell">Phase 3</td>
           <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Submitted</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/phase-3/tasklist">APP-20250827-D9Y5</a></th>
+          <td class="govuk-table__cell">School name</td>
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">27/08/2026 13:19 PM</td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell">Phase 3</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Completed</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/phase-3/tasklist">APP-20250827-D9Y6</a></th>
+          <td class="govuk-table__cell">School name</td>
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">27/08/2026 14:19 PM</td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell">Phase 3</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
         </tr>
       </tbody>
     </table>
@@ -86,23 +104,23 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Jonathon Markers</td>
-          <td class="govuk-table__cell">Job title</td>
-          <td class="govuk-table__cell">email@email.com</td>
+          <td class="govuk-table__cell">{{ data['la-contact-primary-name'] }}</td>
+          <td class="govuk-table__cell">{{ data['la-contact-primary-job'] }}e</td>
+          <td class="govuk-table__cell">{{ data['la-contact-primary-email'] }}</td>
           <td class="govuk-table__cell">Primary</td>
           <td class="govuk-table__cell"><a href="/phase-3/la-contact-information/primary-contact">Change</a></td>
         </tr>
          <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Jonathon Markers</td>
-          <td class="govuk-table__cell">Job title</td>
-          <td class="govuk-table__cell">email@email.com</td>
+          <td class="govuk-table__cell">{{ data['la-contact-secondary-name'] }}</td>
+          <td class="govuk-table__cell">{{ data['la-contact-secondary-job'] }}e</td>
+          <td class="govuk-table__cell">{{ data['la-contact-secondary-email'] }}</td>
           <td class="govuk-table__cell">Secondary</td>
           <td class="govuk-table__cell"><a href="/phase-3/la-contact-information/secondary-contact">Change</a></td>
         </tr>
          <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Jonathon Markers</td>
-          <td class="govuk-table__cell">Job title</td>
-          <td class="govuk-table__cell">email@email.com</td>
+          <td class="govuk-table__cell">{{ data['la-contact-tertiary-name'] }}</td>
+          <td class="govuk-table__cell">{{ data['la-contact-tertiary-job'] }}e</td>
+          <td class="govuk-table__cell">{{ data['la-contact-tertiary-email'] }}</td>
           <td class="govuk-table__cell">Tertiary</td>
           <td class="govuk-table__cell"><a href="/phase-3/la-contact-information/teriary-contact">Change</a></td>
         </tr>
