@@ -1,0 +1,74 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project and additional funding costs - If your project can be undertaken in another financial year to your first preference, please identify which other year(s) it could be undertaken in - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="/phase-3/project-and-funding/internal-floor-area" method="post">
+
+    <span class="govuk-caption-xl">Project and additional funding costs</span>
+
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        If your project can be undertaken in another financial year to your first preference, please identify which other year(s) it could be undertaken in
+      </h1>
+    </legend>
+    <p>The proposed projects must be operational and offering new childcare places by September 2030.</p>
+    <div id="waste-hint" class="govuk-hint">
+      Select all that apply
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="prefYear" name="prefYear" type="checkbox" value="2027 to 2028">
+        <label class="govuk-label govuk-checkboxes__label" for="prefYear">
+          2027 to 2028
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="prefYear-2" name="prefYear" type="checkbox" value="2028 to 2029">
+        <label class="govuk-label govuk-checkboxes__label" for="prefYear-2">
+          2028 to 2029
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="prefYear-3" name="prefYear" type="checkbox" value="2029 to 2030">
+        <label class="govuk-label govuk-checkboxes__label" for="prefYear-3">
+          2029 to 2030
+        </label>
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="prefYear-4" name="prefYear" type="checkbox" value="Not flexible">
+        <label class="govuk-label govuk-checkboxes__label" for="prefYear-4">
+          Not flexible
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

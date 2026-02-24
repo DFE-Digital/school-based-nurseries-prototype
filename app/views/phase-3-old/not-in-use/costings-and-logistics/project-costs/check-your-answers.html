@@ -1,0 +1,195 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Project and additional funding costs - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/phase-3/tasklist?costs=Complete" method="post">
+
+      <span class="govuk-caption-xl">Project and additional funding costs</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How much DfE capital grant funding are you applying for?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['costGrant'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> How much DfE capital grant funding are you applying for?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Will you be receiving additional funding from other sources?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['additionalFund'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Will you be receiving additional funding from other sources?</span></a>
+            </dd>
+          </div>
+          {% if data['additionalFund'] == "Yes" %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How much additional funding will you receive?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['howMuch'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> How much additional funding will you receive?</span></a>
+            </dd>
+          </div>
+          {% endif %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Additional funding information
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['additionalInfo'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Additional funding information</span></a>
+            </dd>
+          </div>
+        </dl>
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">
+             Project cost breakdown
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Project cost breakdown</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total indoor area size
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['areaSize'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Abnormal items
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['abnomral'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Building works
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['build'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  External works
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['external'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Furniture, Fixtures & Equipment
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['furniture'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Irrecoverable VAT
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['vat'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Risk allowance
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['risk'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Survey and design fees
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['surveys'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Technical advisor fees
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['tech'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total from cost breakdown
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['total'] }}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+
+      
+         {{ govukButton({
+          text: "Save and continue",
+          href: ""
+         }) }}
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+      
+  
+
+
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

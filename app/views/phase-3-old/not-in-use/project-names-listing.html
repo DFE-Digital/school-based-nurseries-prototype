@@ -1,0 +1,158 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Name of Primary Schools, Best Start Family Hubs, Maintained Nursery Schools at which the projects would be undertaken? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/tasklist-application" method="post">
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="school-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Name of Primary Schools, Best Start Family Hubs, Maintained Nursery Schools at which the projects would be undertaken?
+              </h1>
+            </legend>
+            {% if data['school1'] == "Bowland high" %}
+              <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">
+                    Bowland high
+                  </h2>
+                  <ul class="govuk-summary-card__actions">
+                    <li class="govuk-summary-card__action">
+                      <a class="govuk-link" href="#">Remove project<span class="govuk-visually-hidden"> Bowland high</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="govuk-summary-card__content">
+                  <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Address
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Castle Road, Pucklechurch, Bristol, South Gloucestershire, BS16 9RF
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        URN
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        135300
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+              {% endif %}
+              {% if data['school2'] == "Downend Highschool" %}
+              <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">
+                    Downend Highschool
+                  </h2>
+                  <ul class="govuk-summary-card__actions">
+                    <li class="govuk-summary-card__action">
+                      <a class="govuk-link" href="#">Remove project<span class="govuk-visually-hidden"> Bowland high</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="govuk-summary-card__content">
+                  <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Address
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Willowherb Road, Emersons Green, Bristol, South Gloucestershire, BS16 7LH
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        URN
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        135302
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+              {% endif %}
+              {% if data['school3'] == "Aylestone High" %}
+              <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">
+                    Aylestone High
+                  </h2>
+                  <ul class="govuk-summary-card__actions">
+                    <li class="govuk-summary-card__action">
+                      <a class="govuk-link" href="#">Remove project<span class="govuk-visually-hidden"> Bowland high</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="govuk-summary-card__content">
+                  <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Address
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Church Farm Road, Emersons Green, Bristol, Not recorded, BS16 7EY
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        URN
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        135305
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+              {% endif %}
+    
+          </fieldset>
+        </div>
+
+
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+        {{ govukButton({
+          text: "Add another project",
+          href: "/phase-3/project-location/project-location",
+          classes: "govuk-button--secondary"
+        }) }}
+      </div>
+
+  
+
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

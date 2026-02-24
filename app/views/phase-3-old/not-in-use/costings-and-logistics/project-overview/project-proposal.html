@@ -1,0 +1,54 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project overview - Project proposal and funding - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/costings-and-logistics/project-overview/upload-site-plan" method="post">
+
+  <span class="govuk-caption-xl">Project overview</span>
+  <h1 class="govuk-heading-l">Project proposal and funding</h1>
+
+  <p class="govuk-body">Provide a summary of your project, including:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the construction work and equipment required to deliver the proposed nursery places</li>
+      <li>how the proposed work will enable the delivery of new nursery places why the proposed project is the most effective</li>
+      <li>how your timeline reflects the scale and complexity of your project</li>
+      <li>at least one risk or dependency that could affect your milestones, their likelihood, impact, and how you plan to mitigate delays</li>
+    </ul>
+
+ <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="1000">
+  <textarea class="govuk-textarea govuk-js-character-count" id="proPropsal" name="proPropsal" rows="7" aria-describedby="proPropsal-info"></textarea>
+  <div id="word-count-info" class="govuk-hint govuk-character-count__message">
+    You can enter up to 150 words
+  </div>
+</div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Planning permission, significant change and childcare registration - Will the project will result in a reduction in capacity of physical teaching space - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="/phase-3/planning-permission/ofsted-registration" method="post">
+
+        <span class="govuk-caption-xl">Planning permission, significant change and childcare registration</span>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Will the project will result in a reduction in capacity of physical teaching space i.e. classroom space by over 30 (i.e. 31 or more) places
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="projectGoals" name="projectGoals" type="radio" value="Yes~/phase-3/planning-permission/upload-summary-consultation">
+                  <label class="govuk-label govuk-radios__label" for="projectGoals">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="projectGoals-2" name="projectGoals" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="projectGoals-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+      {{ govukButton({
+      text: "Save and continue",
+            href: ""
+      }) }}
+
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

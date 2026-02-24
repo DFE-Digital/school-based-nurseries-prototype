@@ -1,0 +1,86 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Name of Primary Schools, Best Start Family Hubs, Maintained Nursery Schools at which the projects would be undertaken? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/tasklist" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Name of the setting
+              </h1>
+            </legend>
+            <p class="govuk-body">Confirm the name of the setting where the proposed project will take place</p>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="school1" name="schools" type="radio" value="Bowland high">
+                <label class="govuk-label govuk-radios__label" for="school1">
+                  Bowland high
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Castle Road, Pucklechurch, Bristol, South Gloucestershire, BS16 9RF<br>
+                  URN: 135300, DfE number: 801/6907 UKPRN: 10021092
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="school2" name="schools" type="radio" value="Downend Highschool">
+                <label class="govuk-label govuk-radios__label" for="school2">
+                  Downend Highschool
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Willowherb Road, Emersons Green, Bristol, South Gloucestershire, BS16 7LH<br>
+                  URN: 135302, DfE number: 801/6907 UKPRN: 10021092
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="school3" name="schools" type="radio" value="Aylestone High">
+                <label class="govuk-label govuk-radios__label" for="school3">
+                  Aylestone High
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Church Farm Road, Emersons Green, Bristol, Not recorded, BS16 7EY<br>
+                  URN: 135300, DfE number: 801/6907 UKPRN: 10021092
+                </div>
+              </div>
+              <div class="govuk-radios__divider">or</div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="school4" name="schools" type="radio" value="Family Hub~/phase-3/project-location/name-of-bsfh">
+                <label class="govuk-label govuk-radios__label" for="school4">
+                  Enter manually for a new best family hub
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+     <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      <a class="govuk-link" href="/phase-3/project-location/project-location">Return to search</a>
+    </div>
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

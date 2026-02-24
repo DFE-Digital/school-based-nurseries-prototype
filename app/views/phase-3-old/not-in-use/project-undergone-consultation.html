@@ -1,0 +1,74 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Local consultation - Has this project undergone a minimum of 3 to 4 weeks consultation with interested local parties, as recommended by DfE? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="" method="post">
+
+  <span class="govuk-caption-xl">Local consultation</span>
+
+   <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Has this project undergone a minimum of 3 to 4 weeks consultation with interested local parties, as recommended by DfE?
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="undergoneConsultation" name="undergoneConsultation" type="radio" value="Yes~/phase-3/about-your-project/upload-local-consultation">
+            <label class="govuk-label govuk-radios__label" for="undergoneConsultation">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="undergoneConsultation-2" name="undergoneConsultation" type="radio" value="Consultation is still in progress~/phase-3/about-your-project/check-your-answers-consultation">
+            <label class="govuk-label govuk-radios__label" for="undergoneConsultation-2">
+              Consultation is still in progress
+            </label>
+            <div id="Consultantion-hint" class="govuk-hint govuk-radios__hint">
+              In exceptional circumstances, and with prior agreement from the DfE, you can submit an application while your consultation is in progress. Contact us to discuss, before submitting your application.
+            </div>
+            <div class="govuk-radios__divider">or</div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="undergoneConsultation-3" name="undergoneConsultation" type="radio" value="Not applicable~/phase-3/about-your-project/consultation-information">
+            <label class="govuk-label govuk-radios__label" for="undergoneConsultation-3">
+              Not applicable
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <p class="govuk-body">More information on this can be found in <a class="govuk-link" href="" >our guidance (opens in a new tab).</a></p>
+
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

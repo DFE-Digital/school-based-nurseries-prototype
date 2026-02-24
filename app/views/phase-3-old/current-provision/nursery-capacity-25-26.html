@@ -1,0 +1,68 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Current nursery provision and capacity - Nursery capacity for academic year 2025 to 2026 - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/current-provision/current-operating-hours" method="post">
+
+  <span class="govuk-caption-xl">Current nursery provision and capacity</span>
+  <h1 class="govuk-heading-l">Nursery capacity for academic year 2025 to 2026</h1>
+ 
+  <p class="govuk-body">Tell us your current 2025 to 2026 academic year nursery capacity.</p>
+  <p class="govuk-body">This should reflect the maximum number of children you have at any given time in the nursery space, not necessarily the total capacity of the space, for example if your staff structure doesn't allow. Do not double count places used in both morning and afternoon sessions. Only include the highest number of children expected to be present at once.</p>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="under-2">
+      Under the age of 2
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="under-2" name="under-2" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="2-years">
+      2 years of age
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="2-years" name="2-years" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="3-years">
+      3 to 4 years of age
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="3-years" name="3-years" type="text">
+  </div>
+ 
+
+  <h3 class="govuk-heading-s">Total number of children</h3>
+  <p class="govuk-body">0</p>
+
+ 
+
+  </div>
+  </div>
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

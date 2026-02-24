@@ -1,0 +1,140 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Applications - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+       <form action="/phase-3/project-location/declaration?application=New" method="post">
+
+
+    <h1 class="govuk-heading-xl">Applications</h1>
+
+    <p class="govuk-body">On this page you can:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>start a new application</li>
+        <li>manage applications that are in progress</li>
+        <li>view previously submitted applications</li>
+      </ul>
+      
+
+       {{ govukButton({
+          text: "Start a new application",
+          href: "",
+          isStartButton: true
+        }) }}
+    
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          Applications close at 5pm on Wednesday 30 September 2026
+        </strong>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+
+    <h2 class="govuk-heading-l">Your applications</h2>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Application reference</th>
+          <th scope="col" class="govuk-table__header">Project</th>
+          <th scope="col" class="govuk-table__header">Created by</th>
+          <th scope="col" class="govuk-table__header">Created on</th>
+          <th scope="col" class="govuk-table__header">Last updated</th>
+          <th scope="col" class="govuk-table__header">Round</th>
+          <th scope="col" class="govuk-table__header"></th>
+          
+        </tr> 
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/phase-3/tasklist">APP-20250827-D9Y4</a></th>
+          <td class="govuk-table__cell">School name</td>
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">27/08/2026 12:19 PM</td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell">Phase 3</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Submitted</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/phase-3/tasklist">APP-20250827-D9Y5</a></th>
+          <td class="govuk-table__cell">School name</td>
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">27/08/2026 13:19 PM</td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell">Phase 3</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Completed</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/phase-3/tasklist">APP-20250827-D9Y6</a></th>
+          <td class="govuk-table__cell">School name</td>
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">27/08/2026 14:19 PM</td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell">Phase 3</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+     <h2 class="govuk-heading-l">Your contacts</h2>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">Job title</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">Contact</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">{{ data['la-contact-primary-name'] }}</td>
+          <td class="govuk-table__cell">{{ data['la-contact-primary-job'] }}e</td>
+          <td class="govuk-table__cell">{{ data['la-contact-primary-email'] }}</td>
+          <td class="govuk-table__cell">Primary</td>
+          <td class="govuk-table__cell"><a href="/phase-3/la-contact-information/primary-contact">Change</a></td>
+        </tr>
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell">{{ data['la-contact-secondary-name'] }}</td>
+          <td class="govuk-table__cell">{{ data['la-contact-secondary-job'] }}e</td>
+          <td class="govuk-table__cell">{{ data['la-contact-secondary-email'] }}</td>
+          <td class="govuk-table__cell">Secondary</td>
+          <td class="govuk-table__cell"><a href="/phase-3/la-contact-information/secondary-contact">Change</a></td>
+        </tr>
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell">{{ data['la-contact-tertiary-name'] }}</td>
+          <td class="govuk-table__cell">{{ data['la-contact-tertiary-job'] }}e</td>
+          <td class="govuk-table__cell">{{ data['la-contact-tertiary-email'] }}</td>
+          <td class="govuk-table__cell">Tertiary</td>
+          <td class="govuk-table__cell"><a href="/phase-3/la-contact-information/teriary-contact">Change</a></td>
+        </tr>
+      </tbody>
+    </table>
+   
+
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

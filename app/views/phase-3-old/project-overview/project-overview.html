@@ -1,0 +1,61 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project overview - Project description - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/project-overview/outline-local-need" method="post">
+
+  <span class="govuk-caption-xl">Project overview</span>
+ 
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="150">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="proPropsal">
+        Project description
+      </label>
+    </h1>
+     <p class="govuk-body">Ensure your response describes all these points:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a summary of the project, outlining the construction works and equipment required to deliver the proposed nursery places</li>
+        <li>how the proposed works enable the delivery of new nursery places</li>
+        <li>at least one risk or dependency that could affect key milestones, their Free text qualitative response Max 500 words (750 words for projects costing over £1 million) likelihood, impact and how delays are planned to be mitigated </li>
+        <li>justification of project costs (with more extensive rationale for those costing over £1 million) e.g. listed building</li>
+        <li>if a school is participating in the School Rebuilding Programme (SRP), provide an overview of discussions with your assigned DfE delivery team and its potential impact on the SRP delivery</li>
+      </ul>
+    <textarea class="govuk-textarea govuk-js-character-count" id="proPropsal" name="proPropsal" rows="7" aria-describedby="proPropsal-info"></textarea>
+    <div id="proPropsal-info" class="govuk-hint govuk-character-count__message">
+      You can enter up to 750 words
+    </div>
+  </div>
+
+
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

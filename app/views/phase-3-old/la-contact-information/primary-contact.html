@@ -1,0 +1,59 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+LA contact information - What is the primary contact for your local authority? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/la-contact-information/secondary-contact?localAuthority=inProgress" method="post">
+
+<span class="govuk-caption-xl">LA contact information</span>
+<h1 class="govuk-heading-xl">What is the primary contact for your local authority?</h1>
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-primary-name">
+    Name
+  </label>
+  <input class="govuk-input" id="la-contact-primary-name" name="la-contact-primary-name" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-primary-job">
+    Job title
+  </label>
+  <input class="govuk-input" id="la-contact-primary-job" name="la-contact-primary-job" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-primary-email">
+    Email
+  </label>
+  <input class="govuk-input" id="la-contact-primary-email" name="la-contact-primary-email" type="text">
+</div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

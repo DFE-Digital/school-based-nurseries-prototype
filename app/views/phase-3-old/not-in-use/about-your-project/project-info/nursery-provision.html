@@ -1,0 +1,80 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Project information - How will the nursery provision be delivered? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/about-your-project/project-info/conflicts-of-interest" method="post">
+
+  <span class="govuk-caption-xl">Project information</span>
+
+   <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            How will the nursery provision be delivered?
+          </h1>
+        </legend>
+         <div id="nProvision-hint" class="govuk-hint">
+        Select one option
+        </div>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="nProvision" name="nProvision" type="radio" value="School led">
+            <label class="govuk-label govuk-radios__label" for="projectType">
+              School led
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="nProvision-2" name="nProvision" type="radio" value="Multi-Academy Trust (MAT) led">
+            <label class="govuk-label govuk-radios__label" for="nProvision-2">
+              Multi-Academy Trust (MAT) led
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="nProvision-3" name="nProvision" type="radio" value="Governor run">
+            <label class="govuk-label govuk-radios__label" for="nProvision-3">
+              Governor run
+            </label>
+          </div>
+            <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="nProvision-4" name="nProvision" type="radio" value="Private, voluntary or independent (PVI) provider run">
+            <label class="govuk-label govuk-radios__label" for="nProvision-4">
+              Private, voluntary or independent (PVI) provider run
+            </label>
+          </div>
+            <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="nProvision-5" name="nProvision" type="radio" value="Childminder run">
+            <label class="govuk-label govuk-radios__label" for="nProvision-5">
+              Childminder run
+            </label>
+        </div>
+      </fieldset>
+    </div>
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

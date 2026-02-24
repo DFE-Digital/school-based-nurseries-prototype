@@ -1,0 +1,153 @@
+{% extends "layouts/dfe-header.html" %}
+
+{% block pageTitle %}
+  Page by page listings – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        (Phase 3) Page by page listings
+      </h1>
+
+      <p class="govuk-body-s">Last updated 29 January 2026</p>
+      <p><a href="/admin/data">Data been stored as part of current session</a></p>
+      <p><a href="/manage-prototype/clear-data">Clear data</a></p>
+
+
+          <h2>Home/applications</h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/home" >Apply for a School-Based Nurseries Capital Grant</a></li>
+              <li><a class="govuk-link" href="/phase-3/home-phase-3" >Phase 3 grant applications are open</a></li>
+              <li><a class="govuk-link" href="/phase-3/before-you-apply" >Information you will need to provide</a></li>
+              <li><a class="govuk-link" href="/phase-3/applications" >Applications</a></li>
+            </ul>
+
+            <h2>Project location</h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/project-location/project-location" >What is the Primary Schools, Best Start Family Hubs, Maintained Nursery Schools where the projects will be undertaken?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-location/project-names" >Name of Primary Schools, Best Start Family Hubs, Maintained Nursery Schools at which the projects would be undertaken?</a></li>
+            </ul>
+
+            <h3>If new BSFH</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/project-location/name-of-bsfh" >What is the name of the Best Start Family Hub?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-location/address-of-bsfh" >What is the address of the Best Start Family Hub?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-location/uprn-of-bsfh" >What is the UPRN of the Best Start Family Hub?</a></li>
+            </ul>
+
+            <h2>Tasklist</h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/tasklist" >Tasklist</a></li>
+            </ul>
+
+
+            <h2>About your school or Best Start Family Hub</h2>
+            <h3>Current nursery provision and capacity</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/current-provision/existing-nursery-provision" >Does the project have existing nursery provision?</a></li>
+              <li><a class="govuk-link" href="/phase-3/current-provision/nursery-capacity-25-26" >Nursery capacity for academic year 2025 to 2026</a></li>
+              <li><a class="govuk-link" href="/phase-3/current-provision/current-operating-hours" >What is the current opening hours of the existing nursery provision?</a></li>
+              <li><a class="govuk-link" href="/phase-3/current-provision/do-you-currently-provide-holiday" >Does the existing nursery provision offer holiday childcare?</a></li>
+              <li><a class="govuk-link" href="/phase-3/current-provision/holiday-operating-hours" >What will be the holiday opening hours of the nursery provision?</a></li>
+              <li><a class="govuk-link" href="/phase-3/current-provision/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            
+            <h3>Delivery of new nursery provision</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/delivery-of-nursery/nursery-provision" >How will the nursery provision be delivered?</a></li>
+              <li><a class="govuk-link" href="/phase-3/delivery-of-nursery/pvi-provider-name" >What is the name of the PVI provider or childminder?</a></li>
+              <li><a class="govuk-link" href="/phase-3/delivery-of-nursery/pvi-number" >PVI Unique Provider Reference Number (UPRN)</a></li>
+              <li><a class="govuk-link" href="/phase-3/delivery-of-nursery/ofsted-number" >What is your Ofsted EY unique reference number?</a></li>
+              <li><a class="govuk-link" href="/phase-3/delivery-of-nursery/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>New nursery provision and capacity</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/new-nursery-provision/new-nursery-capacity" >Your new nursery capacity</a></li>
+              <li><a class="govuk-link" href="/phase-3/new-nursery-provision/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>Opening times and holiday childcare</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/opening-times-childcare/operating-hours" >What will be the operating hours of the nursery provision?</a></li>
+              <li><a class="govuk-link" href="/phase-3/opening-times-childcare/do-you-currently-provide-holiday" >Will your nursery provide holiday childcare?</a></li>
+              <li><a class="govuk-link" href="/phase-3/opening-times-childcare/operating-hours-holiday" >What will be the holiday opening hours of the nursery provision?</a></li>
+              <li><a class="govuk-link" href="/phase-3/opening-times-childcare/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+
+            <h2>About the project</h2>
+            <h3>Project timeline</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/project-timeline/project-timeline-info" >Project timeline information</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-timeline/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>Project and additional funding costs</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/what-type-of-project" >What type of project is it?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/project-costs" >Project costs</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/how-much-grant" >How much DfE Capital Grant funding are you applying for?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/receiving-additional-funding" >Will you be receiving additional funding from other sources?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/additional-funding-information" >Additional funding information</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/total-cost" >What is the total project cost?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/preferred-funding-27-28" >Assuming you are funded in your preferred year/s, how much funding are you requesting in 2027-28?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/27-28-contingency" > how much is your contingency allowance?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/preferred-funding-28-29" > Assuming you are funded in your preferred year/s, how much funding are you requesting in 2028-29?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/28-29-contingency" > how much is your contingency allowance?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/preferred-funding-29-30" > Assuming you are funded in your preferred year/s, how much funding are you requesting in 2029-30?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/29-30-contingency" > how much is your contingency allowance?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/preferred-finanacial-year" > If your project can be undertaken in another financial year to your first preference, please identify which other year(s) it could be undertaken in</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/internal-floor-area" > What is the total internal floor area (m2) that will be created or refurbished as part of this project?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/outdoor-area" > If works also include outdoor areas, what is the overall site area (m2) that will be part of the works?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-and-funding/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>Planning permission, significant change and childcare registration</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/planning-permission/planning-permission-required" >Is planning permission required for this project?</a></li>
+              <li><a class="govuk-link" href="/phase-3/planning-permission/what-stage" >At what stage is your planning permission at?</a></li>
+              <li><a class="govuk-link" href="/phase-3/planning-permission/planning-more-information" >Provide more information</a></li>
+              <li><a class="govuk-link" href="/phase-3/planning-permission/project-goals" >Which of the following statements apply to your project?</a></li>
+              <li><a class="govuk-link" href="/phase-3/planning-permission/change-approval" >Does your project require a Significant Change Approval?</a></li>
+              <li><a class="govuk-link" href="/phase-3/planning-permission/ofsted-registration" >Ofsted registration - will your nursery require any of the following?</a></li>
+              <li><a class="govuk-link" href="/phase-3/planning-permission/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h3>Project overview</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/project-overview/project-overview" >Project description</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-overview/outline-local-need" >Outline your assessment of the local need for this nursery provision in your Local Authority and how this projects support your LAs sufficiency need?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-overview/bsfh-school" >Is your Best Start Family Hub co-located with a school?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-overview/bsfh-information" >Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?</a></li>
+              <li><a class="govuk-link" href="/phase-3/project-overview/check-your-answers" >Check your answers</a></li>
+            </ul>
+
+            <h2>Submit</h2>
+            <h3>Submit your application</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="/phase-3/submit/submit-application" >Submit your appliation</a></li>
+              <li><a class="govuk-link" href="/phase-3/submit/application-submitted" >Confirmation page</a></li>
+            </ul>
+
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

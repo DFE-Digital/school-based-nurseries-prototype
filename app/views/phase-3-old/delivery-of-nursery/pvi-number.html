@@ -1,0 +1,47 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Delivery of new nursery provision- PVI Unique Provider Reference Number (UPRN) - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/delivery-of-nursery/ofsted-number" method="post">
+
+
+  <span class="govuk-caption-xl">Delivery of new nursery provision</span>
+  <div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="pviNum">
+       PVI Unique Provider Reference Number (UPRN)
+      </label>
+    </h1>
+     
+    <input class="govuk-input" id="pviNum" name="pviNum" type="text" aria-describedby="event-name-hint">
+  </div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

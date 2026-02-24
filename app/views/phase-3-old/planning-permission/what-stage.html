@@ -1,0 +1,70 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Planning permission, significant change and childcare registration - At what stage is your planning permission at? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/phase-3/planning-permission/project-goals" method="post">
+
+  <span class="govuk-caption-xl">Planning permission, significant change and childcare registration</span>
+
+   <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+       At what stage is your planning permission at?
+      </h1>
+    </legend>
+     <div id="changedName-hint" class="govuk-hint">
+      Select one option
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="planningPermissionstage" name="planningPermissionstage" type="radio" value="I already have planning permission">
+        <label class="govuk-label govuk-radios__label" for="planningPermission">
+          I already have planning permission
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="planningPermissionstage-2" name="planningPermissionstage" type="radio" value="I have applied for planning permission but waiting on the decision">
+        <label class="govuk-label govuk-radios__label" for="planningPermissionstage-2">
+          I have applied for planning permission but waiting on the decision
+        </label>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="planningPermissionstage-3" name="planningPermissionstage" type="radio" value="I need to apply for planning permission">
+        <label class="govuk-label govuk-radios__label" for="planningPermissionstage-2">
+          I need to apply for planning permission
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

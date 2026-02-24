@@ -1,0 +1,56 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Apply for a School-Based Nurseries Capital Grant - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="" method="post">
+
+
+    <h1 class="govuk-heading-xl">Apply for a School-Based Nurseries Capital Grant</h1>
+    <p class="govuk-body">School-based nurseries capital grants must be spent on repurposing space within an estate into nursery provision.</p>
+
+    <h2 class="govuk-heading-l">Phase 1 and 2 applications </h2>
+    <p class="govuk-body">Successful phase 1 and 2 applications will announced in spring 2026. You can view your existing applications on this website.</p>
+
+    <h2 class="govuk-heading-l">New phase 3 applications </h2>
+    <p class="govuk-body">All local authorities in England are invited to apply for phase 3 of the <a href="">School-based nurseries capital grant 2027 to 2030 (link opens in new tab)</a>.</p>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+          Applications close at 5pm on Wednesday 30 September 2026
+      </strong>
+    </div>
+
+    <p class="govuk-body">You will need a DFE Sign-in account to use this service.</p>
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Sign in or register",
+          href: "/phase-3/home-phase-3",
+          isStartButton: true
+        }) }}
+
+    </div>
+
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

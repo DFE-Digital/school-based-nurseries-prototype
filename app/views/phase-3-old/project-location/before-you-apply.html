@@ -1,0 +1,62 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Information you will need to provide - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {% if data['application'] == "New" %}
+      <form action="/phase-3/project-location/project-location" method="post">
+      {% else %}
+      <form action="/phase-3/la-contact-information/primary-contact" method="post">
+      {% endif %}
+
+   <h1 class="govuk-heading-xl">Information you will need to provide</h1>
+
+     <p class="govuk-body">During the application process, you will need to provide:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>details of any childminders or Private, Voluntary, and Independent (PVI) partners, if relevant</li>
+        <li>evidence of how local childcare needs have been considered</li>
+        <li>evidence of your approach to early years education</li>
+        <li>feasibility and sustainability details</li>
+        <li>financial suitability details</li>
+        <li>full project cost breakdown</li>
+        <li>funding needed from addtional sources (if relevant)</li>
+        <li>risks associated with the project and key milestones</li>
+      </ul>
+
+      <p class="govuk-body">You can <a class="govuk-link" href="#">find more information in our guidance</a>.</p>
+
+      
+      <div class="govuk-inset-text">
+      If you need to gather any information during your application, you save your progress and return
+      </div>
+
+
+      {{ govukButton({
+      text: "Continue",
+            href: ""
+      }) }}
+<!-- 
+      <h2 class="govuk-heading-l">Register your interest</h2>
+      <p class="govuk-body">You can <a class="govuk-link" href="#">register your interest to apply in future rounds</a>.</p>
+
+      <p class="govuk-body">We will let you know when applications are open.</p> -->
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

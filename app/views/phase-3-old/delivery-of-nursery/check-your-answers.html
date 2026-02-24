@@ -1,0 +1,107 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Delivery of new nursery provision - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form action="/phase-3/tasklist?newProvision=Complete" method="post">
+
+      <span class="govuk-caption-xl">Delivery of new nursery provision</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+         
+          
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How will the nursery provision be delivered?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['nProvision'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> How will the nursery provision be delivered?</span></a>
+            </dd>
+          </div>
+          {% if data['nProvision'] == "Private, voluntary or independent (PVI) provider run" %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             What is the name of the PVI provider or childminder?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['pviProvider'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What is the name of the PVI provider or childminder?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             PVI Unique Provider Reference Number
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['pviNum'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> PVI Unique Provider Reference Number</span></a>
+            </dd>
+          </div>
+          {% endif %}
+            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             What is your Ofsted EY unique reference number?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['ofstedNum'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What is your Ofsted EY unique reference number?</span></a>
+            </dd>
+          </div>
+
+
+
+
+
+        </dl>
+
+
+
+        {{ govukButton({
+          text: "Save and continue",
+          href: ""
+         }) }}
+
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+      
+  
+
+
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

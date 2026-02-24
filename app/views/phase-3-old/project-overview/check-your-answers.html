@@ -1,0 +1,97 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project overview - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/phase-3/tasklist?proOverview=Complete" method="post">
+
+
+      <span class="govuk-caption-xl">Project overview</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+               Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['proPropsal'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Please outline your assessment of the local need for this nursery provision in your Local Authority and how this projects support your LAs sufficiency need?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['localNeed'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Please outline your assessment of the local need for this nursery provision in your Local Authority and how this projects support your LAs sufficiency need?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Is your Best Start Family Hub co-located with a school?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['bsfhSchool'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">Is your Best Start Family Hub co-located with a school?</span></a>
+            </dd>
+          </div>
+          {% if data['bsfhSchool'] == "Yes" %}
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+               Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['bsfhInfo'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?</span></a>
+            </dd>
+          </div>
+          {% endif %}
+          
+        </dl>
+      
+         {{ govukButton({
+          text: "Save and continue",
+          href: ""
+         }) }}
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+      
+  
+
+
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

@@ -16,15 +16,7 @@
        <form action="check-your-answers" method="post">
 
     <span class="govuk-caption-xl">APP-20250827-D9Y4</span>
-    {% if data['schools'] == "Bowland high" %}
-    <h1 class="govuk-heading-xl">Bowland high</h1>
-    {% elif data['schools'] == "Downend Highschool" %}
-    <h1 class="govuk-heading-xl">Downend Highschool</h1>
-    {% elif data['schools'] == "Aylestone High" %}
-    <h1 class="govuk-heading-xl">Aylestone High</h1>
-    {% else %}
-    <h1 class="govuk-heading-xl">Aylestone High</h1>
-    {% endif %}
+    <h1 class="govuk-heading-xl">{{ data['schools'] }}</h1>
 
     <p class="govuk-body">Castle Road, Pucklechurch, Bristol, South Gloucestershire, BS16 9RF<br>URN: 135300, DfE number: 801/6907 UKPRN: 10021092</p>
    

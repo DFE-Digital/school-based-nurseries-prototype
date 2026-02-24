@@ -1,0 +1,86 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Project information - What type of project is it? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="/phase-3/about-your-project/project-info/nursery-provision" method="post">
+
+        <span class="govuk-caption-xl">Project information</span>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How does the project support wider estate aims?
+              </h1>
+            </legend>
+            <div id="waste-hint" class="govuk-hint">
+              Select all that apply
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="projectAim" name="projectAim" type="checkbox" value="Utilise spare space">
+                <label class="govuk-label govuk-checkboxes__label" for="projectAim">
+                  Utilise spare space
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="projectAim-2" name="projectAim" type="checkbox" value="Create or expand a SEND provision">
+                <label class="govuk-label govuk-checkboxes__label" for="projectAim-2">
+                  Create or expand a SEND provision
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="projectAim-3" name="projectAim" type="checkbox" value="Address disadvantage">
+                <label class="govuk-label govuk-checkboxes__label" for="projectAim-3">
+                  Address disadvantage
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="projectAim-4" name="projectAim" type="checkbox" value="Sustainability">
+                <label class="govuk-label govuk-checkboxes__label" for="projectAim-4">
+                  Sustainability
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="projectAim-5" name="projectAim" type="checkbox" value="Estate Strategy">
+                <label class="govuk-label govuk-checkboxes__label" for="projectAim-5">
+                  Estate Strategy
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="projectAim-6" name="projectAim" type="checkbox" value="Other (Please specify)">
+                <label class="govuk-label govuk-checkboxes__label" for="projectAim-6">
+                  Other (Please specify)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+      {{ govukButton({
+      text: "Save and continue",
+            href: ""
+      }) }}
+
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

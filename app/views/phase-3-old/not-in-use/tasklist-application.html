@@ -1,0 +1,157 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Apply for a School-Based Nurseries Capital Grant - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="check-your-answers" method="post">
+
+    <span class="govuk-caption-xl">APP-20250827-D9Y4</span>
+    <h1 class="govuk-heading-xl">Apply for a School-Based Nurseries Capital Grant</h1>
+
+    <p class="govuk-body">The application process is arranged into stages. Each stage contains one or more sections with questions relating to your application.</p>
+    <p class="govuk-body">Once you have completed all the sections, you can submit your answers to us to assess.</p>
+
+    <h3 class="govuk-heading-s">You have completed 0 of 12 sections</h3>
+  
+
+    <h2 class="govuk-heading-m">1. About your local authority</h2>
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="/phase-3/la-contact-information/primary-contact" aria-describedby="company-details-1-status">
+            Contact information
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="company-details-1-status">
+        {% if data['localAuthority'] == "inProgress" %}
+        <strong class="govuk-tag govuk-tag--blue">
+          In progress
+        </strong>
+        {% elif data['localAuthority'] == "Complete" %}
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong>
+        {% else %}
+         <strong class="govuk-tag govuk-tag--grey">
+          Not started
+        </strong>
+        {% endif %}
+        </div>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m">2. About your Individual project information</h2>
+    <ul class="govuk-task-list">
+      {% if data['school1'] == "Bowland high" %}
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="/phase-3/tasklist" aria-describedby="company-details-1-status">
+              Bowland high
+            </a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+          {% if data['project1'] == "inProgress" %}
+          <strong class="govuk-tag govuk-tag--blue">
+            In progress
+          </strong>
+          {% elif data['project1'] == "Complete" %}
+          <strong class="govuk-tag govuk-tag--green">
+            Completed
+          </strong>
+          {% else %}
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+          {% endif %}
+          </div>
+        </li>
+      {% endif %}
+
+      {% if data['school2'] == "Downend Highschool" %}
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="/phase-3/about-your-project/project-info/what-type-of-project?proinfo=inProgress" aria-describedby="company-details-1-status">
+              Downend Highschool
+            </a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+          {% if data['project2'] == "inProgress" %}
+          <strong class="govuk-tag govuk-tag--blue">
+            In progress
+          </strong>
+          {% elif data['project2'] == "Complete" %}
+          <strong class="govuk-tag govuk-tag--green">
+            Completed
+          </strong>
+          {% else %}
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+          {% endif %}
+          </div>
+        </li>
+      {% endif %}
+
+      {% if data['school3'] == "Aylestone High" %}
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="/phase-3/about-your-project/project-info/what-type-of-project?proinfo=inProgress" aria-describedby="company-details-1-status">
+              Aylestone High
+            </a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+          {% if data['project3'] == "inProgress" %}
+          <strong class="govuk-tag govuk-tag--blue">
+            In progress
+          </strong>
+          {% elif data['project3'] == "Complete" %}
+          <strong class="govuk-tag govuk-tag--green">
+            Completed
+          </strong>
+          {% else %}
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+          {% endif %}
+          </div>
+        </li>
+      {% endif %}
+      
+     
+     
+    </ul>
+
+    <h2 class="govuk-heading-m">3. Submit</h2>
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="/phase-3/submit/submit-application" aria-describedby="company-details-1-status">
+            Submit your application
+          </a>
+        </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+          Cannot start yet
+          </div>
+        </div>
+      </li>
+    </ul>
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Local need, educational approach and sustainability of provision - Delivery and sustainability - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/about-your-project/check-your-answers-approach" method="post">
+
+  <span class="govuk-caption-xl">Local need, educational approach and sustainability of provision</span>
+  <h1 class="govuk-heading-l">Delivery and sustainability</h1>
+
+   <p class="govuk-body">Your answer can include:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>be fully staffed by project completion, meeting EYFS staff-to-child ratios</li>
+      <li>make sure that staff have the appropriate early years experience and relevant DBS checks, with a plan to address any gaps</li>
+      <li>be appropriately governed</li>
+      <li>have strong finanical management, referencing <a class="govuk-link" href="" >school financial value standards (opens in a new tab)</a> if necessary</li>
+    </ul>
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+  <textarea class="govuk-textarea govuk-js-character-count" id="sustainability" name="sustainability" rows="10" aria-describedby="sustainability"></textarea>
+  <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message">
+    You have 750 words remaining
+  </div>
+</div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

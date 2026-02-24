@@ -1,0 +1,61 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Planning permission, significant change and childcare registration - Is planning permission required for this project? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/phase-3/planning-permission/what-stage" method="post">
+
+  <span class="govuk-caption-xl">Planning permission, significant change and childcare registration</span>
+
+   <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Is planning permission required for this project? 
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="planningPermission" name="planningPermission" type="radio" value="Yes">
+        <label class="govuk-label govuk-radios__label" for="planningPermission">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="planningPermission-2" name="planningPermission" type="radio" value="No~/phase-3/planning-permission/project-goals">
+        <label class="govuk-label govuk-radios__label" for="planningPermission-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
