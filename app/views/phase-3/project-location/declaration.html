@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Confirm that your application is eligible - Declaration - {{serviceName}} - GOV.UK Prototype Kit
+Check your eligibility - Declaration - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,24 +13,24 @@ Confirm that your application is eligible - Declaration - {{serviceName}} - GOV.
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-       <form action="/phase-3/project-location/before-you-apply" method="post">
+       <form action="/phase-3/project-location/project-location" method="post">
 
 
-   <h1 class="govuk-heading-xl">Confirm that your application is eligible</h1>
+   <h1 class="govuk-heading-xl">Check your eligibility</h1>
 
-    <p class="govuk-body">You need to confirm that your application meets the 5 eligibility criteria for a School-based nursery capital grant. These criteria help to ensure that the Department for Education upholds its responsibilty to manage public money correctly.</p>
-    <p class="govuk-body">For information about these eligibility criteria, <a href="">read the guidance on [get correct link name] (link opens in new tab)</a></p>
+    <p class="govuk-body">You must submit a separate application for each school-based nursery you want to create or expand. Make sure the school you are making an application on behalf of meets all five criteria before you continue:</p>
 
     <ol class="govuk-list govuk-list--number">
-      <li>I am applying for a School-based nursery capital grant on behalf of a local authority.</li>
-      <li>The new or extended school-based nursery will result in an increased number of childcare places. This increase takes into account any existing provision on site or nearby, including that delivered by external providers. </li>
-      <li>The new or extended school-based nursery will be operational and offer new childcare places within 3 years of receiving the grant.</li>
-      <li>The new or extended school-based nursery is located on either: <ul class="govuk-list govuk-list--bullet">
-          <li>a primary school site that already offers Early Years education</li>
-          <li>a maintained nursery school site </li>
+      <li>The school's proposed project must increase the total number of childcare places at the school. This includes any places already available on site or nearby, including those run by other providers.</li>
+      <li>The nursery will be operational and offering new childcare places by September 2030 at the latest.</li>
+      <li>There is written permission from the freehold landowner to use the land and carry out the proposed works. Examples of freehold landowners include the local authority, a foundation or trust, or a religious body.</li>
+      <li>The proposed project must be one of these types: <ul class="govuk-list govuk-list--bullet">
+          <li>an school-based nursery (SBN) at a state-funded primary school in England that already offers early education, such as reception classes</li>
+          <li>part of a maintained nursery school (MNS) site in England</li>
+          <li>a Best Start Family Hub (BSFH) that already exists or is in the process of being set up - it can be on a school site or elsewhere</li>
         </ul>
       </li>
-      <li>I have written permission from the relevant freehold landowner to use the land for nursery provision and carry out the proposed works. Example freehold landowners include the local authority, foundation or trust, or religious body. </li>
+      <li>If the school already received funding through this grant in either 2024-2025 or 2025-2026, the proposed project must add new places beyond what was delivered in earlier phases, and offer good value for money.</li>
     </ol>
 
 
@@ -40,16 +40,13 @@ Confirm that your application is eligible - Declaration - {{serviceName}} - GOV.
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
             <label class="govuk-label govuk-checkboxes__label" for="waste">
-              I understand and agree to the 5 eligibility criteria.
+              I understand and agree to the five eligibility criteria.
             </label>
           </div>
         </div>
       </fieldset>
     </div>
-      
-    <div class="govuk-inset-text">
-    If your project does not meet the eligibility criteria but you are interested in opening a nursery, you can <a class="govuk-link" href="#">register your interest</a>. For more information, <a class="govuk-link" href="#">see the supporting guidance (opens in a new tab)</a>.
-    </div>
+    
 
 
       {{ govukButton({

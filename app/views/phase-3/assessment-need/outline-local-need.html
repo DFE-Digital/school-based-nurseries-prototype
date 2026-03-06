@@ -1,0 +1,71 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Assessment needs - What childcare sufficiency challenges has the local authority identified?  - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/applications" method="post">
+
+  <span class="govuk-caption-xl">Assessment needs</span>
+ 
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="localNeed">
+        What childcare sufficiency challenges has the local authority identified?  
+      </label>
+    </h1>
+
+     <p class="govuk-body">Describe the gaps or shortfalls in childcare sufficiency such as:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>not enough childcare places for certain age groups </li>
+        <li>limited wraparound or holiday childcare </li>
+        <li>childcare that is hard to access for disadvantaged families or children with SEND </li>
+        <li>unmet need in rural areas </li>
+      </ul>
+
+      <p class="govuk-body">In your response include the sources used to assess local need, such as: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>childcare sufficiency assessment  </li>
+          <li>parent surveys  </li>
+          <li>engagement with local childcare providers  </li>
+          <li>information from new housing developments  </li>
+        </ul>
+
+
+    <textarea class="govuk-textarea govuk-js-character-count" id="localNeed" name="localNeed" rows="7" aria-describedby="localNeed-info"></textarea>
+    <div id="localNeed-info" class="govuk-hint govuk-character-count__message">
+      You can enter up to 750 words
+    </div>
+  </div>
+
+
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
