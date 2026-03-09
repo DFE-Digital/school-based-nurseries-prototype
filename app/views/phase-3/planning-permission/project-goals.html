@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Planning permission, significant change and childcare registration - Will the project will result in a reduction in capacity of physical teaching space - {{serviceName}} - GOV.UK Prototype Kit
+Planning permission, significant change and childcare registration - Does the project require a Significant Change approval?  - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,9 +21,12 @@ Planning permission, significant change and childcare registration - Will the pr
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Will the project will result in a reduction in capacity of physical teaching space i.e. classroom space by over 30 (i.e. 31 or more) places
+                  Does the project require a Significant Change approval? 
                 </h1>
-              </legend>
+                </legend>
+                
+                <p class="govuk-body">If the project reduces teaching space by 31 places or more at any one time, it will require a Significant Change approval. </p>
+            
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="projectGoals" name="projectGoals" type="radio" value="Yes~/phase-3/planning-permission/upload-summary-consultation">

@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Planning permission, significant change and childcare registration - Upload local consultation details - {{serviceName}} - GOV.UK Prototype Kit
+Planning permission, significant change and childcare registration - Upload a summary of the Significant Change consultation for the project - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,9 +16,16 @@ Planning permission, significant change and childcare registration - Upload loca
        <form action="/phase-3/planning-permission/your-uploaded-consultation-details" method="post">
 
   <span class="govuk-caption-xl">Planning permission, significant change and childcare registration</span>
-  <h1 class="govuk-heading-l">Upload a summary of your consultation </h1>
+  <h1 class="govuk-heading-l">Upload a summary of the Significant Change consultation for the project </h1>
 
-  <!-- <p class="govuk-body">You will need to provide a summary of the consultation for your Significant Change Approval.</p> -->
+  <p class="govuk-body">The summary should be a maximum 500 words and include: </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>who was consulted, for example, parents, staff, local community, diocese </li>
+      <li>the dates the consultation took place </li>
+      <li>an overview of the consultation process </li>
+      <li>key outcomes and feedback  </li>
+    </ul>
+
 
   <div class="govuk-inset-text">
     <p class="govuk-body">Your file must be in PDF format and smaller than 20MB.</p>

@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Planning permission, significant change and childcare registration - At what stage is your planning permission at? - {{serviceName}} - GOV.UK Prototype Kit
+Planning permission, significant change and childcare registration - What stage has the planning permission and/or listed building consent application reached?  - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,7 +21,7 @@ Planning permission, significant change and childcare registration - At what sta
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-       At what stage is your planning permission at?
+       What stage has the planning permission and/or listed building consent application reached? 
       </h1>
     </legend>
      <div id="changedName-hint" class="govuk-hint">
@@ -29,21 +29,21 @@ Planning permission, significant change and childcare registration - At what sta
     </div>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="planningPermissionstage" name="planningPermissionstage" type="radio" value="I already have planning permission">
+        <input class="govuk-radios__input" id="planningPermissionstage" name="planningPermissionstage" type="radio" value="Consent has been granted">
         <label class="govuk-label govuk-radios__label" for="planningPermission">
-          I already have planning permission
+          Consent has been granted 
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="planningPermissionstage-2" name="planningPermissionstage" type="radio" value="I have applied for planning permission but waiting on the decision">
+        <input class="govuk-radios__input" id="planningPermissionstage-2" name="planningPermissionstage" type="radio" value="An application has been submitted and decision is pending ">
         <label class="govuk-label govuk-radios__label" for="planningPermissionstage-2">
-          I have applied for planning permission but waiting on the decision
+          An application has been submitted and decision is pending 
         </label>
       </div>
        <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="planningPermissionstage-3" name="planningPermissionstage" type="radio" value="I need to apply for planning permission">
-        <label class="govuk-label govuk-radios__label" for="planningPermissionstage-2">
-          I need to apply for planning permission
+        <input class="govuk-radios__input" id="planningPermissionstage-3" name="planningPermissionstage" type="radio" value="An application still needs to be submitted">
+        <label class="govuk-label govuk-radios__label" for="planningPermissionstage-3">
+          An application still needs to be submitted
         </label>
       </div>
     </div>
