@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Opening times and holiday childcare - What will be the holiday opening hours of the nursery provision? - {{serviceName}} - GOV.UK Prototype Kit
+New or extended nursery capacity and opening times  - Proposed nursery holiday opening hours  - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,8 +15,8 @@ Opening times and holiday childcare - What will be the holiday opening hours of 
       
        <form action="/phase-3/opening-times-childcare/check-your-answers" method="post">
 
-  <span class="govuk-caption-xl">Opening times and holiday childcare</span>
-  <h1 class="govuk-heading-l">What will be the holiday opening hours of the nursery provision?</h1>
+  <span class="govuk-caption-xl">New or extended nursery capacity and opening times </span>
+  <h1 class="govuk-heading-l">Proposed nursery holiday opening hours </h1>
  
   <p class="govuk-body">Enter the start and end times for your term time opening hours.</p>
   <p class="govuk-body">Times must be entered in 24 hour decimal format. For example, 09.00 or 14.30. Enter 12.00 for midday.</p>
@@ -81,7 +81,7 @@ Opening times and holiday childcare - What will be the holiday opening hours of 
     <input class="govuk-input govuk-input--width-4" id="th-end-hol" name="th-end-hol" type="text">
   </div>
 
-   <h2 class="govuk-heading-m">Friday</h2>
+  <h2 class="govuk-heading-m">Friday</h2>
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="f-start-hol">
@@ -94,6 +94,36 @@ Opening times and holiday childcare - What will be the holiday opening hours of 
       End time
     </label>
     <input class="govuk-input govuk-input--width-4" id="f-end-hol" name="f-end-hol" type="text">
+  </div>
+
+   <h2 class="govuk-heading-m">Saturday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sat-start-hol">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="sat-start-hol" name="sat-start-hol" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sat-end-hol">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="sat-end-hol" name="sat-end-hol" type="text">
+  </div>
+
+   <h2 class="govuk-heading-m">Sunday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sun-start-hol">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="sun-start-hol" name="sun-start-hol" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sun-end-hol">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="sun-end-hol" name="sun-end-hol" type="text">
   </div>
 
 

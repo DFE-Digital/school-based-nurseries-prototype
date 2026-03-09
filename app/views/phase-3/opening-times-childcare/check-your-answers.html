@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Opening times and holiday childcare - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+New or extended nursery capacity and opening times  - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,14 +15,63 @@ Opening times and holiday childcare - Check your answers - {{serviceName}} - GOV
 
       <form action="/phase-3/tasklist?timesHoliday=Complete" method="post">
 
-      <span class="govuk-caption-xl">Opening times and holiday childcare</span>
+      <span class="govuk-caption-xl">New or extended nursery capacity and opening times </span>
       <h1 class="govuk-heading-l">Check your answers</h1>
+
+      <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">
+             What will the new nursery capacity be for each age group?
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> What will the new nursery capacity be for each age group?</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Under the age of 2
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['new-under-2'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  2 years of age	
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['new-2-years'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  3-4 years of age
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['new-3-years'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data[''] }}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
 
 
         <div class="govuk-summary-card">
           <div class="govuk-summary-card__title-wrapper">
             <h2 class="govuk-summary-card__title">
-             What will be the operating hours of the nursery provision?
+             Proposed nursery opening hours
             </h2>
             <ul class="govuk-summary-card__actions">
               <li class="govuk-summary-card__action">
@@ -72,6 +121,22 @@ Opening times and holiday childcare - Check your answers - {{serviceName}} - GOV
                   {{ data['f-start'] }} - {{ data['f-end'] }}
                 </dd>
               </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Saturday
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['sat-start'] }} - {{ data['sat-end'] }}
+                </dd>
+              </div>
+               <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Sunday
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['sun-start'] }} - {{ data['sun-end'] }}
+                </dd>
+              </div>
             </dl>
           </div>
         </div>
@@ -94,7 +159,7 @@ Opening times and holiday childcare - Check your answers - {{serviceName}} - GOV
          <div class="govuk-summary-card">
           <div class="govuk-summary-card__title-wrapper">
             <h2 class="govuk-summary-card__title">
-             What will be the holiday opening hours of the nursery provision?
+             Proposed nursery holiday opening hours
             </h2>
             <ul class="govuk-summary-card__actions">
               <li class="govuk-summary-card__action">
@@ -142,6 +207,22 @@ Opening times and holiday childcare - Check your answers - {{serviceName}} - GOV
                 </dt>
                 <dd class="govuk-summary-list__value">
                   {{ data['f-start-hol'] }} - {{ data['f-end-hol'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Saturday
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['sat-start-hol'] }} - {{ data['sat-end-hol'] }}
+                </dd>
+              </div>
+                 <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Sunday
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['sun-start-hol'] }} - {{ data['sun-end-hol'] }}
                 </dd>
               </div>
             </dl>
