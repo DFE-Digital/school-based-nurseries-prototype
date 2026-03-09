@@ -59,7 +59,7 @@
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
           <a class="govuk-link govuk-task-list__link" href="/phase-3/delivery-of-nursery/nursery-provision?newProvision=inProgress" aria-describedby="company-details-1-status">
-            Delivery of new nursery provision 
+            Delivery of new or extended nursery provision 
           </a>
         </div>
         <div class="govuk-task-list__status" id="company-details-1-status">
@@ -81,7 +81,7 @@
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
           <a class="govuk-link govuk-task-list__link" href="/phase-3/new-nursery-provision/new-nursery-capacity?newNursery=inProgress" aria-describedby="company-details-1-status">
-            New nursery provision and capacity
+            New or extended nursery capacity and opening times
           </a>
         </div>
         <div class="govuk-task-list__status" id="company-details-1-status">
@@ -100,31 +100,9 @@
         {% endif %}
         </div>
       </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/opening-times-childcare/operating-hours?timesHoliday=inProgress" aria-describedby="company-details-1-status">
-            Opening times and holiday childcare  
-          </a>
-        </div>
-        <div class="govuk-task-list__status" id="company-details-1-status">
-        {% if data['timesHoliday'] == "inProgress" %}
-        <strong class="govuk-tag govuk-tag--blue">
-          In progress
-        </strong>
-        {% elif data['timesHoliday'] == "Complete" %}
-        <strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong>
-        {% else %}
-         <strong class="govuk-tag govuk-tag--grey">
-          Not started
-        </strong>
-        {% endif %} 
-        </div>
-      </li>
     </ul>
 
-    <h2 class="govuk-heading-m">2. About the project</h2>
+    <h2 class="govuk-heading-m">2. About your project</h2>
     <ul class="govuk-task-list">
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
@@ -216,7 +194,7 @@
       </li>
     </ul>
 
-    <h2 class="govuk-heading-m">3. Submit application</h2>
+    <h2 class="govuk-heading-m">3. Submit project  plan </h2>
     <p class="govuk-body">Once you have completed all sections of the application, you can submit your application. You will not be able to make changes to your application after submission, so make sure you have completed all sections and reviewed your answers before submitting.</p>
     <ul class="govuk-task-list">
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
