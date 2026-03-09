@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Project overview - Is the Best Start Family Hub located on the same site as a school? - {{serviceName}} - GOV.UK Prototype Kit
+Project overview - Will the proposed project be on a school site that is part of the Department for Education’s School rebuilding programme (SRP)? - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ Project overview - Is the Best Start Family Hub located on the same site as a sc
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-       <form action="/phase-3/project-overview/bsfh-information" method="post">
+       <form action="/phase-3/project-overview/bsfh-school" method="post">
 
     <span class="govuk-caption-xl">Project overview</span>
 
@@ -21,20 +21,21 @@ Project overview - Is the Best Start Family Hub located on the same site as a sc
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Is the Best Start Family Hub located on the same site as a school? 
+        Will the proposed project be on a school site that is part of the Department for Education’s School rebuilding programme (SRP)? 
       </h1>
     </legend>
-     <p class="govuk-body">Best Start Family Hubs are not required to be co-located with a school to be eligible for this grant.</p>
+     <p class="govuk-body">Tick ‘Yes’ only if the school has been confirmed to receive SRP funding or is already receiving it.</p>
+
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="bsfhSchool" name="bsfhSchool" type="radio" value="Yes">
-        <label class="govuk-label govuk-radios__label" for="bsfhSchool">
+        <input class="govuk-radios__input" id="esbSchool" name="esbSchool" type="radio" value="Yes~/phase-3/project-overview/school-esb-overview">
+        <label class="govuk-label govuk-radios__label" for="esbSchool">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="bsfhSchool-2" name="bsfhSchool" type="radio" value="No">
-        <label class="govuk-label govuk-radios__label" for="bsfhSchool-2">
+        <input class="govuk-radios__input" id="esbSchool-2" name="esbSchool" type="radio" value="No">
+        <label class="govuk-label govuk-radios__label" for="esbSchool-2">
           No
         </label>
       </div>

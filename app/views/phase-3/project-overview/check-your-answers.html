@@ -22,29 +22,42 @@ Project overview - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-               Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?
+               Provide an overview of the proposed project
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['proPropsal'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">Provide an overview of the proposed project</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Please outline your assessment of the local need for this nursery provision in your Local Authority and how this projects support your LAs sufficiency need?
+              Will the proposed project be on a school site that is part of the Department for Education’s School rebuilding programme (SRP)?
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['localNeed'] }}
+              {{ data['esbSchool'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Please outline your assessment of the local need for this nursery provision in your Local Authority and how this projects support your LAs sufficiency need?</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Will the proposed project be on a school site that is part of the Department for Education’s School rebuilding programme (SRP)?</span></a>
             </dd>
           </div>
+            {% if data['esbSchool'] == "Yes" %}
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Could this nursery project impact the delivery of School rebuilding programme capital works?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['esbOverview'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Could this nursery project impact the delivery of School rebuilding programme capital works?</span></a>
+              </dd>
+            </div>
+            {% endif %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Is your Best Start Family Hub co-located with a school?
+             Is the Best Start Family Hub located on the same site as a school?
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['bsfhSchool'] }}
@@ -53,19 +66,19 @@ Project overview - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">Is your Best Start Family Hub co-located with a school?</span></a>
             </dd>
           </div>
-          {% if data['bsfhSchool'] == "Yes" %}
+        
            <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-               Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?
+               Describe how the Best Start Family Hub works with local primary schools
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['bsfhInfo'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)?</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Describe how the Best Start Family Hub works with local primary schools</span></a>
             </dd>
           </div>
-          {% endif %}
+        
           
         </dl>
       
