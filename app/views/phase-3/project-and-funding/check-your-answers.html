@@ -19,7 +19,7 @@
       <h1 class="govuk-heading-l">Check your answers</h1>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
+          <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               What type of project is it?
             </dt>
@@ -30,17 +30,107 @@
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What type of project is it?</span></a>
             </dd>
           </div>
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              How much DfE capital grant funding are you applying for?
+              What is the total internal floor area (m2) that will be created or refurbished as part of this project?
             </dt>
             <dd class="govuk-summary-list__value">
-              £{{ data['costGrant'] }}
+              {{ data['intareaSize'] }} m²
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> How much DfE capital grant funding are you applying for?</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What is the total internal floor area (m2) that will be created or refurbished as part of this project?</span></a>
             </dd>
           </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              If works also include outdoor areas, what is the overall site area (m2) that will be part of the works?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['outareaSiz'] }} m²
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> If works also include outdoor areas, what is the overall site area (m2) that will be part of the works?</span></a>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">
+            How much DfE capital grant funding are you applying for?
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> Project timeline information</span></a>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total grant amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £{{ data['costGrant'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total contingency amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £{{ data['contingencyGrant'] }}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+
+         <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">
+              How much of the SBN grant funding requested (including the contingency allowance) will the project require in each of the following financial years?
+              </h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action">
+                  <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> Project timeline information</span></a>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                     Total amount for 2027 to 2028
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    £{{ data['fund2728'] }}
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                   Total amount for 2028 to 2029
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     £{{ data['fund2829'] }}
+                  </dd>
+                </div>
+                 <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                   Total amount for 2029 to 2030
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     £{{ data['fund2930'] }}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+  
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Will you be receiving additional funding from other sources?
@@ -88,72 +178,7 @@
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What is the total project cost?</span></a>
             </dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Assuming you are funded in your preferred year/s, how much funding are you requesting in 2027-28?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              £{{ data['fund2728'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Assuming you are funded in your preferred year/s, how much funding are you requesting in 2027-28?</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Of the £{{ data['fund2728'] }}, how much is your contingency allowance?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              £{{ data['con2728'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> how much is your contingency allowance?</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Assuming you are funded in your preferred year/s, how much funding are you requesting in 2028-29?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              £{{ data['fund2829'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Assuming you are funded in your preferred year/s, how much funding are you requesting in 2028-29?</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Of the £{{ data['fund2829'] }}, how much is your contingency allowance?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              £{{ data['con2829'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> how much is your contingency allowance?</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Assuming you are funded in your preferred year/s, how much funding are you requesting in 2029-30?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              £{{ data['fund2930'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Assuming you are funded in your preferred year/s, how much funding are you requesting in 2029-30?</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Of the £{{ data['fund2930'] }}, how much is your contingency allowance?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              £{{ data['con2930'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> how much is your contingency allowance?</span></a>
-            </dd>
-          </div>
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               If your project can be undertaken in another financial year to your first preference, please identify which other year(s) it could be undertaken in
@@ -165,28 +190,8 @@
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> If your project can be undertaken in another financial year to your first preference, please identify which other year(s) it could be undertaken in</span></a>
             </dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              What is the total internal floor area (m2) that will be created or refurbished as part of this project?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['intareaSize'] }}m²
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What is the total internal floor area (m2) that will be created or refurbished as part of this project?</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              If works also include outdoor areas, what is the overall site area (m2) that will be part of the works?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['outareaSiz'] }}m²
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> If works also include outdoor areas, what is the overall site area (m2) that will be part of the works?</span></a>
-            </dd>
-          </div>
+
+         
 
 
 

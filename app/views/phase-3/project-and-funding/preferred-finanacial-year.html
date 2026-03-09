@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Project and additional funding costs - If your project can be undertaken in another financial year to your first preference, please identify which other year(s) it could be undertaken in - {{serviceName}} - GOV.UK Prototype Kit
+Project and additional funding costs - DfE may move successful projects to start in another year(s) to effectively manage the programme’s affordability - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ Project and additional funding costs - If your project can be undertaken in anot
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-       <form action="/phase-3/project-and-funding/internal-floor-area" method="post">
+       <form action="/phase-3/project-and-funding/check-your-answers" method="post">
 
     <span class="govuk-caption-xl">Project and additional funding costs</span>
 
@@ -21,10 +21,11 @@ Project and additional funding costs - If your project can be undertaken in anot
   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        If your project can be undertaken in another financial year to your first preference, please identify which other year(s) it could be undertaken in
+        If the project can begin in another financial year(s), which other year(s) it could be undertaken in?
       </h1>
     </legend>
-    <p>The proposed projects must be operational and offering new childcare places by September 2030.</p>
+    <p>DfE may move successful projects to start in another year(s) to effectively manage the programme’s affordability.</p>
+    <p>To note, the proposed projects must be operational and offering new childcare places by September 2030.</p>
     <div id="waste-hint" class="govuk-hint">
       Select all that apply
     </div>

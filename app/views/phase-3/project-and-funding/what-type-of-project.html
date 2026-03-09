@@ -13,7 +13,7 @@ Project and additional funding costs - What type of project is it? - {{serviceNa
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-       <form action="/phase-3/project-and-funding/project-costs" method="post">
+       <form action="/phase-3/project-and-funding/internal-floor-area" method="post">
 
   <span class="govuk-caption-xl">Project and additional funding costs</span>
 
@@ -24,54 +24,51 @@ Project and additional funding costs - What type of project is it? - {{serviceNa
             What type of project is it?
           </h1>
         </legend>
-        <!-- <div id="projectType-hint" class="govuk-hint">
-        For guidance refer to Annex B in the guidance document.
-        </div> -->
-         <div id="projectType-hint" class="govuk-hint">
-        Select one option
-        </div>
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="projectType" name="projectType" type="radio" value="Small surplus">
+            <input class="govuk-radios__input" id="projectType" name="projectType" type="radio" value="Light refurbishment">
             <label class="govuk-label govuk-radios__label" for="projectType">
-              Small surplus
+              Light refurbishment
             </label>
+            <div id="project-item-hint" class="govuk-hint govuk-radios__hint">
+              General improvement of existing spaces. Building structurally sound and unlikely to require any significant repairs, strengthening or remodelling
+            </div>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="projectType-2" name="projectType" type="radio" value="Medium surplus">
+            <input class="govuk-radios__input" id="projectType-2" name="projectType" type="radio" value="Medium refurbishment">
             <label class="govuk-label govuk-radios__label" for="uprojectType-2">
-              Medium surplus
+              Medium refurbishment
             </label>
+            <div id="project-item-hint" class="govuk-hint govuk-radios__hint">
+              General improvement of existing spaces. Building generally structurally sound, although some very minor structural repairs/strengthening may be required
+            </div>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="projectType-3" name="projectType" type="radio" value="Large surplus">
+            <input class="govuk-radios__input" id="projectType-3" name="projectType" type="radio" value="Heavy refurbishment">
             <label class="govuk-label govuk-radios__label" for="projectType-3">
-              Large surplus
+              Heavy refurbishment
             </label>
+             <div id="project-item-hint" class="govuk-hint govuk-radios__hint">
+              Extensive upgrades involving structural changes and full system replacements
+            </div>
           </div>
             <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="projectType-4" name="projectType" type="radio" value="Small extension">
+            <input class="govuk-radios__input" id="projectType-4" name="projectType" type="radio" value="Extension">
             <label class="govuk-label govuk-radios__label" for="projectType-4">
-              Small extension
+              Extension
             </label>
+            <div id="project-item-hint" class="govuk-hint govuk-radios__hint">
+              Adjoining new space to an existing building.
+            </div>
           </div>
             <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="projectType-5" name="projectType" type="radio" value="Medium extension">
+            <input class="govuk-radios__input" id="projectType-5" name="projectType" type="radio" value="New build">
             <label class="govuk-label govuk-radios__label" for="projectType-5">
-              Medium extension
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="projectType-6" name="projectType" type="radio" value="Large extension">
-            <label class="govuk-label govuk-radios__label" for="projectType-6">
-              Large extension
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="projectType-6" name="projectType" type="radio" value="New build">
-            <label class="govuk-label govuk-radios__label" for="projectType-6">
               New build
             </label>
+             <div id="project-item-hint" class="govuk-hint govuk-radios__hint">
+              Construction of an entirely new standalone building or facility.
+            </div>
           </div>
         </div>
       </fieldset>
