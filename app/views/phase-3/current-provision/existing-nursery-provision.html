@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Current nursery provision and capacity - Does the project have existing nursery provision? - {{serviceName}} - GOV.UK Prototype Kit
+Current nursery provision and capacity - Who manages the existing nursery provision? - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,45 +21,45 @@ Current nursery provision and capacity - Does the project have existing nursery 
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Does the project have existing nursery provision?
+        Who manages the existing nursery provision?
       </h1>
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="existProvision" name="existProvision" type="radio" value="Yes, School run">
+        <input class="govuk-radios__input" id="existProvision" name="existProvision" type="radio" value="School">
         <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-          Yes, School run
+          School
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="existProvision-2" name="existProvision" type="radio" value="Yes, Governor run">
+        <input class="govuk-radios__input" id="existProvision-2" name="existProvision" type="radio" value="Governor">
         <label class="govuk-label govuk-radios__label" for="existProvision-2">
-          Yes, Governor run
+          Governor
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="existProvision-3" name="existProvision" type="radio" value="Yes, MAT run">
+        <input class="govuk-radios__input" id="existProvision-3" name="existProvision" type="radio" value="Multi-academy trust">
         <label class="govuk-label govuk-radios__label" for="existProvision-3">
-          Yes, MAT run
+          Multi-academy trust
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="existProvision-4" name="existProvision" type="radio" value="Yes, PVI or childminder run">
+        <input class="govuk-radios__input" id="existProvision-4" name="existProvision" type="radio" value="Private, voluntary and independent (PVI) childcare provider or childminder">
         <label class="govuk-label govuk-radios__label" for="existProvision-4">
-          Yes, PVI or childminder run
+          Private, voluntary and independent (PVI) childcare provider or childminder
         </label>
       </div>
         <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="existProvision-4" name="existProvision" type="radio" value="Yes, Local authority run">
+        <input class="govuk-radios__input" id="existProvision-4" name="existProvision" type="radio" value="Local authority">
         <label class="govuk-label govuk-radios__label" for="existProvision-4">
-          Yes, Local authority run (Only if BSFH project)
+          Local authority
         </label>
       </div>
       <div class="govuk-radios__divider">or</div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="existProvision-6" name="existProvision" type="radio" value="No~/phase-3/current-provision/check-your-answers">
+        <input class="govuk-radios__input" id="existProvision-6" name="existProvision" type="radio" value="Nursery provision does not currently exist~/phase-3/current-provision/check-your-answers">
         <label class="govuk-label govuk-radios__label" for="existProvision-6">
-          No
+          Nursery provision does not currently exist
         </label>
       </div>
     </div>
