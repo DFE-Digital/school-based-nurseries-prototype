@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Delivery of new nursery provision - How will the nursery provision be delivered? - {{serviceName}} - GOV.UK Prototype Kit
+Delivery of new nursery provision - Who will run the new or extended nursery?  - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,7 +21,7 @@ Delivery of new nursery provision - How will the nursery provision be delivered?
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
           <h1 class="govuk-fieldset__heading">
-            How will the nursery provision be delivered?
+            Who will run the new or extended nursery? 
           </h1>
         </legend>
          <div id="nProvision-hint" class="govuk-hint">
@@ -29,35 +29,41 @@ Delivery of new nursery provision - How will the nursery provision be delivered?
         </div>
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="nProvision" name="nProvision" type="radio" value="School led">
+            <input class="govuk-radios__input" id="nProvision" name="nProvision" type="radio" value="School">
             <label class="govuk-label govuk-radios__label" for="projectType">
-              School led
+              School
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="nProvision-2" name="nProvision" type="radio" value="Multi-Academy Trust (MAT) led">
+            <input class="govuk-radios__input" id="nProvision-2" name="nProvision" type="radio" value="Governor">
             <label class="govuk-label govuk-radios__label" for="nProvision-2">
-              Multi-Academy Trust (MAT) led
+              Governor
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="nProvision-3" name="nProvision" type="radio" value="Governor run">
+            <input class="govuk-radios__input" id="nProvision-3" name="nProvision" type="radio" value="Multi-academy Trust">
             <label class="govuk-label govuk-radios__label" for="nProvision-3">
-              Governor run
+              Multi-academy Trust
             </label>
           </div>
-            <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="nProvision-4" name="nProvision" type="radio" value="Private, voluntary or independent (PVI) provider run~/phase-3/delivery-of-nursery/pvi-provider-name">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="nProvision-4" name="nProvision" type="radio" value="Private, voluntary or independent (PVI)~/phase-3/delivery-of-nursery/pvi-provider-name">
             <label class="govuk-label govuk-radios__label" for="nProvision-4">
-              Private, voluntary or independent (PVI) provider run
+              Private, voluntary or independent (PVI)
             </label>
           </div>
-            <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="nProvision-5" name="nProvision" type="radio" value="Childminder run">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="nProvision-5" name="nProvision" type="radio" value="Local authority">
             <label class="govuk-label govuk-radios__label" for="nProvision-5">
-              Childminder run
+              Local authority
             </label>
-        </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="nProvision-6" name="nProvision" type="radio" value="Childminder">
+            <label class="govuk-label govuk-radios__label" for="nProvision-6">
+              Childminder
+            </label>
+          </div>
       </fieldset>
     </div>
 

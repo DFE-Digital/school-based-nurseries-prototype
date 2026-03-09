@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Delivery of new nursery provision - What is the name of the PVI provider or childminder? - {{serviceName}} - GOV.UK Prototype Kit
+Delivery of new nursery provision - What is the name of the Private, voluntary or independent (PVI) provider or childminder who will run the nursery? - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,16 +13,17 @@ Delivery of new nursery provision - What is the name of the PVI provider or chil
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-       <form action="/phase-3/delivery-of-nursery/pvi-number" method="post">
+       <form action="/phase-3/delivery-of-nursery/ofsted-number" method="post">
 
   <span class="govuk-caption-xl">Delivery of new nursery provision</span>
 
   <div class="govuk-form-group">
     <h1 class="govuk-label-wrapper">
       <label class="govuk-label govuk-label--l" for="pviProvider">
-       What is the name of the PVI provider or childminder?
+       What is the name of the Private, voluntary or independent (PVI) provider or childminder who will run the nursery? 
       </label>
     </h1>
+    <p class="govuk-body">Enter the full name of the PVI provider or childminder responsible for delivering the nursery provision.</p>
     <input class="govuk-input" id="pviProvider" name="pviProvider" type="text" aria-describedby="event-name-hint">
   </div>
 

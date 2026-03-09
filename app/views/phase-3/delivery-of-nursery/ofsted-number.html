@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-Delivery of new nursery provision - What is your Ofsted EY unique reference number? - {{serviceName}} - GOV.UK Prototype Kit
+Delivery of new nursery provision - What is the nursery provider’s Ofsted early years unique reference number (URN)?  - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -20,9 +20,15 @@ Delivery of new nursery provision - What is your Ofsted EY unique reference numb
   <div class="govuk-form-group">
     <h1 class="govuk-label-wrapper">
       <label class="govuk-label govuk-label--l" for="ofstedNum">
-       What is your Ofsted EY unique reference number?
+       What is the nursery provider’s Ofsted early years unique reference number (URN)? 
       </label>
     </h1>
+     <label class="govuk-label" for="authentication-code">
+   Ofsted early years unique reference number (optional)
+  </label>
+  <div id="authentication-code-hint" class="govuk-hint">
+    Some nurseries don’t have an Ofsted early years URN. Leave this blank if you don’t have one.
+  </div>
      
     <input class="govuk-input" id="ofstedNum" name="ofstedNum" type="text" aria-describedby="event-name-hint">
   </div>
