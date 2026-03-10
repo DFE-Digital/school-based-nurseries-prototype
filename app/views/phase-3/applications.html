@@ -18,32 +18,36 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
 
     <h1 class="govuk-heading-xl">School based nurseries capital grant</h1>
 
-    <p class="govuk-body">On this page you can:</p>
+    <p class="govuk-body">Use this page to:</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>start a new application</li>
-        <li>manage applications that are in progress</li>
-        <li>view previously submitted applications</li>
+        <li>start a new project plan</li>
+        <li>manage project plans in progress</li>
+        <li>view submitted plans </li>
+        <li>answer childcare sufficiency questions </li>
+        <li>update contact information </li>
       </ul>
+
+      <p class="govuk-body">To be considered for the school-based nursery capital grant, you must include an assessment of local childcare sufficiency needs. Only project plans that are submitted before the deadline will be considered.</p>
+
 
        <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-visually-hidden">Warning</span>
-          Applications close at 5pm on Wednesday 30 September 2026
+          The deadline to apply is 5pm on Monday 14 September 2026
         </strong>
       </div>
       
-      <h2 class="govuk-heading-l">Your School based nurseries projects</h2>
-      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h2 class="govuk-heading-l">Project plans</h2>
+      <p class="govuk-body">You must submit a project plan for each school-based nursery that needs to be created or expanded.</p>
 
        {{ govukButton({
-          text: "Start a new project",
+          text: "Start a project plan",
           href: "",
           isStartButton: true
         }) }}
     
-    
-
+     {% if data['application'] == "New" %}
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -54,7 +58,6 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
           <th scope="col" class="govuk-table__header">Last updated</th>
           <th scope="col" class="govuk-table__header">Round</th>
           <th scope="col" class="govuk-table__header"></th>
-          
         </tr> 
       </thead>
       <tbody class="govuk-table__body">
@@ -65,32 +68,15 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
           <td class="govuk-table__cell">27/08/2026 12:19 PM</td>
           <td class="govuk-table__cell">N/A</td>
           <td class="govuk-table__cell">Phase 3</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Submitted</strong></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="/phase-3/tasklist">APP-20250827-D9Y5</a></th>
-          <td class="govuk-table__cell">School name</td>
-          <td class="govuk-table__cell">Jonathon Markers</td>
-          <td class="govuk-table__cell">27/08/2026 13:19 PM</td>
-          <td class="govuk-table__cell">N/A</td>
-          <td class="govuk-table__cell">Phase 3</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Completed</strong></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="/phase-3/tasklist">APP-20250827-D9Y6</a></th>
-          <td class="govuk-table__cell">School name</td>
-          <td class="govuk-table__cell">Jonathon Markers</td>
-          <td class="govuk-table__cell">27/08/2026 14:19 PM</td>
-          <td class="govuk-table__cell">N/A</td>
-          <td class="govuk-table__cell">Phase 3</td>
           <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
         </tr>
       </tbody>
     </table>
+    {% endif %}
 
 
-    <h2 class="govuk-heading-l">Your assessment need</h2>
-    <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h2 class="govuk-heading-l">Assessment of local sufficiency needs</h2>
+    <p class="govuk-body">Tell us about childcare sufficiency challenges within the local authority and how your proposed SBN projects will address them. Answering these questions is a required part of your SBN proposal. This will help us assess school-based nursery need in your local area.</p>
 
     <ul class="govuk-task-list">
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
@@ -124,8 +110,8 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
       </li>
     </ul>
 
-     <h2 class="govuk-heading-l">Your contacts</h2>
-    <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+     <h2 class="govuk-heading-l">Local authority contact information</h2>
+    <p class="govuk-body">These are the individuals in the local authority that we may contact if we need more information about your school-based nursery project plan(s) and proposal.</p>
 
      <div class="govuk-summary-card">
         <div class="govuk-summary-card__title-wrapper">
