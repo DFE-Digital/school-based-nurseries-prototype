@@ -11,7 +11,7 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-full">
 
        <form action="/phase-3/project-location/declaration?application=New" method="post">
 
@@ -53,10 +53,8 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Application reference</th>
           <th scope="col" class="govuk-table__header">Project</th>
-          <th scope="col" class="govuk-table__header">Created by</th>
-          <th scope="col" class="govuk-table__header">Created on</th>
+          <th scope="col" class="govuk-table__header">Modified by</th>
           <th scope="col" class="govuk-table__header">Last updated</th>
-          <th scope="col" class="govuk-table__header">Round</th>
           <th scope="col" class="govuk-table__header"></th>
         </tr> 
       </thead>
@@ -66,9 +64,7 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
           <td class="govuk-table__cell">School name</td>
           <td class="govuk-table__cell">Jonathon Markers</td>
           <td class="govuk-table__cell">27/08/2026 12:19 PM</td>
-          <td class="govuk-table__cell">N/A</td>
-          <td class="govuk-table__cell">Phase 3</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
+          <td class="govuk-table__cell" style="text-align: right;"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
         </tr>
       </tbody>
     </table>
@@ -81,7 +77,7 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
     <ul class="govuk-task-list">
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/assessment-need/outline-local-need" aria-describedby="company-details-2-status">
+          <a class="govuk-link govuk-task-list__link" href="/phase-3/assessment-need/outline-local-need?outlineNeed=inProgress" aria-describedby="company-details-2-status">
             Childcare sufficiency gaps
           </a>
            <div id="company-details-3-hint" class="govuk-task-list__hint">
@@ -89,23 +85,45 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
           </div>
         </div>
           <div class="govuk-task-list__status" id="company-details-3-status">
-            <strong class="govuk-tag govuk-tag--grey">
-            Not started yet
-            </strong>
+              {% if data['outlineNeed'] == "inProgress" %}
+              <strong class="govuk-tag govuk-tag--blue">
+                In progress
+              </strong>
+              {% elif data['outlineNeed'] == "Complete" %}
+              <strong class="govuk-tag govuk-tag--green">
+                Completed
+              </strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey">
+                Not started
+              </strong>
+              {% endif %} 
+          </div>
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="/phase-3/assessment-need/proposed-sbn-challenges" aria-describedby="company-details-3-hint company-details-3-status">
-            Proposed SBN project(s) challenges 
+          <a class="govuk-link govuk-task-list__link" href="/phase-3/assessment-need/proposed-sbn-challenges?sbnChallenges=inProgress" aria-describedby="company-details-3-hint company-details-3-status">
+            Proposed SBN project(s) challenges
           </a>
           <div id="company-details-3-hint" class="govuk-task-list__hint">
             Describe how to project supports the priorities of the Local Authorities Best Start in Life local plan 
           </div>
         </div>
           <div class="govuk-task-list__status" id="company-details-3-status">
-            <strong class="govuk-tag govuk-tag--grey">
-            Not started yet
-            </strong>
+              {% if data['sbnChallenges'] == "inProgress" %}
+              <strong class="govuk-tag govuk-tag--blue">
+                In progress
+              </strong>
+              {% elif data['sbnChallenges'] == "Complete" %}
+              <strong class="govuk-tag govuk-tag--green">
+                Completed
+              </strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey">
+                Not started
+              </strong>
+              {% endif %} 
+          </div>
         </div>
       </li>
     </ul>
