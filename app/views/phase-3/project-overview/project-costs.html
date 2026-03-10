@@ -1,0 +1,65 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project overview - What is the justification for the project costs, including any abnormal or higher than usual costs? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3/project-overview/school-esb" method="post">
+
+  <span class="govuk-caption-xl">Project overview</span>
+ 
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="proCosts">
+        What is the justification for the project costs, including any abnormal or higher than usual costs?  
+      </label>
+    </h1>
+
+    <p class="govuk-body">Describe any factors that increase costs, such as: </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>listed building or heritage constraints </li>
+        <li>planning restrictions </li>
+        <li>site or infrastructure challenges </li>
+        <li>high cost per place due to small cohort sizes  </li>
+        <li>projects that combine several types of work (for example, refurbishment plus an extension) </li>
+        <li>local development plan requirements including enhanced Biodiversity Net Gain (BNG) </li>
+        <li>environmental issues such as flood mitigation, contaminated land or poor ground conditions </li>
+      </ul>
+
+    <textarea class="govuk-textarea govuk-js-character-count" id="proCosts" name="proCosts" rows="7" aria-describedby="proCosts-info"></textarea>
+    <div id="proCosts-info" class="govuk-hint govuk-character-count__message">
+      You can enter up to 750 words
+    </div>
+  </div>
+
+
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
