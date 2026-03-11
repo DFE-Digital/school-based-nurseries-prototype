@@ -16,7 +16,21 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
        <form action="/phase-3/project-location/declaration?application=New" method="post">
 
 
-    <h1 class="govuk-heading-xl">School based nurseries capital grant</h1>
+    <h1 class="govuk-heading-xl govuk-!-width-two-thirds">Apply for a School-based nursery capital grant</h1>
+
+    <div class="govuk-notification-banner govuk-!-width-two-thirds" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Application round open
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          The deadline to apply is 5pm on Monday 14 September 2026
+          <a class="govuk-notification-banner__link" href="#"></a>.
+        </p>
+      </div>
+    </div>
 
     <p class="govuk-body">Use this page to:</p>
       <ul class="govuk-list govuk-list--bullet">
@@ -28,15 +42,6 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
       </ul>
 
       <p class="govuk-body">To be considered for the school-based nursery capital grant, you must include an assessment of local childcare sufficiency needs. Only project plans that are submitted before the deadline will be considered.</p>
-
-
-       <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-visually-hidden">Warning</span>
-          The deadline to apply is 5pm on Monday 14 September 2026
-        </strong>
-      </div>
       
       <h2 class="govuk-heading-l">Project plans</h2>
       <p class="govuk-body">You must submit a project plan for each school-based nursery that needs to be created or expanded.</p>
@@ -67,6 +72,15 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
           <td class="govuk-table__cell" style="text-align: right;"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
         </tr>
       </tbody>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/phase-3/tasklist">APP-20250827-D8Y1</a></th>
+          <td class="govuk-table__cell">School name</td>
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">28/08/2026 30:19 PM</td>
+          <td class="govuk-table__cell" style="text-align: right;"><strong class="govuk-tag govuk-tag--red">Submitted</strong></td>
+        </tr>
+      </tbody>
     </table>
     {% endif %}
 
@@ -85,11 +99,7 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
           </div>
         </div>
           <div class="govuk-task-list__status" id="company-details-3-status">
-              {% if data['outlineNeed'] == "inProgress" %}
-              <strong class="govuk-tag govuk-tag--blue">
-                In progress
-              </strong>
-              {% elif data['outlineNeed'] == "Complete" %}
+              {% if data['outlineNeed'] == "Complete" %}
               <strong class="govuk-tag govuk-tag--green">
                 Completed
               </strong>
@@ -110,11 +120,7 @@ Applications - {{serviceName}} - GOV.UK Prototype Kit
           </div>
         </div>
           <div class="govuk-task-list__status" id="company-details-3-status">
-              {% if data['sbnChallenges'] == "inProgress" %}
-              <strong class="govuk-tag govuk-tag--blue">
-                In progress
-              </strong>
-              {% elif data['sbnChallenges'] == "Complete" %}
+              {% if data['sbnChallenges'] == "Complete" %}
               <strong class="govuk-tag govuk-tag--green">
                 Completed
               </strong>
