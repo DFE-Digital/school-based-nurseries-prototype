@@ -1,5 +1,5 @@
 {
-  "serviceName": "School based nursery",
+  "serviceName": "School-based nursery capital grant",
   "plugins": {
     "govuk-frontend": {
 	  "rebrand": true
