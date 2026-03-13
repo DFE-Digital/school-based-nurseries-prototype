@@ -1,0 +1,277 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+ Project additional funding costs and timeline costs costs - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/phase-3-2/tasklist?proCosts=Complete" method="post">
+
+      <span class="govuk-caption-xl">Project additional funding costs and timeline costs costs</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What type of project is it?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['projectType'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What type of project is it?</span></a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is the total internal floor area (m2) that will be created or refurbished as part of this project?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['intareaSize'] }} m²
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> What is the total internal floor area (m2) that will be created or refurbished as part of this project?</span></a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              If works also include outdoor areas, what is the overall site area (m2) that will be part of the works?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['outareaSiz'] }} m²
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> If works also include outdoor areas, what is the overall site area (m2) that will be part of the works?</span></a>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">
+            How much DfE capital grant funding are you applying for?
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> Project timeline information</span></a>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total grant amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £{{ data['costGrant'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total contingency amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £{{ data['contingencyGrant'] }}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Provide justification of the contingency allowance being more than 10% of the total SBN capital funding
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['contingencyJustification'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Provide justification of the contingency allowance being more than 10% of the total SBN capital funding</span></a>
+            </dd>
+          </div>
+          </dl>
+
+            <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">
+            Project timeline information
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> Project timeline information</span></a>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Project start date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['project-start-received-month'] }}/{{ data['project-start-received-year'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Project end date	
+                </dt>
+                <dd class="govuk-summary-list__value">
+                   {{ data['project-end-received-month'] }}/{{ data['project-end-received-year'] }}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Date nursery provision will open
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['nursery-open-received-month'] }}/{{ data['nursery-open-received-year'] }}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+
+         <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">
+              How much of the SBN grant funding requested (including the contingency allowance) will the project require in each of the following financial years?
+              </h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action">
+                  <a class="govuk-link" href="">Change<span class="govuk-visually-hidden"> Project timeline information</span></a>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                     Total amount for 2027 to 2028
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    £{{ data['fund2728'] }}
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                   Total amount for 2028 to 2029
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     £{{ data['fund2829'] }}
+                  </dd>
+                </div>
+                 <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                   Total amount for 2029 to 2030
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     £{{ data['fund2930'] }}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              If your project can be undertaken in another financial year to your first preference, please identify which other year(s) it could be undertaken in
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['prefYear'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> If your project can be undertaken in another financial year to your first preference, please identify which other year(s) it could be undertaken in</span></a>
+            </dd>
+          </div>
+
+  
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Will you be receiving additional funding from other sources?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['additionalFund'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Will you be receiving additional funding from other sources?</span></a>
+            </dd>
+          </div>
+          {% if data['additionalFund'] == "Yes" %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How much additional funding will you receive?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['howMuch'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> How much additional funding will you receive?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Additional funding information
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['additionalInfo'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Additional funding information</span></a>
+            </dd>
+          </div>
+        </dl>
+         {% endif %}
+
+
+         
+
+         
+
+
+
+
+  
+            </dl>
+          </div>
+        </div>
+
+
+      
+         {{ govukButton({
+          text: "Save and continue",
+          href: ""
+         }) }}
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+      
+  
+
+
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

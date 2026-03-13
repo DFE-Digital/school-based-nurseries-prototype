@@ -1,0 +1,111 @@
+{% extends "layouts/dfe-header.html" %}
+
+{% block pageTitle %}
+LA contact information - What is the primary contact for your local authority? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-2/applications" method="post">
+
+<h1 class="govuk-heading-xl">Local authority contact information</h1>
+<p class="govuk-body">Tell us who we should contact at your local authority for all phase 3 applications. We may contact them if we need more information.</p>
+
+<h3 class="govuk-heading-m">First contact</h3>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-primary-name">
+    Name
+  </label>
+  <input class="govuk-input" id="la-contact-primary-name" name="la-contact-primary-name" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-primary-job">
+    Job title
+  </label>
+  <input class="govuk-input" id="la-contact-primary-job" name="la-contact-primary-job" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-primary-email">
+    Email
+  </label>
+  <input class="govuk-input" id="la-contact-primary-email" name="la-contact-primary-email" type="text">
+</div>
+
+<h3 class="govuk-heading-m">Second contact</h3>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-secondary-name">
+    Name
+  </label>
+  <input class="govuk-input" id="la-contact-secondary-name" name="la-contact-secondary-name" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-secondary-job">
+    Job title
+  </label>
+  <input class="govuk-input" id="la-contact-secondary-job" name="la-contact-secondary-job" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-secondary-email">
+    Email
+  </label>
+  <input class="govuk-input" id="la-contact-secondary-email" name="la-contact-secondary-email" type="text">
+</div>
+
+<h3 class="govuk-heading-m">Third contact</h3>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-tertiary-name">
+    Name (optional)
+  </label>
+  <input class="govuk-input" id="la-contact-tertiary-name" name="la-contact-tertiary-name" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-tertiary-job">
+    Job title (optional)
+  </label>
+  <input class="govuk-input" id="la-contact-tertiary-job" name="la-contact-tertiary-job" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="la-contact-tertiary-email">
+    Email (optional)
+  </label>
+  <input class="govuk-input" id="la-contact-tertiary-email" name="la-contact-tertiary-email" type="text">
+</div>
+
+<h3 class="govuk-heading-m">Team email</h3>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="team-email">
+    Email (optional)
+  </label>
+  <input class="govuk-input" id="team-email" name="team-email" type="text">
+</div>
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

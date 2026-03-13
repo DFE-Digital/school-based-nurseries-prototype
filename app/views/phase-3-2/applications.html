@@ -1,0 +1,198 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Applications - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+       <form action="/phase-3-2/project-location/declaration?application=New" method="post">
+
+
+    <h1 class="govuk-heading-xl govuk-!-width-two-thirds">Apply for a School-based nursery capital grant</h1>
+
+    <div class="govuk-notification-banner govuk-!-width-two-thirds" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Application round open
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          The deadline to apply is 5pm on Monday 14 September 2026
+          <a class="govuk-notification-banner__link" href="#"></a>.
+        </p>
+      </div>
+    </div>
+
+    <p class="govuk-body">Use this page to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>start a new project plan</li>
+        <li>manage project plans in progress</li>
+        <li>view submitted plans </li>
+        <li>answer childcare sufficiency questions </li>
+        <li>update contact information </li>
+      </ul>
+
+      <p class="govuk-body">To be considered for the school-based nursery capital grant, you must include an assessment of local childcare sufficiency needs. Only project plans that are submitted before the deadline will be considered.</p>
+      
+      <h2 class="govuk-heading-l">Project plans</h2>
+      <p class="govuk-body">You must submit a project plan for each school-based nursery that needs to be created or expanded.</p>
+
+       {{ govukButton({
+          text: "Start a project plan",
+          href: "",
+          isStartButton: true
+        }) }}
+    
+     {% if data['application'] == "New" %}
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Project plan reference</th>
+          <th scope="col" class="govuk-table__header">Project</th>
+          <th scope="col" class="govuk-table__header">Modified by</th>
+          <th scope="col" class="govuk-table__header">Last updated</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr> 
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/phase-3-2/tasklist">APP-20250827-D9Y4</a></th>
+          <td class="govuk-table__cell">School name</td>
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">27/08/2026 12:19 PM</td>
+          <td class="govuk-table__cell" style="text-align: right;"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
+        </tr>
+      </tbody>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/phase-3-2/tasklist">APP-20250827-D8Y1</a></th>
+          <td class="govuk-table__cell">School name</td>
+          <td class="govuk-table__cell">Jonathon Markers</td>
+          <td class="govuk-table__cell">28/08/2026 30:19 PM</td>
+          <td class="govuk-table__cell" style="text-align: right;"><strong class="govuk-tag govuk-tag--red">Submitted</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    {% endif %}
+
+
+    <h2 class="govuk-heading-l">Assessment of local sufficiency needs</h2>
+    <p class="govuk-body">Tell us about childcare sufficiency challenges within the local authority and how your proposed SBN projects will address them. Answering these questions is a required part of your SBN proposal. This will help us assess school-based nursery need in your local area.</p>
+
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="/phase-3-2/assessment-need/outline-local-need?outlineNeed=inProgress" aria-describedby="company-details-2-status">
+            What childcare sufficiency challenges has the local authority identified?
+          </a>
+           <div id="company-details-3-hint" class="govuk-task-list__hint">
+            Describe the gaps or shortfalls in childcare sufficiency
+          </div>
+        </div>
+          <div class="govuk-task-list__status" id="company-details-3-status">
+              {% if data['outlineNeed'] == "Complete" %}
+              <strong class="govuk-tag govuk-tag--green">
+                Completed
+              </strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey">
+                Not started
+              </strong>
+              {% endif %} 
+          </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="/phase-3-2/assessment-need/proposed-sbn-challenges?sbnChallenges=inProgress" aria-describedby="company-details-3-hint company-details-3-status">
+            How will the proposed SBN project(s) directly address the challenges identified?
+          </a>
+          <div id="company-details-3-hint" class="govuk-task-list__hint">
+            Describe how the project(s) supports the Local Authorities Best Start in Life local plan and improves childcare sufficiency
+          </div>
+        </div>
+          <div class="govuk-task-list__status" id="company-details-3-status">
+              {% if data['sbnChallenges'] == "Complete" %}
+              <strong class="govuk-tag govuk-tag--green">
+                Completed
+              </strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey">
+                Not started
+              </strong>
+              {% endif %} 
+          </div>
+      </li>
+    </ul>
+
+     <h2 class="govuk-heading-l">Local authority contact information</h2>
+    <p class="govuk-body">These are the individuals in the local authority that we may contact if we need more information about your school-based nursery project plan(s) and proposal.</p>
+
+     <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">
+            Contact information
+          </h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="/phase-3-2/la-contact-information/la-contact-information">Change<span class="govuk-visually-hidden"> contact information</span></a>
+            </li>
+          </ul>
+      </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Primary contact
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['la-contact-primary-name'] }}<br>{{ data['la-contact-primary-job'] }}<br>{{ data['la-contact-primary-email'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Secondary contact
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['la-contact-secondary-name'] }}<br>{{ data['la-contact-secondary-job'] }}<br>{{ data['la-contact-secondary-email'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Third contact
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['la-contact-tertiary-name'] }}<br>{{ data['la-contact-tertiary-job'] }}<br>{{ data['la-contact-tertiary-email'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Team email
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['team-email'] }}
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+   
+
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

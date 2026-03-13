@@ -1,0 +1,55 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project overview - What is the purpose of the project and what outcomes are expected? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-2/project-overview/project-works" method="post">
+
+  <span class="govuk-caption-xl">Project overview</span>
+ 
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="proPropsal">
+        What is the purpose of the project and what outcomes are expected? 
+      </label>
+    </h1>
+     <p class="govuk-body">Explain what the project aims to achieve and how it will support the delivery of new nursery places.</p>
+
+    <textarea class="govuk-textarea govuk-js-character-count" id="proPropsal" name="proPropsal" rows="7" aria-describedby="proPropsal-info"></textarea>
+    <div id="proPropsal-info" class="govuk-hint govuk-character-count__message">
+      You can enter up to 750 words
+    </div>
+  </div>
+
+
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project overview - Will the proposed project be on a school site that is part of the Department for Education’s School rebuilding programme (SRP)? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-2/project-overview/bsfh-school" method="post">
+
+    <span class="govuk-caption-xl">Project overview</span>
+
+   <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Will the proposed project be on a school site that is part of the Department for Education’s School rebuilding programme (SRP)? 
+      </h1>
+    </legend>
+     <p class="govuk-body">Tick ‘Yes’ only if the school has been confirmed to receive SRP funding or is already receiving it.</p>
+
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="esbSchool" name="esbSchool" type="radio" value="Yes~/phase-3-2/project-overview/school-esb-overview">
+        <label class="govuk-label govuk-radios__label" for="esbSchool">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="esbSchool-2" name="esbSchool" type="radio" value="No">
+        <label class="govuk-label govuk-radios__label" for="esbSchool-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

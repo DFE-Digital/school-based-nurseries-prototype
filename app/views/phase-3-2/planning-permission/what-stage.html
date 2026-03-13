@@ -1,0 +1,70 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Planning permission, significant change and childcare registration - What stage has the planning permission and/or listed building consent application reached?  - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/phase-3-2/planning-permission/project-goals" method="post">
+
+  <span class="govuk-caption-xl">Planning permission, significant change and childcare registration</span>
+
+   <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+       What stage has the planning permission and/or listed building consent application reached? 
+      </h1>
+    </legend>
+     <div id="changedName-hint" class="govuk-hint">
+      Select one option
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="planningPermissionstage" name="planningPermissionstage" type="radio" value="Consent has been granted">
+        <label class="govuk-label govuk-radios__label" for="planningPermission">
+          Consent has been granted 
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="planningPermissionstage-2" name="planningPermissionstage" type="radio" value="An application has been submitted and decision is pending ">
+        <label class="govuk-label govuk-radios__label" for="planningPermissionstage-2">
+          An application has been submitted and decision is pending 
+        </label>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="planningPermissionstage-3" name="planningPermissionstage" type="radio" value="An application still needs to be submitted">
+        <label class="govuk-label govuk-radios__label" for="planningPermissionstage-3">
+          An application still needs to be submitted
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
