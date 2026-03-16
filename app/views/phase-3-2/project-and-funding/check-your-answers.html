@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
- Project additional funding costs and timeline costs costs - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
+Project additional funding costs and timeline - Check your answers - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,7 +15,7 @@
 
       <form action="/phase-3-2/tasklist?proCosts=Complete" method="post">
 
-      <span class="govuk-caption-xl">Project additional funding costs and timeline costs costs</span>
+      <span class="govuk-caption-xl">Project additional funding costs and timeline</span>
       <h1 class="govuk-heading-l">Check your answers</h1>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -102,7 +102,46 @@
           </div>
           </dl>
 
-            <div class="govuk-summary-card">
+             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Will you be receiving additional funding from other sources?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['additionalFund'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Will you be receiving additional funding from other sources?</span></a>
+            </dd>
+          </div>
+          {% if data['additionalFund'] == "Yes" %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How much additional funding will you receive?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['howMuch'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> How much additional funding will you receive?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Additional funding information
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['additionalInfo'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Additional funding information</span></a>
+            </dd>
+          </div>
+           {% endif %}
+        </dl>
+        
+
+        <div class="govuk-summary-card">
           <div class="govuk-summary-card__title-wrapper">
             <h2 class="govuk-summary-card__title">
             Project timeline information
@@ -195,44 +234,9 @@
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> If your project can be undertaken in another financial year to your first preference, please identify which other year(s) it could be undertaken in</span></a>
             </dd>
           </div>
-
-  
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Will you be receiving additional funding from other sources?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['additionalFund'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Will you be receiving additional funding from other sources?</span></a>
-            </dd>
-          </div>
-          {% if data['additionalFund'] == "Yes" %}
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              How much additional funding will you receive?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['howMuch'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> How much additional funding will you receive?</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Additional funding information
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['additionalInfo'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Additional funding information</span></a>
-            </dd>
-          </div>
         </dl>
-         {% endif %}
+
+     
 
 
          
