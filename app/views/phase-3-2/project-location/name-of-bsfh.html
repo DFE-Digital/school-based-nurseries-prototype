@@ -1,7 +1,7 @@
 {% extends "layouts/dfe-header-full.html" %}
 
 {% block pageTitle %}
-What is the name of the Best Start Family Hub? - {{serviceName}} - GOV.UK Prototype Kit
+Best Start Family Hub information - {{serviceName}} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,15 +16,50 @@ What is the name of the Best Start Family Hub? - {{serviceName}} - GOV.UK Protot
        <form action="/phase-3-2/project-location/address-of-bsfh" method="post">
 
 
-  <div class="govuk-form-group">
-    <h1 class="govuk-label-wrapper">
-      <label class="govuk-label govuk-label--l" for="projectLocation">
-       What is the name of the Best Start Family Hub?
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Best Start Family Hub information
+      </h1>
+    </legend>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="projectLocation">
+        Name of the Best Start Family Hub
       </label>
-    </h1>
-     
-    <input class="govuk-input" id="projectLocation" name="projectLocation" type="text" aria-describedby="event-name-hint">
-  </div>
+      <input class="govuk-input govuk-!-width-two-thirds" id="projectLocation" name="projectLocation" type="text" autocomplete="address-line1">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-1">
+        Address line 1
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-2">
+        Address line 2 (optional)
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-town">
+        Town or city
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-postcode">
+        Postcode
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="bsfhuprn">
+        UPRN of the Best Start Family Hub (Optional)
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="bsfhuprn" name="bsfhuprn" type="text" autocomplete="address-line1">
+    </div>
+  </fieldset>
+
 
 
 
