@@ -1,0 +1,47 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+What is the Primary Schools, Best Start Family Hubs, Maintained Nursery Schools where the projects will be undertaken? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-3/project-location/project-names" method="post">
+
+
+  <div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="projectLocation">
+        Where will the project be located?
+      </label>
+    </h1>
+     <p class="govuk-body">Enter name, URN, LAESTAB or UKPRN of the primary school, maintained nursery school or Best Start Family Hub where the project will be located.</p>
+
+    <input class="govuk-input" id="projectLocation" name="projectLocation" type="text" aria-describedby="event-name-hint">
+  </div>
+
+
+
+      
+    {{ govukButton({
+    text: "Search",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

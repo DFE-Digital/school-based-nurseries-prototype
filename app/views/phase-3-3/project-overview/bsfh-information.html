@@ -1,0 +1,68 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project overview - Please describe the links your Best Start Family Hub already has or plans to have with primary school(s)? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-3/project-overview/check-your-answers" method="post">
+
+  <span class="govuk-caption-xl">Project overview</span>
+ <!--Content updated 10/04/26, Prototype updated 16/04/26-->
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="bsfhInfo">
+        Describe how the Best Start Family Hub works with local primary schools
+      </label>
+    </h1>
+     <p class="govuk-body">The nursery provision proposed in a Best Start Family Hub should have a relationship to local schools. Include the name of each school and the type of relationship including:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>supporting children’s transition into school</li>
+        <li>identifying and supporting families with specific needs (such as SEND) </li>
+        <li>running joint parental engagement activities </li>
+        <li>information sharing or referral pathways </li>
+      </ul>
+     
+  <textarea 
+  class="govuk-textarea"
+  id="bsfhInfo"
+  name="bsfhInfo"
+  rows="7"
+  data-module="govuk-character-count"
+  data-maxwords="500"
+></textarea>
+
+<div id="bsfhInfo-info" class="govuk-hint govuk-character-count__message">
+  You have 500 words remaining <br>
+  </div>
+
+
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

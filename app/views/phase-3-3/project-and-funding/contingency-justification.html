@@ -1,0 +1,54 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project, additional funding costs and timeline - Provide justification of the contingency allowance being more than 10% of the total SBN capital funding - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-3/project-and-funding/receiving-additional-funding" method="post">
+
+  <span class="govuk-caption-xl">Project, additional funding costs and timeline</span>
+ 
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="contingencyJustification">
+        Provide justification of the contingency allowance being more than 10% of the total SBN capital funding
+      </label>
+    </h1>
+
+    <textarea class="govuk-textarea govuk-js-character-count" id="contingencyJustification" name="contingencyJustification" rows="7" aria-describedby="contingencyJustification-info"></textarea>
+    <div id="contingencyJustification-info" class="govuk-hint govuk-character-count__message">
+      You can enter up to 750 words
+    </div>
+  </div>
+
+
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

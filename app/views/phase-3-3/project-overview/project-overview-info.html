@@ -1,0 +1,60 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project overview - Project description - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<!--content updated 09/04/26, prototype updated 16/03/26-->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-3/project-overview/project-works" method="post">
+
+  <span class="govuk-caption-xl">Project overview</span>
+ 
+
+ <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Project overview
+      </h1>
+    </legend>
+    
+    <p class="govuk-body">Provide an overview of the project including information on:  </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the works needed to deliver the new nursery places </li>
+        <li>a justification of the project costs </li>
+      </ul>
+
+
+  </fieldset>
+</div>
+
+
+
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

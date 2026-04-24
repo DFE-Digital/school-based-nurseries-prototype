@@ -1,0 +1,66 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Check your eligibility - Declaration - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<!--Content updtaded 8/04/26, prototype updated 16/04/26-->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="/phase-3-3/project-location/project-location" method="post">
+
+
+   <h1 class="govuk-heading-xl">Check eligibility of the proposed project</h1>
+
+    <p class="govuk-body">The proposed project must meet all 5 of the following criteria:</p>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>The proposed project will result in a net increase in the number of childcare places, taking into account any existing provisions on site or nearby, including that delivered by external providers.</li>
+      <li>The nursery will be operational and offering new childcare places by September 2030 at the latest. </li>
+      <li>There is written permission, such as an email or a letter, from the freehold landowner to use the land and carry out the proposed works. Examples of freehold landowners include the local authority, a foundation or trust, or a religious body.</li>
+      <li>The proposed project must be one of these types: <ul class="govuk-list govuk-list--bullet">
+          <li>an school-based nursery (SBN) at a state-funded primary school in England that already offers early education, such as reception classes</li>
+          <li>part of a maintained nursery school (MNS) site in England</li>
+          <li>a Best Start Family Hub (BSFH) that already exists or is in the process of being set up - it can be on a school site or elsewhere</li>
+        </ul>
+      </li>
+      <li>If the proposed school received funding through the SBN capital grant funding in 2024-2025 or 2025-2026, the proposed project will add new places beyond what was delivered in earlier phases and offers good value for money.</li>
+    </ol>
+
+
+     <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              I confirm the proposed project meets all 5 of the eligibility criteria.
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    
+
+
+      {{ govukButton({
+      text: "Continue",
+            href: ""
+      }) }}
+
+
+</form>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends "layouts/dfe-header.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Access the DfE Sign-in service
+      </h1>
+
+      <form class="form" action="/phase-3-3/dfe-sign-in-password" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="login-email">
+            Log in to your account
+          </label>
+          <div id="event-name-hint" class="govuk-hint">
+            Enter your email address to sign in.
+          </div>
+          <input class="govuk-input govuk-!-width-one-half" id="login-email" name="login-email" type="text" value="{{data['login-email']}}">
+        </div>
+
+        {{ govukButton({
+          text: "Next"
+        }) }}
+
+        <p>
+          By signing in you accept <a href="#">DfE Sign-in terms and conditions</a>
+        </p>
+
+        <h3>New users of DfE sign-in</h3>
+
+        {{ govukButton({
+          text: "Create an account",
+          href: "",
+          classes: "govuk-button--secondary"
+        }) }}
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Services using DfE Sign-in
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">These DfE services are now accessed using your DfE Sign-in account.</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Academy Budget Forecast Return</li>
+              <li>Accounts Return</li>
+              <li>Analyse school performance</li>
+              <li>Apply To Become An Academy</li>
+              <li>Apply for funding to study abroad (Turing Scheme)</li>
+              <li>Apprenticeship service admin</li>
+              <li>Apprenticeship service bulk stop utility</li>
+              <li>Apprenticeship service employer support tool</li>
+              <li>Apprenticeship service for training providers</li>
+              <li>Apprenticeship service identify data locks</li>
+              <li>Apprenticeship service vacancy QA</li>
+              <li>Assessment Service</li>
+              <li>Assessment service: develop an assessment</li>
+              <li>Assessment service: manage your school’s assessments</li>
+              <li>Assessment service: start an assessment</li>
+              <li>Check a Family's Eligibility</li>
+              <li>Check a teacher's record</li>
+              <li>Check the Children’s barred list</li>
+              <li>Child Safeguarding Incident Notification System</li>
+              <li>Claim additional payments for teaching</li>
+              <li>Claim funding for mentor training</li>
+              <li>Collect</li>
+              <li>College Financial Data (CFD) service</li>
+              <li>Customer help portal</li>
+              <li>DfE Connect</li>
+              <li>Document exchange</li>
+              <li>ESFA Digital Forms Service</li>
+              <li>Financial Benchmarking & Insights Tool</li>
+            </ul>
+          </div>
+        </details>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

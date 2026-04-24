@@ -1,0 +1,72 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Your project plan - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<!--Content updated 09/04/26, prototype updated 16/04/26-->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form action="/phase-3-3/submit/application-submitted" method="post">
+
+    <span class="govuk-caption-l">APP-20251021-K8Z0</span>
+    <h1 class="govuk-heading-l">Your project plan</h1>
+
+    <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Project location
+      </dt>
+      <dd class="govuk-summary-list__value">
+      [name][postcode]
+      </dd>
+   </div>
+   <div class="govuk-summary-list__row">
+     <dt class="govuk-summary-list__key">
+      Application round 
+     </dt>
+     <dd class="govuk-summary-list__value">
+      Phase 3
+     </dd>
+   </div>
+   <div class="govuk-summary-list__row">
+     <dt class="govuk-summary-list__key">
+      Date submitted
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [date]
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Status
+    </dt>
+    <dd class="govuk-summary-list__value">
+     Submitted
+    </dd>
+  </div>
+</dl>
+
+
+<h2 class="govuk-heading-m">Project plan details</h2>
+      <p>
+       You have submitted your project plan for the School-based nursery capital grant.
+      </p>
+
+<a href="#" class="govuk-link">Download your project plan</a>
+</p>   
+
+    </div>
+  </div>
+{{ govukButton({
+        text: "Return to your dashboard",
+        href: "/phase-3-3/applications",
+        classes: "govuk-button"
+      }) }}
+{% endblock %}

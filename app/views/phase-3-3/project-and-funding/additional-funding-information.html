@@ -1,0 +1,52 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project, additional funding costs and timeline - Additional funding information - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<!--Content updated 9/04/26, prototype updated 16/04/26-->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-3/project-and-funding/project-timeline-info" method="post">
+
+  <span class="govuk-caption-xl">Project, additional funding costs and timeline</span>
+  <h1 class="govuk-heading-l">What are the sources of additional funding?</h1>
+
+  <p class="govuk-body">For example, local authority high needs provision capital allocations or trust reserves.</p>
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="50">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="additionalInfo">
+    </label>
+  </h1>
+  <textarea class="govuk-textarea govuk-js-character-count" id="additionalInfo" name="additionalInfo" rows="7" aria-describedby="additionalInfo-info"></textarea>
+  <div id="additionalInfo-info" class="govuk-hint govuk-character-count__message">
+    You can enter up to 150 words
+  </div>
+</div>
+ 
+
+
+
+      
+    {{ govukButton({
+    text: "Save and Continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

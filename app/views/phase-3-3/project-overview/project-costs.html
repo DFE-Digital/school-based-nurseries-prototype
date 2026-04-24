@@ -1,0 +1,59 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project overview - What is the justification for the project costs, including any abnormal or higher than usual costs? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<!--Content updated 10/04/26, prototype updated 16/04/26-->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-3/project-overview/school-esb" method="post">
+
+  <span class="govuk-caption-xl">Project overview</span>
+ 
+
+  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="proCosts">
+        What is the justification for the project cost?  
+      </label>
+    </h1>
+
+    <p class="govuk-body">Use recent or comparable projects or market insight to explain value for money for this project. Include any reasons for high or abnormal costs, for example, costs associated with listed buildings or removal of asbestos.</p>
+     
+<textarea 
+  class="govuk-textarea"
+  id="bsfhInfo"
+  name="bsfhInfo"
+  rows="7"
+  data-module="govuk-character-count"
+  data-maxwords="500"
+></textarea>
+
+<div id="bsfhInfo-info" class="govuk-hint govuk-character-count__message">
+  You have 300 words remaining <br>
+  </div>
+  
+  </div>
+ 
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

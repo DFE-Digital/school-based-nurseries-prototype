@@ -1,0 +1,53 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Delivery of new or extended nursery provision - What is the nursery provider’s Ofsted early years unique reference number (URN)?  - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-3/delivery-of-nursery/check-your-answers" method="post">
+
+
+  <span class="govuk-caption-xl">Delivery of new or extended nursery provision</span>
+  <div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="ofstedNum">
+       What is the nursery provider’s Ofsted early years unique reference number (URN)? 
+      </label>
+    </h1>
+     <label class="govuk-label" for="ofstedNum">
+   Ofsted early years URN, for example, EY456798 (optional) 
+  </label>
+  <div id="authentication-code-hint" class="govuk-hint">
+   Some nurseries do not have an Ofsted early years URN. Leave this blank if the nursery does not have one. 
+  </div>
+     
+    <input class="govuk-input" id="ofstedNum" name="ofstedNum" type="text" aria-describedby="event-name-hint">
+  </div>
+
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

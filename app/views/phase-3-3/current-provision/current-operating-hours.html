@@ -1,0 +1,150 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Current nursery provision and capacity - What are the nursery’s current opening hours? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<!--Content updated 17/04/26, prototype upated 17/04/26-->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-3/current-provision/do-you-currently-provide-holiday" method="post">
+
+  <span class="govuk-caption-xl">Current nursery provision and capacity</span>
+  <h1 class="govuk-heading-xl">What are the nursery’s current opening hours?</h1>
+ 
+  <p class="govuk-body">Enter the start and end times for the nursery’s term-time opening hours.</p>
+  <p class="govuk-body">Enter times as a 24-hour clock, for example, 16.30 not 4.30pm, 9.00 not 9am.</p>
+  <p class="govuk-body">Leave blank if the nursery is not open on certain days.</p>
+
+  <h2 class="govuk-heading-m">Monday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="cases">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="cm-start" name="cm-start" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="cm-end">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="cm-end" name="cm-end" type="text">
+  </div>
+
+  <h2 class="govuk-heading-m">Tuesday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="ct-start">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="ct-start" name="ct-start" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="ct-end">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="ct-end" name="ct-end" type="text">
+  </div>
+
+  <h2 class="govuk-heading-m">Wednesday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="cw-start">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="cw-start" name="cw-start" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="cw-end">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="cw-end" name="cw-end" type="text">
+  </div>
+
+  <h2 class="govuk-heading-m">Thursday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="cth-start">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="cth-start" name="cth-start" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="cth-end">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="cth-end" name="cth-end" type="text">
+  </div>
+
+  <h2 class="govuk-heading-m">Friday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="cf-start">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="cf-start" name="cf-start" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="cf-end">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="cf-end" name="cf-end" type="text">
+  </div>
+
+  <h2 class="govuk-heading-m">Saturday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="csat-start">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="csat-start" name="csat-start" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="csat-end">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="csat-end" name="csat-end" type="text">
+  </div>
+
+  <h2 class="govuk-heading-m">Sunday</h2>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="cssun-start">
+      Start time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="cssun-start" name="cssun-start" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="cssun-end">
+      End time
+    </label>
+    <input class="govuk-input govuk-input--width-4" id="cssun-end" name="cssun-end" type="text">
+  </div>
+
+
+  </div>
+  </div>
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

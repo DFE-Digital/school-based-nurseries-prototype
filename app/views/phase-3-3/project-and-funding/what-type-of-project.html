@@ -1,0 +1,93 @@
+{% extends "layouts/dfe-header-full.html" %}
+
+{% block pageTitle %}
+Project, additional funding costs and timeline - What type of project is it? - {{serviceName}} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+       <form action="/phase-3-3/project-and-funding/internal-floor-area" method="post">
+
+  <span class="govuk-caption-xl">Project, additional funding costs and timeline</span>
+
+   <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            What type of project is it?
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType" name="projectType" type="radio" value="Light refurbishment">
+            <label class="govuk-label govuk-radios__label" for="projectType">
+              Light refurbishment
+            </label>
+            <div id="project-item-hint" class="govuk-hint govuk-radios__hint">
+              General improvement of existing spaces. Building structurally sound and unlikely to require any significant repairs, strengthening or remodelling
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType-2" name="projectType" type="radio" value="Medium refurbishment">
+            <label class="govuk-label govuk-radios__label" for="uprojectType-2">
+              Medium refurbishment
+            </label>
+            <div id="project-item-hint" class="govuk-hint govuk-radios__hint">
+              General improvement of existing spaces. Building generally structurally sound, although some very minor structural repairs/strengthening may be required
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType-3" name="projectType" type="radio" value="Heavy refurbishment">
+            <label class="govuk-label govuk-radios__label" for="projectType-3">
+              Heavy refurbishment
+            </label>
+             <div id="project-item-hint" class="govuk-hint govuk-radios__hint">
+              Extensive upgrades involving structural changes and full system replacements
+            </div>
+          </div>
+            <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType-4" name="projectType" type="radio" value="Extension">
+            <label class="govuk-label govuk-radios__label" for="projectType-4">
+              Extension
+            </label>
+            <div id="project-item-hint" class="govuk-hint govuk-radios__hint">
+              Adjoining new space to an existing building.
+            </div>
+          </div>
+            <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="projectType-5" name="projectType" type="radio" value="New build">
+            <label class="govuk-label govuk-radios__label" for="projectType-5">
+              New build
+            </label>
+             <div id="project-item-hint" class="govuk-hint govuk-radios__hint">
+              Construction of an entirely new standalone building or facility.
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+      
+    {{ govukButton({
+    text: "Save and continue",
+          href: ""
+    }) }}
+
+</form>
+  </fieldset>
+</div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
