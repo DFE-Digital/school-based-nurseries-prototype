@@ -43,7 +43,7 @@ New or extended nursery capacity and opening times  - What will the ne
  
 
   <h3 class="govuk-heading-s">Total number of children</h3>
-  <p class="govuk-body">0</p>
+  <p class="govuk-body" id="new-total-children">0</p>
 
  
 
@@ -57,6 +57,26 @@ New or extended nursery capacity and opening times  - What will the ne
     }) }}
 
 </form>
+<script>
+  const newUnder2 = document.getElementById('new-under-2');
+  const newTwoYears = document.getElementById('new-2-years');
+  const newThreeYears = document.getElementById('new-3-years');
+  const newTotalChildren = document.getElementById('new-total-children');
+
+  function updateNewTotal() {
+    const value1 = Number(newUnder2.value) || 0;
+    const value2 = Number(newTwoYears.value) || 0;
+    const value3 = Number(newThreeYears.value) || 0;
+
+    const total = value1 + value2 + value3;
+
+    newTotalChildren.textContent = total;
+  }
+
+  newUnder2.addEventListener('input', updateNewTotal);
+  newTwoYears.addEventListener('input', updateNewTotal);
+  newThreeYears.addEventListener('input', updateNewTotal);
+</script>
   </fieldset>
 </div>
 
